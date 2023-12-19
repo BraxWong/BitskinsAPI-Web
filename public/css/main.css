@@ -1,11 +1,14 @@
 #Disclaimer
 {
-    background-color: black;
+    background-color: yellow;
     position: fixed;
     bottom: 0;
+    width: 100%;
 }
 
 #Disclaimer-text
 {
-    color: white;
+    color: black;
+
 }
+
