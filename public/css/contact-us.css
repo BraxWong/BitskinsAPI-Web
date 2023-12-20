@@ -1,0 +1,43 @@
+#Contact-Us-Box
+{
+  position: fixed;
+  left: 26%;
+  top: 20%;
+
+}
+
+#card-title
+{
+  position: relative;
+  left: 43%;
+}
+
+#card-text
+{
+  position: relative;
+  left: 10%
+}
+
+#Form-Message
+{
+  position: relative;
+  height: 80px;
+  padding-bottom: 20px;
+}
+
+#Form-Send-Button
+{
+  position: relative;
+  left: 44%;
+  bottom: 10px;
+  width: 90px;
+}
+
+#Disclaimer
+{
+    background-color: yellow;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+

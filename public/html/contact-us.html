@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bitskins API Web Portal</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link href="../css/Bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/contact-us.css" rel="stylesheet">
+  </head>
+  <body>
+    <!--Start of Nav Bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="main.html">Bitskins API Web Portal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="main.html">Home</a>
+            <a class="nav-item nav-link" href="#">About</a>
+            <a class="nav-item nav-link" href="#">Forms</a>
+            <a class="nav-item nav-link active" href="contact-us.html">Contact Us</a>
+        </div>
+        </div>
+    </nav>
+    <!--End of Nav Bar-->
+    
+    <!--Start of Contact Us Card-->
+    <div class="card" style="width: 58rem;" id="Contact-Us-Box">
+      <div class="card-body">
+        <h5 class="card-title" id="card-title">Contact Us</h5>
+        <p class="card-text" id="card-text">If you have any questions, please fill out the form below. We will get back to you as soon as possible.</p>
+      </div>
+      <!--End of Contact Us Card-->
+
+      <!--Start of Contact Us Form-->
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="For example: example@exampleAddr.com">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        </br>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Name</label>
+          <input type="Name" class="form-control" id="Form-Name" placeholder="John Doe">
+        </div>
+        </br>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number(Please include the area code)</label>
+            <input type="Phone Number" class="form-control" id="Form-Phone-Number" placeholder="+852 12345678">
+        </div>
+        </br>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="Form-Message" placeholder="Your message"></textarea>
+        </div>
+        </br>
+        <button type="submit" class="btn btn-primary" id="Form-Send-Button">Send</button>
+      </form>
+    </div>
+    <!--End of Contact us Form-->
+
+    <!--Start of Disclaimer-->
+    <div class="card" id="Disclaimer">
+      <div class="card-body" id="Disclaimer-text">
+        NOTICE: Users' information will be used but not stored after a contact us form has been sent. 
+      </div>
+    </div>
+    <!--End of Disclaimer-->
+
+</div>
+  </main>
+    <script src="../js/Bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+</html>
