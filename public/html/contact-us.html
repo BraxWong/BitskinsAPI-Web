@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bitskins API Web Portal</title>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <link href="../css/Bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/contact-us.css" rel="stylesheet">
+    <link href="/public/css/Bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/css/contact-us.css" rel="stylesheet">
   </head>
   <body>
     <!--Start of Nav Bar-->
@@ -18,10 +18,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" href="main.html">Home</a>
+            <a class="nav-item nav-link" href="/public/html/main.html">Home</a>
             <a class="nav-item nav-link" href="#">About</a>
             <a class="nav-item nav-link" href="#">Forms</a>
-            <a class="nav-item nav-link active" href="contact-us.html">Contact Us</a>
+            <a class="nav-item nav-link active" href="/public/html/contact-us.html">Contact Us</a>
         </div>
         </div>
     </nav>
@@ -36,29 +36,29 @@
       <!--End of Contact Us Card-->
 
       <!--Start of Contact Us Form-->
-      <form>
+      <form id="contact-us-form">
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="Form-Email" aria-describedby="emailHelp" placeholder="For example: example@exampleAddr.com">
+          <input type="email" class="form-control" id="Form-Email" aria-describedby="emailHelp" placeholder="For example: example@exampleAddr.com" name="user_email">
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         </br>
         <div class="form-group">
           <label for="exampleInputPassword1">Name</label>
-          <input type="Name" class="form-control" id="Form-Name" placeholder="John Doe">
+          <input type="Name" class="form-control" id="Form-Name" placeholder="John Doe" name="user_name">
         </div>
         </br>
         <div class="form-group">
             <label for="phoneNumber">Phone Number(Please include the area code)</label>
-            <input type="Phone Number" class="form-control" id="Form-Phone-Number" placeholder="+852 12345678">
+            <input type="Phone Number" class="form-control" id="Form-Phone-Number" placeholder="+852 12345678" name="phone_number">
         </div>
         </br>
         <div class="form-group">
             <label for="message">Message</label>
-            <textarea class="form-control" id="Form-Message" placeholder="Your message"></textarea>
+            <textarea class="form-control" id="Form-Message" placeholder="Your message" name="message"></textarea>
         </div>
         </br>
-        <button type="submit" class="btn btn-primary" id="Form-Send-Button" onclick="sendEmail()">Send</button>
+        <button type="submit" class="btn btn-primary" id="Form-Send-Button">Send</button>
       </form>
     </div>
     <!--End of Contact us Form-->
@@ -73,7 +73,7 @@
 
 </div>
   </main>
-    <script src="../js/Bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="../js/contact-us.js"></script>
+    <script src="/public/js/Bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="/public/js/contact-us.js"></script>
 </html>
