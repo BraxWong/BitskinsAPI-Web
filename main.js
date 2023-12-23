@@ -1,8 +1,10 @@
 var express = require('express');
 var app = express();
 var fs = require('fs');
+var app2 = require('./public/js/Node/testing.js')
 
 app.use('/public', express.static(__dirname + '/public'));
+app.use('/app1', app2);
 console.log("You are in the right place");
 
 app.get('/main', function(request, response) {
