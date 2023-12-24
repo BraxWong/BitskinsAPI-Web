@@ -1,14 +1,27 @@
 #Disclaimer
 {
-    background-color: yellow;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background-color: yellow;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 #Disclaimer-text
 {
-    color: black;
-
+  color: black;
 }
 
+#Login-Button
+{
+  position: absolute;
+  display: block;
+  left: 87%;
+  width: 80px
+}
+
+#SignUp-Button
+{
+  position: absolute;
+  display: block;
+  left: 93%;
+}
