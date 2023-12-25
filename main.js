@@ -21,4 +21,11 @@ app.get('/contact-us', function(request, response) {
   });
 })
 
+app.get('/login', function(request, response) {
+  fs.readFile("public/html/login.html", function(err, text) {
+    response.setHeader("Content-Type", "text/html");
+    response.end(text);
+  });
+})
+
 app.listen(8080, "127.0.0.1");
