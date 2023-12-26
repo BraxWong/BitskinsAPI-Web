@@ -7,4 +7,5 @@ IF "!output!" EQU "" (
 ) else (
   npm install express
   npm install fs
+  npm install --save kill-port
 )

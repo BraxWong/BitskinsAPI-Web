@@ -6,6 +6,8 @@ if which node > /dev/null
     sudo npm install express
     echo "Install fs"
     npm install fs
+    echo "Install kill-port"
+    npm install --save kill-port
   else
     echo "Error: Node has not been installed."
   fi
