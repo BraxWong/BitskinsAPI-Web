@@ -29,3 +29,6 @@ app.get('/login', function(request, response) {
 })
 
 app.listen(8080, "127.0.0.1");
+
+//TODO: use npx kill-port NPM module to kill the port when the user is terminating the server
+//Resource: https://www.npmjs.com/package/kill-port
