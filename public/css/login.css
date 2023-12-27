@@ -1,0 +1,100 @@
+#Login-Text
+{
+  position: relative;
+  left: 47%;
+  padding-top: 60px;
+  font-family: monospace;
+}
+
+#Login-Email-Text
+{
+  position: relative;
+  left: 42%;
+  padding-top: 80px;
+  font-family: monospace;
+}
+
+#Login-Button
+{
+  position: relative;
+  top: 30px;
+  left: 45%;
+  width: 150px;
+  border-radius: 12px;
+}
+
+#Login-Email
+{
+  position: relative;
+  border-radius: 12px;
+  width: 300px;
+  height: 50px;
+  left: 40%;
+}
+
+#Login-Email:focus
+{
+  transform: scale(1.1) perspective(1px);
+  transition: 0.7s;
+}
+
+#Login-Password
+{
+  position: relative;
+  border-radius: 12px;
+  width: 300px;
+  height: 50px;
+  left: 40%;
+}
+
+#Login-Password:focus
+{
+  transform: scale(1.1) perspective(1px);
+  transition: 0.7s;
+}
+
+#Login-Button:hover
+{
+  transform: scale(1.1) perspective(1px);
+  transition: 0.7s;
+}
+
+body
+{
+  background-color: #D3D3D3;
+}
+
+#Login-Facebook-Button
+{
+  position: relative;
+  left: 43%;
+  color: white;
+  background-color: blue;
+  border-radius: 12px;
+  border-color: blue;
+  width: 200px;
+}
+
+#Login-Facebook-Button:hover
+{
+  transform: scale(1.1) perspective(1px);
+  transition: 0.7s;
+}
+
+#Login-Threads-Button
+{
+  position: relative;
+  left: 43%;
+  color: white;
+  background-color: black;
+  border-radius: 12px;
+  border-color: black;
+  width: 200px;
+}
+
+#Login-Threads-Button:hover
+{
+  transform: scale(1.1) perspective(1px);
+  transition: 0.7s;
+}
+
