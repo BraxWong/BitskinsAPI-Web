@@ -18,7 +18,7 @@
 {
   position: relative;
   top: 30px;
-  left: 45%;
+  left: 44%;
   width: 150px;
   border-radius: 12px;
 }
@@ -27,9 +27,9 @@
 {
   position: relative;
   border-radius: 12px;
-  width: 300px;
+  width: 320px;
   height: 50px;
-  left: 40%;
+  left: 39%;
 }
 
 #Login-Email:focus
@@ -42,9 +42,9 @@
 {
   position: relative;
   border-radius: 12px;
-  width: 300px;
+  width: 320px;
   height: 50px;
-  left: 40%;
+  left: 39%;
 }
 
 #Login-Password:focus
@@ -67,12 +67,12 @@ body
 #Login-Facebook-Button
 {
   position: relative;
-  left: 43%;
+  left: 41%;
   color: white;
   background-color: blue;
   border-radius: 12px;
   border-color: blue;
-  width: 200px;
+  width: 250px;
 }
 
 #Login-Facebook-Button:hover
@@ -81,20 +81,37 @@ body
   transition: 0.7s;
 }
 
-#Login-Threads-Button
+#Facebook-Icon
 {
+  width: 25px;
+  height: 20px;
   position: relative;
-  left: 43%;
-  color: white;
-  background-color: black;
-  border-radius: 12px;
-  border-color: black;
-  width: 200px;
+  bottom: 2px;
+  right: 10px; 
 }
 
-#Login-Threads-Button:hover
+#Login-Twitter-Button
+{
+  position: relative;
+  left: 41%;
+  color: white;
+  background-color: #1DA1F2;
+  border-radius: 12px;
+  border-color: black;
+  width: 250px;
+}
+
+#Login-Twitter-Button:hover
 {
   transform: scale(1.1) perspective(1px);
   transition: 0.7s;
 }
 
+#Twitter-Icon
+{
+  width: 25px;
+  height: 20px;
+  position: relative;
+  bottom: 2px;
+  right: 10px;
+}
