@@ -29,34 +29,43 @@
     </nav>
     <!--End of Nav Bar-->
 
-    <!--Start of Login Template-->
-      <h3 id="Login-Text">
-        Login
-      </h3>
-      <a class="btn btn-outline-success my-1 my-sm-1" id="Login-Facebook-Button">
-        <picture>
-          <img src="/public/resources/img/facebook-icon.png" id="Facebook-Icon">
-        </picture>
-        Login with Facebook
-      </a>
-      </br>
-      <a class="btn btn-outline-success my-1 my-sm-1" id="Login-Twitter-Button">
-        <picture>
-          <img src="/public/resources/img/twitter-icon.png" id="Twitter-Icon">
-        </picture>
-        Login with Twitter
-      </a>
-      <h4 id="Login-Email-Text">
-        Login with email
-      </h4>
-      </br>
-      <input type="email" class="form-control" id="Login-Email" aria-describedby="emailHelp" placeholder="Email" name="user_email">
-      </br>
-      <input type="password" class="form-control" id="Login-Password" placeholder="Password" name="user_name">
-      </br>
-      <button type="submit" class="btn btn-dark" id="Login-Button">Login</button>
-      </br>
-    <!--End of Login Template-->
+    <div class="login-container">
+      <div id="grid-item1"></div>
+      <div>
+        <!--Start of Login Template-->
+          <h3 id="Login-Text">
+            Login
+          </h3>
+          <a class="btn btn-outline-success my-1 my-sm-1" id="Login-Facebook-Button">
+            <picture>
+              <img src="/public/resources/img/facebook-icon.png" id="Facebook-Icon">
+            </picture>
+            Login with Facebook
+          </a>
+          </br>
+          </br>
+          <a class="btn btn-outline-success my-1 my-sm-1" id="Login-Twitter-Button">
+            <picture>
+              <img src="/public/resources/img/twitter-icon.png" id="Twitter-Icon">
+            </picture>
+            Login with Twitter
+          </a>
+          </br>
+          </br>
+          <h4 id="Login-Email-Text">
+            Login with email
+          </h4>
+          </br>
+          <input type="email" class="form-control" id="Login-Email" aria-describedby="emailHelp" placeholder="Email" name="user_email">
+          </br>
+          <input type="password" class="form-control" id="Login-Password" placeholder="Password" name="user_name">
+          </br>
+          <button type="submit" class="btn btn-dark" id="Login-Button">Login</button>
+          </br>
+        <!--End of Login Template-->
+      </div>
+      <div id="grid-item3"></div>
+    </div>
   </main>
     <script src="/public/js/Bootstrap/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>

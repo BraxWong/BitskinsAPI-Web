@@ -1,117 +1,102 @@
-#Login-Text
-{
-  position: relative;
-  left: 47%;
-  padding-top: 60px;
+/* General Styles */
+body {
+  background-color: #D3D3D3;
   font-family: monospace;
 }
 
-#Login-Email-Text
-{
-  position: relative;
-  left: 42%;
-  padding-top: 80px;
-  font-family: monospace;
+/* Container Styles */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
+/* Form Styles */
+.login-form {
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Heading Styles */
+#Login-Text,
+#Login-Email-Text {
+  text-align: center;
+}
+
+/* Input Styles */
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  height: 40px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+/* Button Styles */
+#Login-Twitter-Button {
+  width: 100%;
+  height: 40px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  background-color: #1DA1F2;
+  color: white;
+  border-color: #1DA1F2;
+}
+
+#Login-Facebook-Button
+{
+  width: 100%;
+  height: 40px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  background-color: blue;
+  border-color: blue;
+  color: white;
+}
 #Login-Button
 {
+  border-radius: 12px;
   position: relative;
-  top: 30px;
-  left: 44%;
+  left: 20%;
   width: 150px;
-  border-radius: 12px;
 }
 
-#Login-Email
-{
-  position: relative;
-  border-radius: 12px;
-  width: 320px;
-  height: 50px;
-  left: 39%;
-}
-
-#Login-Email:focus
-{
-  transform: scale(1.1) perspective(1px);
-  transition: 0.7s;
-}
-
-#Login-Password
-{
-  position: relative;
-  border-radius: 12px;
-  width: 320px;
-  height: 50px;
-  left: 39%;
-}
-
+#Login-Facebook-Button:hover,
+#Login-Twitter-Button:hover,
+#Login-Button:hover,
+#Login-Email:focus,
 #Login-Password:focus
 {
   transform: scale(1.1) perspective(1px);
   transition: 0.7s;
 }
 
-#Login-Button:hover
-{
-  transform: scale(1.1) perspective(1px);
-  transition: 0.7s;
-}
-
-body
-{
-  background-color: #D3D3D3;
-}
-
-#Login-Facebook-Button
-{
-  position: relative;
-  left: 41%;
-  color: white;
-  background-color: blue;
-  border-radius: 12px;
-  border-color: blue;
-  width: 250px;
-}
-
-#Login-Facebook-Button:hover
-{
-  transform: scale(1.1) perspective(1px);
-  transition: 0.7s;
-}
-
-#Facebook-Icon
-{
+/* Icon Styles */
+#Facebook-Icon,
+#Twitter-Icon {
   width: 25px;
   height: 20px;
-  position: relative;
-  bottom: 2px;
-  right: 10px; 
+  margin-right: 10px;
 }
 
-#Login-Twitter-Button
-{
-  position: relative;
-  left: 41%;
-  color: white;
-  background-color: #1DA1F2;
-  border-radius: 12px;
-  border-color: black;
-  width: 250px;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .login-form {
+    width: 90%;
+    max-width: 300px;
+  }
 }
 
-#Login-Twitter-Button:hover
-{
-  transform: scale(1.1) perspective(1px);
-  transition: 0.7s;
-}
-
-#Twitter-Icon
-{
-  width: 25px;
-  height: 20px;
-  position: relative;
-  bottom: 2px;
-  right: 10px;
+@media (max-width: 480px) {
+  input[type="email"],
+  input[type="password"],
+  #Login-Button,
+  #Login-Facebook-Button,
+  #Login-Twitter-Button {
+    height: 30px;
+  }
 }
