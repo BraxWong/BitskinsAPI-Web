@@ -22,12 +22,18 @@ app.get('/contact-us', function(request, response) {
 })
 
 app.get('/login', function(request, response) {
-  fs.readFile("public/html/login.html", function(err, text) {
+  fs.readFile("public/html/Login.html", function(err, text) {
     response.setHeader("Content-Type", "text/html");
     response.end(text);
   });
 })
 
+app.get('/forgot-password', function(request, response) {
+  fs.readFile("public/html/forgot-password.html", function(err, text) {
+    response.setHeader("Content-Type", "text/html");
+    response.end(text);
+  });
+})
 app.listen(8080, "127.0.0.1");
 
 //TODO: use npx kill-port NPM module to kill the port when the user is terminating the server

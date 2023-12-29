@@ -61,13 +61,14 @@ input[type="password"] {
 {
   border-radius: 12px;
   position: relative;
-  left: 20%;
+  left: 19%;
   width: 150px;
 }
 
 #Login-Facebook-Button:hover,
 #Login-Twitter-Button:hover,
 #Login-Button:hover,
+#Sign-Up:hover,
 #Login-Email:focus,
 #Login-Password:focus
 {
@@ -99,4 +100,30 @@ input[type="password"] {
   #Login-Twitter-Button {
     height: 30px;
   }
+}
+
+#Forgot-Password
+{
+  position: relative;
+  left: 125px;
+  bottom: 25px;
+  font-size: small;
+  color: black;
+  text-decoration: none;
+}
+
+#Forgot-Password:hover
+{
+  text-decoration: underline;
+  transition: 0.7s;
+}
+
+#Sign-Up
+{
+  position: relative;
+  background-image: linear-gradient(to top right, rgb(30, 205, 218) , rgb(233, 17, 179));
+  left: 33px;
+  color: white;
+  border-radius: 12px;
+  border-color: white
 }
