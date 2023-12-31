@@ -31,49 +31,52 @@
 
     <div class="login-container">
       <div id="grid-item1"></div>
-      <div>
-        <!--Start of Login Template-->
+      <div class="card-group">
+        <div class="card shadow p-3 mb-5 bg-white rounded" id="Login-Card">
           <h3 id="Login-Text">
             Login
           </h3>
-          <a class="btn btn-outline-success my-1 my-sm-1" id="Login-Facebook-Button">
-            <picture>
-              <img src="/public/resources/img/facebook-icon.png" id="Facebook-Icon">
-            </picture>
-            Login with Facebook
-          </a>
-          </br>
-          </br>
-          <a class="btn btn-outline-success my-1 my-sm-1" id="Login-Twitter-Button">
-            <picture>
-              <img src="/public/resources/img/twitter-icon.png" id="Twitter-Icon">
-            </picture>
-            Login with Twitter
-          </a>
-          </br>
-          </br>
-          <h4 id="Login-Email-Text">
-            Login with email
-          </h4>
-          </br>
-          <input type="email" class="form-control" id="Login-Email" aria-describedby="emailHelp" placeholder="Email" name="user_email">
-          </br>
-          <input type="password" class="form-control" id="Login-Password" placeholder="Password" name="user_name">
-          </br>
-          <a href="/public/html/SignUp.html" id="Forgot-Password">Forgot password?</a>
-          </br>
-          </br>
-          <button type="submit" class="btn btn-dark" id="Login-Button">Login</button>
-          </br>
-          <div class="card">
-              <div class="card-body">
-                <div class="card-title">
-                  Do not have an account?
-                </div>
-                <hr>
-                <a class="btn btn-outline-success my1 my-sm-1" id="Sign-Up" href="/public/html/SignUp.html">Sign Up Here</a>
-              </div>
+          <div class="card-body">
+            <a class="btn btn-outline-success my-1 my-sm-1" id="Login-Facebook-Button">
+              <picture>
+                <img src="/public/resources/img/facebook-icon.png" id="Facebook-Icon">
+              </picture>
+              Facebook Login
+            </a>
+            </br>
+            </br>
+            <a class="btn btn-outline-success my-1 my-sm-1" id="Login-Twitter-Button">
+              <picture>
+                <img src="/public/resources/img/twitter-icon.png" id="Twitter-Icon">
+              </picture>
+              Twitter Login
+            </a>
+            </br>
+            </br>
+            <h4 id="Login-Email-Text">
+              Login with email
+            </h4>
+            <input type="email" class="form-control" id="Login-Email" aria-describedby="emailHelp" placeholder="Email" name="user_email">
+            </br>
+            <input type="password" class="form-control" id="Login-Password" placeholder="Password" name="user_name">
+            </br>
+            <a href="/public/html/SignUp.html" id="Forgot-Password">Forgot password?</a>
+            </br>
+            </br>
+            <button type="submit" class="btn btn-dark" id="Login-Button">Login</button>
+            </br>
           </div>
+        </div>
+        <!--Start of Login Template-->
+        <div class="card shadow p-3 mb-5 bg-white rounded col-md-6" id="Card-2">
+          <div class="card-body">
+            <div class="card-title">
+              Do not have an account?
+            </div>
+            <hr id="Line-Separator">
+            <a class="btn btn-outline-success my1 my-sm-1" id="Sign-Up" href="/public/html/SignUp.html">Sign Up Here</a>
+          </div>
+        </div>
         <!--End of Login Template-->
       </div>
       <div id="grid-item3"></div>
