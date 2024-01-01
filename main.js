@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 var database = require('./public/js/Node/database.js')
+const kill = require('kill-port')
 
 app.use('/public', express.static(__dirname + '/public'));
 app.use('/database', database);
@@ -34,7 +35,12 @@ app.get('/forgot-password', function(request, response) {
     response.end(text);
   });
 })
-app.listen(8080, "127.0.0.1");
 
-//TODO: use npx kill-port NPM module to kill the port when the user is terminating the server
-//Resource: https://www.npmjs.com/package/kill-port
+app.listen(8080, "127.0.0.1", () => {
+  setTimeout(() => {
+   kill(8080, 'tcp')
+    .then(console.log)
+    .catch(console.log)
+  }, 1000);
+});
+
