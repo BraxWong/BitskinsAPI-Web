@@ -1,4 +1,3 @@
-
 //╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮
 //┃                                                                              ┃
 //┃   Since the real contact-us.js cannot be displayed due to public API-key,    ┃
@@ -14,6 +13,7 @@
 //┃https://www.emailjs.com/docs/tutorial/creating-contact-form/ for more information┃
 //┃                                                                                 ┃
 //╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+
 
 emailjs.init('YOUR_PUBLIC_KEY');
 document.getElementById('contact-form').addEventListener('submit', function(event) {
