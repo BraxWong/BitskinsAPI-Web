@@ -8,6 +8,8 @@ if which node > /dev/null
     npm install fs
     echo "Install kill-port"
     npm install --save kill-port
+    echo "Install mongodb"
+    npm isntall mongodb
   else
     echo "Error: Node has not been installed."
   fi
