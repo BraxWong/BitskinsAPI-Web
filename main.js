@@ -36,6 +36,13 @@ app.get('/forgot-password', function(request, response) {
   });
 })
 
+app.get('/signup', function(request, response) {
+  fs.readFile("public/html/SignUp.html", function(err, text) {
+    response.setHeader("Content-Type", "text/html");
+    response.end(text);
+  })
+})
+
 app.listen(8080, "127.0.0.1", () => {
   process.on('exit', () => {
     // Kill the port when the process is about to exit

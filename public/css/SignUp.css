@@ -1,0 +1,47 @@
+/* General Styles */
+body {
+  background-color: #D3D3D3;
+  font-family: monospace;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Container Styles */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card-title {
+  position: relative;
+  text-align: center;
+  top: 10px;
+}
+
+#Create-Account-Card{
+  width: 300px; 
+  height: 400px;
+}
+
+#Create-Account-Button { 
+  position: relative;
+  top: 10%;
+}
+
+#Login{
+  font-size: small;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  left: 65%;
+  top: 5%;
+}
+
+#Login:hover {
+  text-decoration: underline;
+  transition: 0.7s;
+}
