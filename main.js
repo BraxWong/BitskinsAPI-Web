@@ -37,10 +37,16 @@ app.get('/forgot-password', function(request, response) {
 })
 
 app.listen(8080, "127.0.0.1", () => {
-  setTimeout(() => {
-   kill(8080, 'tcp')
-    .then(console.log)
-    .catch(console.log)
-  }, 1000);
+  process.on('exit', () => {
+    // Kill the port when the process is about to exit
+    kill(8080, 'tcp')
+      .then(console.log)
+      .catch(console.log);
+  });
+  
+  process.on('SIGINT', () => {
+    process.exit(0);
+  });
 });
+
 
