@@ -45,3 +45,8 @@ body {
   text-decoration: underline;
   transition: 0.7s;
 }
+
+#Login-Button {
+  position: absolute;
+  right: 0;
+}
