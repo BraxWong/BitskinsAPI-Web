@@ -5,7 +5,7 @@ var database = require('./public/js/Node/database.js')
 const kill = require('kill-port')
 
 app.use('/public', express.static(__dirname + '/public'));
-app.use('/database', database);
+app.use('/', database);
 console.log("You are in the right place");
 
 app.get('/main', function(request, response) {
