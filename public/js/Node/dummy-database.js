@@ -49,7 +49,9 @@ const db = client.db('DATABASE_NAME');
 const collection = db.collection('DATABASE_COLLECTION_NAME');
 
 app.get("/insertData", function(request, response) {
-  collection.insertOne(dataToInsert);
+  if(request.body.email != "" | request.body.password != "") {
+    collection.insertOne(request.body);
+  }
 })
 
 app.get("/terminate", function(request, response) {
