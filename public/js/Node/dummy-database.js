@@ -77,6 +77,16 @@ app.get("/findUser", async function(request, response) {
     console.log("User not found:", result);
     response.status(200).json({exists:false});
   }
-});
+})
 
+app.get("/userLogin", async function(request, response) {
+  const result = await collection.findOne({email: request.body.email, password: request.body.password});
+  if(result){
+    console.log("Login Complete");
+    response.status(200).json({success: true});
+  } else {
+    console.log("Login Incomplete");
+    response.status(500).json({success: false});
+  }
+})
 module.exports = app;

@@ -9,6 +9,8 @@
     <link href="/public/css/Bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="/public/css/main.css" rel="stylesheet">
     <link href="/public/css/login.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="/public/js/Login.js"></script>
   </head>
   <body>
     <!--Start of Nav Bar-->
@@ -63,7 +65,7 @@
             <a href="/public/html/SignUp.html" id="Forgot-Password">Forgot password?</a>
             </br>
             </br>
-            <button type="submit" class="btn btn-dark" id="Login-Button">Login</button>
+            <button type="submit" class="btn btn-dark" id="Login-Button" onclick="login()">Login</button>
             </br>
           </div>
         </div>
@@ -83,5 +85,4 @@
     </div>
   </main>
     <script src="/public/js/Bootstrap/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </html>
