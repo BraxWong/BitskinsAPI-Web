@@ -1,0 +1,27 @@
+#settings-text{
+  position: relative;
+  left: 10%;
+  margin-top: 10%;
+}
+
+#public-profile,
+#account-settings,
+#notifications{
+  position: relative;
+  left:10%;
+  top: 5%;
+  width: 150px;
+  border-radius: 12px;
+  border-color: grey;
+  color: black;
+}
+
+#sidebar{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  height: 100vh;
+}
+
+
