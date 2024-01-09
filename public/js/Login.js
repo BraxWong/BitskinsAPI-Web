@@ -13,6 +13,7 @@ function login()
     success: function(data, textStatus, xhr) {
       if(data.success == true) {
         alert("Login complete");
+        window.location.href = "../html/profile-settings.html"
       } else {
         alert("Login failed");
       }
