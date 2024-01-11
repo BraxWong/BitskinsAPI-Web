@@ -12,14 +12,19 @@ function login()
     contentType: "application/json",
     success: function(data, textStatus, xhr) {
       if(data.success == true) {
-        alert("Login complete");
         window.location.href = "../html/profile-settings.html"
       } else {
-        alert("Login failed");
       }
     },
     error: function (data, textStatus, xhr) {
        alert("Error while logging in: " + data);
+
+//           ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮
+//           ┃                                                      ┃
+//           ┃ TODO:Using bootstrap alert to notify users of errors ┃
+//           ┃                                                      ┃
+//           ╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+
     }
   });
 }
