@@ -27,22 +27,38 @@
             </div>
         </nav>
         <!--End of Nav Bar-->
-        <div id="profile-settings">
-          <div id="sidebar">
-            <h2 id="settings-text">
-              Settings
-            </h2>
-            </br>
-            <button id="public-profile" class="btn btn-outline-success my-1 my-sm-1">Public profile</button>
-            </br>
-            </br>
-            <button id="account-settings" class="btn btn-outline-success my-1 my-sm-1">Account settings</button>
-            </br>
-            </br>
-            <button id="notifications" class="btn btn-outline-success my-1 my-sm-1">Notifications</button>
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-black bg-white" style="width: 280px; height: 750px">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-4">Settings</span>
+          </a>
+          <hr>
+          <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link active" aria-current="page">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                Public Profile
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-black">
+                <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                Account Settings
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-black">
+                <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                Notifications
+              </a>
+            </li>
+          </ul>
+          <hr>
+          <div class="dropdown">
+            <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            </a>
           </div>
         </div>
-
 <!-- ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮
      ┃                                                                       ┃
      ┃ TODO: Need to learn about html/css layout because this is not working ┃
