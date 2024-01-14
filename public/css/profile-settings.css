@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+body, html{
+  margin:0;
+  padding:0;
+}
+
 #settings-text{
   position: relative;
   left: 10%;
@@ -28,4 +33,46 @@
   height: 100vh;
 }
 
+#sidebar{
+  height: 100vh;
+  width: 40vh;
+}
 
+#public-profile{
+  position:relative;
+  width: 500px;
+  left: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+#public-profile-card-title{
+  position: relative;
+  bottom: 12vh;
+  font-size: 25px;
+}
+
+#last-name-div{
+  position:relative;
+  bottom: 16vh;
+}
+
+#first-name-div{
+  position:relative;
+  bottom: 16vh;
+}
+
+#public-profile-next-button{
+  position: relative;
+  top: 10vh;
+  background-color: lightblue !important; 
+}
+
+#phone-number-div{
+  position:relative;
+  bottom: 15vh;
+  right: 16vh;
+}

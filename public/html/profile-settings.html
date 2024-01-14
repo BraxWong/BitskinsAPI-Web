@@ -27,45 +27,75 @@
             </div>
         </nav>
         <!--End of Nav Bar-->
-        <div class="d-flex flex-column flex-shrink-0 p-3 text-black bg-white" style="width: 280px; height: 750px">
-          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-            <span class="fs-4">Settings</span>
-          </a>
-          <hr>
-          <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item">
-              <a href="#" class="nav-link active" aria-current="page">
-              <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+        <div class="row">
+          <div class="col-md">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-black" id="sidebar">
+              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <span class="fs-4">Settings</span>
+              </a>
+              <hr>
+              <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                  <a href="#" class="nav-link active" aria-current="page">
+                    <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                    Public Profile
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link text-white">
+                    <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                    Account Settings
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="nav-link text-white">
+                    <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                    Notifications
+                  </a>
+                </li>
+              </ul>
+              <hr>
+              <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow" id="public-profile">
+              <div class="card-title" id="public-profile-card-title">
                 Public Profile
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-black">
-                <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-                Account Settings
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-black">
-                <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-                Notifications
-              </a>
-            </li>
-          </ul>
-          <hr>
-          <div class="dropdown">
-            <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-            </a>
+              </div>
+              <hr style="width:30vh; position:relative; bottom: 15vh;">
+              <div class="row">
+                <div class="form-group col" id="last-name-div">
+                  <label>
+                    Last Name
+                  </label>
+                  <input type="last-name" class="form-control"aria-describedby="lastname" placeholder="Doe">
+                </div>  
+                <div class="form-group col" id="first-name-div">
+                  <label>
+                    First Name
+                  </label>
+                  <input type="first-name"class="form-control"aria-describedby="firstname"placeholder="John">
+                </div>
+              </div> 
+              <div class="row">
+                <div class="form-group col" id="phone-number-div">
+                  <label>Phone Number</label>
+                  <input type="phone-number"class="form-control"aria-describedby="phonenumber"placeholder="">
+                </div>
+              </div>
+              <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" id="public-profile-next-button">
+                Next
+              </button>
+            </div>
+          </div>
+          <div class="col-sm">
           </div>
         </div>
-<!-- ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮
-     ┃                                                                       ┃
-     ┃ TODO: Need to learn about html/css layout because this is not working ┃
-     ┃                                                                       ┃
-     ╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
--->
-
     </main>
     <script src="/public/js/Bootstrap/bootstrap.bundle.min.js"></script>
 </html>
