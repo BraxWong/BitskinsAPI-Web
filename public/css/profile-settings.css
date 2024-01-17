@@ -41,7 +41,8 @@ body, html{
 #public-profile{
   position:relative;
   width: 500px;
-  left: 15vh;
+  left: 16vh;
+  top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,28 +52,38 @@ body, html{
 
 #public-profile-card-title{
   position: relative;
-  bottom: 12vh;
+  bottom: 8vh;
   font-size: 25px;
 }
 
 #last-name-div{
   position:relative;
-  bottom: 16vh;
+  bottom: 11vh;
 }
 
 #first-name-div{
   position:relative;
-  bottom: 16vh;
+  bottom: 11vh;
 }
 
 #public-profile-next-button{
   position: relative;
-  top: 10vh;
+  top: 5vh;
   background-color: lightblue !important; 
+}
+
+#public-profile-next-button:hover{
+  transform: scale(1.1) perspective(1px);
+  transition: 0.7s;
 }
 
 #phone-number-div{
   position:relative;
-  bottom: 15vh;
-  right: 16vh;
+  bottom: 10vh;
+  width:135px
+}
+
+#email-div{
+  position:relative;
+  bottom:10vh;
 }
