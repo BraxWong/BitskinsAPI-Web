@@ -1,3 +1,4 @@
+
 var emailAddressInput = document.getElementById("email-text");
 $.ajax({
     url: "/currentUser",
@@ -26,10 +27,12 @@ function changeToAccountSettings(){
   if(!valueValidation("first-name-label", first_name, "")){
     errorText+="First name can't be empty";
   }
-  if(!valueValidation("phone-number-label", phone_number, "")){
+  if(!validatePhoneNumber(phone_number, "phone-number-label")){
     errorText+="Phone number can't be empty";
   }
-  console.log(errorText);
+  if(errorText != ""){
+    console.log(errorText);
+  }
 }
 
 function valueValidation(element, currentValue, invalidValue){
@@ -55,3 +58,22 @@ const validateEmail = (email, element) => {
   }
   return validEmail;
 };
+
+
+//╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮
+//┃                                                                              ┃
+//┃   TODO: Need to implement a dropdown menu for users to select the country    ┃
+//┃                                code and stuff                                ┃
+//┃                                                                              ┃
+//╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+
+function validatePhoneNumber(phoneNumber, element){
+  const num = new libphonenumber.parsePhoneNumber(phoneNumber, 'GB');
+  if(num.isPossible() && num.isValid()){
+    document.getElementById(element).style.color="black";
+    return true;
+  }else{
+    document.getElementById(element).style.color="red";
+    return false;
+  }
+}
