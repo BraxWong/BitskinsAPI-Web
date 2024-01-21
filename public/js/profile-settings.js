@@ -59,14 +59,6 @@ const validateEmail = (email, element) => {
   return validEmail;
 };
 
-
-//╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮
-//┃                                                                              ┃
-//┃   TODO: Need to implement a dropdown menu for users to select the country    ┃
-//┃                                code and stuff                                ┃
-//┃                                                                              ┃
-//╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
-
 function validatePhoneNumber(phoneNumber, element){
   const num = new libphonenumber.parsePhoneNumber(phoneNumber, 'GB');
   if(num.isPossible() && num.isValid()){
