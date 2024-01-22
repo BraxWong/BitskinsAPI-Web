@@ -39,16 +39,16 @@ npm install
 
 - Main Menu
 
-![[Resources/HomePage.png]]
+![Main Menu](/Resources/HomePage.png)
 
 - Sign Up Page
 
-![[Resources/SignUpPage.png]]
+![Sign Up Page](Resources/SignUpPage.png)
 
 - Sign In Page
 
-![[SignInPage.png]]
+![Sign In Page](Resources/SignInPage.png)
 
 - Contact Us Page
 
-![[ContactUsPage.png]]
+![Contact Us Page](Resources/ContactUsPage.png)
