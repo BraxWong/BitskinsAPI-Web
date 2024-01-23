@@ -38,7 +38,8 @@ body, html{
   width: 40vh;
 }
 
-#public-profile{
+#public-profile,
+#account-settings{
   position:relative;
   width: 600px;
   left: 14vh;
@@ -138,5 +139,5 @@ body, html{
   bottom: 35px;
   left: 72px;
   height: 35px;
-  width: 134px;
+  width: 132px;
 }

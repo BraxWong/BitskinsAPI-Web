@@ -32,6 +32,9 @@ function changeToAccountSettings(){
   }
   if(errorText != ""){
     console.log(errorText);
+  } else {
+    document.getElementById("public-profile").style.display = "none";
+    document.getElementById("account-settings").style.display = "block";
   }
 }
 
