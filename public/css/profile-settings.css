@@ -141,3 +141,36 @@ body, html{
   height: 35px;
   width: 132px;
 }
+
+#account-settings-card-title{
+  position: relative;
+  top: 40px;
+  left: 210px;
+  font-size: 25px;
+}
+
+#api-div,
+#auth-div{
+  position: relative;
+  top: 80px;
+  left: 18px;
+}
+
+
+#api-key-text,
+#auth-token-text{
+  width: 240px;
+}
+
+
+#account-settings-next-button{
+  position: relative;
+  top: 190px;
+  left: 254px;
+  background-color: lightblue !important; 
+}
+
+#account-settings-next-button:hover{
+  transform: scale(1.1) perspective(1px);
+  transition: 0.7s;
+}
