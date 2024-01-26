@@ -17,24 +17,43 @@ function changeToAccountSettings(){
   var first_name = document.getElementById('first-name-text').value;
   var phone_number = document.getElementById('phone-number-text').value;
   var email = document.getElementById('email-text').value;
-  var errorText = ""
+  var error = false;
   if(!validateEmail(email, "email-label")){
-    errorText+="Please insert a valid email address";
+    document.getElementById('email-hint').style.display = "block";
+    error=true;
+  } else {
+    document.getElementById('email-hint').style.display = "none";
   }
   if(!valueValidation("last-name-label", last_name, "")){
-    errorText+="Last name can't be empty";
+    document.getElementById('last-name-hint').style.display = "block";
+    error=true;
+  } else {
+    document.getElementById('last-name-hint').style.display = "none";
   } 
   if(!valueValidation("first-name-label", first_name, "")){
-    errorText+="First name can't be empty";
+    document.getElementById('first-name-hint').style.display = "block";
+    error=true;
+  } else {
+    document.getElementById('last-name-hint').style.display = "none";
   }
   if(!validatePhoneNumber(phone_number, "phone-number-label")){
-    errorText+="Phone number can't be empty";
-  }
-  if(errorText != ""){
-    console.log(errorText);
+    document.getElementById("phone-number-hint").style.display = "block";
+    error=true;
   } else {
+    document.getElementById("phone-number-hint").style.display = "none";
+  }
+  if(!error){
     document.getElementById("public-profile").style.display = "none";
     document.getElementById("account-settings").style.display = "block";
+  }
+}
+
+function changeToNotification(){
+  var api_key_text = document.getElementById("api-key-text");
+  if(api_key_text.length != 64) {
+    document.getElementById("api-key-hint").style.display="block";
+  } else {
+    document.getElementById("api-key-hint").style.display="none";
   }
 }
 

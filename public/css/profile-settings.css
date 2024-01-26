@@ -84,13 +84,13 @@ body, html{
   position:relative;
   bottom: 2vh;
   width:135px;
-  right: 13px;
+  right:60px;
 }
 
 #email-div{
   position:relative;
   bottom:2vh;
-  left: 10px;
+  left: 55px;
 }
 
 .dropbtn {

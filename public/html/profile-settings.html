@@ -76,12 +76,14 @@
                     Last Name
                   </label>
                   <input type="last-name" class="form-control"aria-describedby="lastname" placeholder="Doe" id="last-name-text">
+                  <small id="last-name-hint" style="display: none; color: red;">Please provide your last name</small>
                 </div>  
                 <div class="form-group col" id="first-name-div">
                   <label id="first-name-label">
                     First Name
                   </label>
                   <input type="first-name"class="form-control"aria-describedby="firstname"placeholder="John" id="first-name-text">
+                  <small id="first-name-hint" style="display: none; color: red;">Please provide your first name</small>
                 </div>
               </div> 
               <div class="row">
@@ -98,11 +100,12 @@
                     </div>
                     <input type="phone-number"class="form-control"aria-describedby="phonenumber"placeholder="" id="phone-number-text">
                   </div>           
+                  <small id="phone-number-hint" style="display: none; color: red;">Please provide a valid phone number</small>
                 </div>
                 <div class="form-group col" id="email-div">
                   <label id="email-label">Email Address</label>
-                  <input type="emailAddress"class="form-control"aria-describedby="phonenumber"placeholder="" id="email-text">
-                  <small>Your email address can be changed at any time</small>
+                  <input type="emailAddress"class="form-control"aria-describedby="phonenumber"placeholder="" id="email-text" style="width: 200px;">
+                  <small id="email-hint" style="display: none; color: red;">Please provide a valid email address</small>
                 </div>
               </div>
               <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" id="public-profile-next-button" onclick="changeToAccountSettings()", type="submit">
@@ -120,6 +123,7 @@
                     Bitskins' API Key
                   </label>
                   <input type="api-key" class="form-control"aria-describedby="lastname" placeholder="Doe" id="api-key-text">
+                  <small id="api-key-hint" style="display: none; color: red;">Please provide a valid API key</small>
                 </div>  
                 <div class="form-group col" id="auth-div">
                   <label>
@@ -128,7 +132,7 @@
                   <input type="auth-token"class="form-control"aria-describedby="firstname"placeholder="John" id="auth-token-text">
                 </div>
               </div> 
-              <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" id="account-settings-next-button">
+              <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" id="account-settings-next-button" onclick="changeToNotification()">
                 Next
               </button>
             </div>
