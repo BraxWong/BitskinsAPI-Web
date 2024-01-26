@@ -52,3 +52,12 @@ npm install
 - Contact Us Page
 
 ![Contact Us Page](Resources/ContactUsPage.png)
+
+- Public Profile Page
+
+![Public Profile Page](Resources/PublicProfilePage.png)
+
+- Account Settings Page
+
+![Account Settings Page](Resources/AccountSettingsPage.png)
+

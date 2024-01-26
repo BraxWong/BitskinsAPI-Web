@@ -45,7 +45,11 @@ function changeToAccountSettings(){
   if(!error){
     document.getElementById("public-profile").style.display = "none";
     document.getElementById("account-settings").style.display = "block";
-  }
+    document.getElementById("public-profile-nav").classList.remove("active");
+    document.getElementById("public-profile-nav").classList.add("text-white");
+    document.getElementById("account-settings-nav").classList.remove("text-white")
+    document.getElementById("account-settings-nav").classList.add("active")
+  } 
 }
 
 function changeToNotification(){
