@@ -39,7 +39,8 @@ body, html{
 }
 
 #public-profile,
-#account-settings{
+#account-settings,
+#Notifications-div{
   position:relative;
   width: 600px;
   left: 14vh;
@@ -51,7 +52,9 @@ body, html{
   height: 60vh;
 }
 
-#public-profile-card-title{
+#public-profile-card-title,
+#Notifications-title
+{
   position: relative;
   bottom: 8vh;
   font-size: 25px;
@@ -171,6 +174,36 @@ body, html{
 }
 
 #account-settings-next-button:hover{
+  transform: scale(1.1) perspective(1px);
+  transition: 0.7s;
+}
+
+#phone-notifications-div{
+  position: relative;
+  right: 22%;
+  top: 25px;
+}
+
+#email-notifications-div{
+  position: relative;
+  bottom: 20px;
+  left: 25%
+}
+
+#phone-checkbox{
+  position: relative;
+  right: 24px;
+  top: 24px;
+}
+
+#Notifications-submit-button{
+  position: relative;
+  background-color: lightblue !important; 
+  top: 100px;
+  left: 8px;
+}
+
+#Notifications-submit-button:hover{
   transform: scale(1.1) perspective(1px);
   transition: 0.7s;
 }

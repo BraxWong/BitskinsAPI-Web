@@ -1,4 +1,3 @@
-
 var emailAddressInput = document.getElementById("email-text");
 $.ajax({
     url: "/currentUser",
@@ -53,11 +52,18 @@ function changeToAccountSettings(){
 }
 
 function changeToNotification(){
-  var api_key_text = document.getElementById("api-key-text");
+  var api_key_text = document.getElementById("api-key-text").value;
+  console.log(api_key_text.length);
   if(api_key_text.length != 64) {
     document.getElementById("api-key-hint").style.display="block";
   } else {
     document.getElementById("api-key-hint").style.display="none";
+    document.getElementById("account-settings").style.display="none";
+    document.getElementById("Notifications-div").style.display="";
+    document.getElementById("account-settings-nav").classList.remove("active");
+    document.getElementById("account-settings-nav").classList.add("text-white");
+    document.getElementById("notification-nav").classList.remove("text-white");
+    document.getElementById("notification-nav").classList.add("active");
   }
 }
 
