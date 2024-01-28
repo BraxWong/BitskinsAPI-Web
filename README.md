@@ -61,3 +61,7 @@ npm install
 
 ![Account Settings Page](Resources/AccountSettingsPage.png)
 
+- Notifications Page
+
+![Notifications Page](Resources/NotificationsPage.png)
+
