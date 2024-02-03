@@ -101,3 +101,38 @@ function validatePhoneNumber(phoneNumber, element){
     return false;
   }
 }
+
+function insertUserSettings()
+{
+  var lastName = document.getElementById("last-name-text").value;
+  var firstName = document.getElementById("first-name-text").value;
+  var phoneNumber = document.getElementById("phone-number-text").value;
+  var emailAddress = document.getElementById("email-text").value;
+  var apiKey = document.getElementById("api-key-text").value;
+  var authToken = document.getElementById("auth-token-text").value;
+  var emailAlerts = document.getElementById("email-checkbox").value; 
+  var phoneAlerts = document.getElementById("phone-checkbox").value;
+
+  const dataToInsert = {
+      lastName: lastName, 
+      firstName: firstName,
+      phoneNumber: phoneNumber,
+      emailAddress: emailAddress,
+      apiKey: apiKey,
+      authToken: authToken,
+      enableEmailAlerts: emailAlerts,
+      enablePhoneAlerts: phoneAlerts
+  };
+  $.ajax({
+    url: '/insertUserData',
+    type: 'POST',
+    contentType: 'application/json',
+    data: JSON.stringify(dataToInsert),
+    success: function(data, textStatus, xhr) {
+      alert("Your Account Settings Have Been Saved");
+    },
+    error: function(data, textStatus, xhr){
+      alert("Your Account Settings Have Not Been Saved");
+    }
+  })  
+}

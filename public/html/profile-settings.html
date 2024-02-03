@@ -375,14 +375,14 @@
                   <label>
                     Bitskins' API Key
                   </label>
-                  <input type="api-key" class="form-control"aria-describedby="lastname" placeholder="Doe" id="api-key-text">
+                  <input type="api-key" class="form-control"aria-describedby="lastname" placeholder="API-KEY" id="api-key-text">
                   <small id="api-key-hint" style="display: none; color: red;">Please provide a valid API key</small>
                 </div>  
                 <div class="form-group col" id="auth-div">
                   <label>
                     Bitskins' Authentication Token 
                   </label>
-                  <input type="auth-token"class="form-control"aria-describedby="firstname"placeholder="John" id="auth-token-text">
+                  <input type="auth-token"class="form-control"aria-describedby="firstname"placeholder="AUTH-TOKEN" id="auth-token-text">
                 </div>
               </div> 
               <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" id="account-settings-next-button" onclick="changeToNotification()">
@@ -408,7 +408,7 @@
                   </label>
                 </div>
               </div> 
-              <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" id="Notifications-submit-button" onclick="changeToAccountSettings()", type="submit">
+              <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" id="Notifications-submit-button" onclick="insertUserSettings()", type="submit">
                 Submit
               </button>
             </div>
