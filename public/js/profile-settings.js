@@ -1,4 +1,16 @@
 var emailAddressInput = document.getElementById("email-text");
+const dropdownMenu = document.querySelectorAll(".dropdown-content a");
+var dropdown_button_text = document.getElementById("dropdown-btn-text");
+var countryISO = "";
+dropdownMenu.forEach(item => {
+  item.addEventListener('click', function(event) {
+    event.preventDefault();
+    var areaCode = this.getAttribute('area-code');
+    countryISO = this.getAttribute('country');
+    dropdown_button_text.innerText = areaCode;
+  });
+});
+
 $.ajax({
     url: "/currentUser",
     type: 'GET',
@@ -136,3 +148,5 @@ function insertUserSettings()
     }
   })  
 }
+
+
