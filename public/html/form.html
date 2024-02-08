@@ -7,31 +7,48 @@
     <title>Bitskins API Web Portal</title>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link href="/public/css/Bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="/public/css/SignUp.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script src="/public/js/SignUp.js"></script>
+    <link href="/public/css/form.css" rel="stylesheet">
+    <link href="/public/css/main.css" rel="stylesheet">
   </head>
-  <body>
-    <!--Start of Nav Bar-->
+<body>
+  <!--Start of Nav Bar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="main.html">Bitskins API Web Portal</a>
+        <a class="navbar-brand" href="/public/html/main.html">Bitskins API Web Portal</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
               <a class="nav-item nav-link" href="/public/html/main.html">Home</a>
               <a class="nav-item nav-link" href="#">About</a>
-              <a class="nav-item nav-link" href="/public/html/form.html">Forms</a>
+              <a class="nav-item nav-link active" href="/public/html/form.html">Forms</a>
               <a class="nav-item nav-link" href="/public/html/contact-us.html">Contact Us</a>
           </div>
-          <a class="btn btn-outline-success my-1 my-sm-1" href="/public/html/login.html" id="Login-Button">Login</a>
         </div>
     </nav>
     <!--End of Nav Bar-->
-      <main>
-      </main>
-    <script src="/public/js/Bootstrap/bootstrap.bundle.min.js"></script>
-</script>
-</html>
+
+    <div class="sidenav">
+      <button class="dropdown-btn">Account 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-container">
+        <button class="profile-dropdown-btn">Profile
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <br>
+        <button class="affiliate-dropdown-btn">Affiliate
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <button class="two-factor-dropdown-btn">Two-factor authentication
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <button class="api-dropdown-btn">API Access
+          <i class="fa fa-caret-down"></i>
+        </button>
+      </div>
+    </div>
+  <script src="/public/js/form.js"></script>
+</body>
+</html> 
+
