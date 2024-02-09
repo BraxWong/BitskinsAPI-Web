@@ -21,31 +21,50 @@
           <div class="navbar-nav">
               <a class="nav-item nav-link" href="/public/html/main.html">Home</a>
               <a class="nav-item nav-link" href="#">About</a>
-              <a class="nav-item nav-link active" href="/public/html/form.html">Forms</a>
+              <a class="nav-item nav-link" href="/public/html/form.html">Forms</a>
               <a class="nav-item nav-link" href="/public/html/contact-us.html">Contact Us</a>
           </div>
         </div>
     </nav>
     <!--End of Nav Bar-->
-
-    <div class="sidenav">
-      <button class="dropdown-btn">Account 
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <button class="profile-dropdown-btn">Profile
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <br>
-        <button class="affiliate-dropdown-btn">Affiliate
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <button class="two-factor-dropdown-btn">Two-factor authentication
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <button class="api-dropdown-btn">API Access
-          <i class="fa fa-caret-down"></i>
-        </button>
+    <div class="row">
+      <div class="sidenav col-md-3">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          <span class="fs-4">Forms</span>
+        </a>
+        <hr style="color: white;">
+        <div id="account-dropdown-div">
+          <button class="account-dropdown-btn">Account 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="account-dropdown-container">
+            <button class="profile-dropdown-btn">Profile
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <button class="affiliate-dropdown-btn">Affiliate
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <button class="two-factor-dropdown-btn">Two-factor authentication
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <button class="api-dropdown-btn">API Access
+              <i class="fa fa-caret-down"></i>
+            </button>
+          </div>
+        </div>
+        <div id="config-dropdown-div">
+          <div class="config-dropdown-btn">
+            <button class="config-dropdown-btn" style="position: relative; right: 17px;">Config
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="config-dropdown-container">
+              <a href="#">Get currency rates</a>
+              <a href="#">Get fee plans</a>
+              <a href="#">Get platform status</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   <script src="/public/js/form.js"></script>

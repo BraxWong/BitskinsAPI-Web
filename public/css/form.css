@@ -17,7 +17,8 @@ body {
 
 /* Style the sidenav links and the dropdown button */
 .sidenav a, 
-.dropdown-btn,
+.account-dropdown-btn,
+.config-dropdown-btn,
 .profile-dropdown-btn,
 .affiliate-dropdown-btn,
 .two-factor-dropdown-btn, 
@@ -38,7 +39,8 @@ body {
 
 /* On mouse-over */
 .sidenav a:hover, 
-.dropdown-btn:hover, 
+.account-dropdown-btn:hover, 
+.config-dropdown-btn:hover,
 .profile-dropdown-btn:hover,
 .affiliate-dropdown-btn:hover,
 .two-factor-dropdown-btn:hover, 
@@ -60,7 +62,9 @@ body {
 }
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
+.account-dropdown-container,
+.config-dropdown-container
+{
   display: none;
   background-color: #262626;
   padding-left: 8px;
