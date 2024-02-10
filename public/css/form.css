@@ -19,9 +19,24 @@ body {
 .sidenav a, 
 .account-dropdown-btn,
 .config-dropdown-btn,
+.market-dropdown-btn,
+.steam-dropdown-btn,
+.steam-trades-dropdown-btn,
 .profile-dropdown-btn,
 .affiliate-dropdown-btn,
-.two-factor-dropdown-btn, 
+.two-factor-dropdown-btn,
+.pricing-dropdown-btn,
+.market-items-dropdown-btn,
+.buy-items-dropdown-btn,
+.withdraw-dropdown-btn,
+.delist-dropdown-btn,
+.relist-dropdown-btn,
+.update-price-dropdown-btn,
+.item-history-dropdown-btn,
+.receipt-dropdown-btn,
+.bump-up-dropdown-btn,
+.all-available-skins-dropdown-btn,
+.all-insell-items-dropdown-btn,
 .api-dropdown-btn 
 {
   padding: 6px 8px 6px 16px;
@@ -41,6 +56,8 @@ body {
 .sidenav a:hover, 
 .account-dropdown-btn:hover, 
 .config-dropdown-btn:hover,
+.steam-dropdown-btn:hover,
+.steam-trades-dropdown-btn:hover,
 .profile-dropdown-btn:hover,
 .affiliate-dropdown-btn:hover,
 .two-factor-dropdown-btn:hover, 
@@ -63,7 +80,10 @@ body {
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .account-dropdown-container,
-.config-dropdown-container
+.config-dropdown-container,
+.market-dropdown-container,
+.steam-dropdown-container,
+.steam-trades-dropdown-container
 {
   display: none;
   background-color: #262626;
