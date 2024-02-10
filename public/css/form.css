@@ -21,6 +21,10 @@ body {
 .config-dropdown-btn,
 .market-dropdown-btn,
 .steam-dropdown-btn,
+.wallet-dropdown-btn,
+.wallet-stats-dropdown-btn,
+.wallet-transactions-dropdown-btn,
+.wallet-reports-dropdown-btn,
 .steam-trades-dropdown-btn,
 .profile-dropdown-btn,
 .affiliate-dropdown-btn,
@@ -58,6 +62,10 @@ body {
 .config-dropdown-btn:hover,
 .steam-dropdown-btn:hover,
 .steam-trades-dropdown-btn:hover,
+.wallet-dropdown-btn:hover,
+.wallet-stats-dropdown-btn:hover,
+.wallet-transactions-dropdown-btn:hover,
+.wallet-reports-dropdown-btn:hover,
 .profile-dropdown-btn:hover,
 .affiliate-dropdown-btn:hover,
 .two-factor-dropdown-btn:hover, 
@@ -83,7 +91,11 @@ body {
 .config-dropdown-container,
 .market-dropdown-container,
 .steam-dropdown-container,
-.steam-trades-dropdown-container
+.steam-trades-dropdown-container,
+.wallet-dropdown-container,
+.wallet-stats-dropdown-container,
+.wallet-transactions-dropdown-container,
+.wallet-reports-dropdown-container
 {
   display: none;
   background-color: #262626;
