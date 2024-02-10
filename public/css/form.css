@@ -22,6 +22,16 @@ body {
 .market-dropdown-btn,
 .steam-dropdown-btn,
 .wallet-dropdown-btn,
+.wallet-deposit-dropdown-btn,
+.wallet-withdraw-dropdown-btn,
+.wallet-withdraw-cryptocurrency-dropdown-btn,
+.wallet-withdraw-binance-dropdown-btn,
+.visa-dropdown-btn,
+.cryptocurrency-dropdown-btn,
+.binance-dropdown-btn,
+.giftcode-dropdown-btn,
+.zen-dropdown-btn,
+.card-dropdown-btn,
 .wallet-stats-dropdown-btn,
 .wallet-transactions-dropdown-btn,
 .wallet-reports-dropdown-btn,
@@ -66,10 +76,20 @@ body {
 .wallet-stats-dropdown-btn:hover,
 .wallet-transactions-dropdown-btn:hover,
 .wallet-reports-dropdown-btn:hover,
+.wallet-deposit-dropdown-btn:hover,
+.cryptocurrency-dropdown-btn:hover,
+.giftcode-dropdown-btn:hover,
+.zen-dropdown-btn:hover,
+.card-dropdown-btn:hover,
 .profile-dropdown-btn:hover,
 .affiliate-dropdown-btn:hover,
 .two-factor-dropdown-btn:hover, 
-.api-dropdown-btn:hover {
+.api-dropdown-btn:hover,
+.wallet-withdraw-dropdown-btn:hover,
+.wallet-withdraw-cryptocurrency-dropdown-btn:hover,
+.wallet-withdraw-binance-dropdown-btn:hover,
+.visa-dropdown-btn:hover
+{
   color: #f1f1f1;
 }
 
@@ -95,7 +115,17 @@ body {
 .wallet-dropdown-container,
 .wallet-stats-dropdown-container,
 .wallet-transactions-dropdown-container,
-.wallet-reports-dropdown-container
+.wallet-reports-dropdown-container,
+.wallet-deposit-dropdown-container,
+.wallet-withdraw-dropdown-container,
+.wallet-withdraw-cryptocurrency-container,
+.wallet-withdraw-binance-dropdown-container,
+.visa-dropdown-container,
+.binance-dropdown-container,
+.cryptocurrency-dropdown-container,
+.giftcode-dropdown-container,
+.zen-dropdown-container,
+.card-dropdown-container
 {
   display: none;
   background-color: #262626;

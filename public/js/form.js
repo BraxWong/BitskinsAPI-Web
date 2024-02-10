@@ -7,103 +7,30 @@ var wallet_dropdown = document.getElementsByClassName("wallet-dropdown-btn");
 var wallet_stats_dropdown = document.getElementsByClassName("wallet-stats-dropdown-btn");
 var wallet_transactions_dropdown = document.getElementsByClassName("wallet-transactions-dropdown-btn");
 var wallet_reports_dropdown = document.getElementsByClassName("wallet-reports-dropdown-btn");
-for(var i = 0; i < wallet_reports_dropdown.length; ++i) {
-  wallet_reports_dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}
+var wallet_deposit_dropdown = document.getElementsByClassName("wallet-deposit-dropdown-btn");
+var cryptocurrency_dropdown = document.getElementsByClassName("cryptocurrency-dropdown-btn");
+var binance_dropdown = document.getElementsByClassName("binance-dropdown-btn");
+var giftcode_dropdown = document.getElementsByClassName("giftcode-dropdown-btn");
+var zen_dropdown = document.getElementsByClassName("zen-dropdown-btn");
+var card_dropdown = document.getElementsByClassName("card-dropdown-btn");
+var wallet_withdraw_dropdown = document.getElementsByClassName("wallet-withdraw-dropdown-btn");
+var wallet_withdraw_cryptocurrency_dropdown = document.getElementsByClassName("wallet-withdraw-cryptocurrency-dropdown-btn");
+var wallet_withdraw_binance_dropdown = document.getElementsByClassName("wallet-withdraw-binance-dropdown-btn");
+var visa_dropdown = document.getElementsByClassName("visa-dropdown-btn");
+var dropdownarr = [account_dropdown, config_dropdown, market_dropdown, steam_dropdown, steam_trades_dropdown, wallet_dropdown, wallet_stats_dropdown, wallet_transactions_dropdown,
+                   wallet_reports_dropdown, wallet_deposit_dropdown, cryptocurrency_dropdown, binance_dropdown, giftcode_dropdown, zen_dropdown, card_dropdown, wallet_withdraw_dropdown,
+                   wallet_withdraw_cryptocurrency_dropdown, wallet_withdraw_binance_dropdown, visa_dropdown];
 
-for(var i = 0; i < wallet_dropdown.length; ++i) {
-  wallet_dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}
-for(var i = 0; i < wallet_transactions_dropdown.length; ++i) {
-  wallet_transactions_dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}
-for(var i = 0; i < wallet_stats_dropdown.length; ++i) {
-  wallet_stats_dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}
-for(var i = 0; i < account_dropdown.length; ++i) {
-  account_dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}
-for(var i = 0; i < config_dropdown.length; ++i) {
-  config_dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}
-for(var i = 0; i < market_dropdown.length; ++i) {
-  market_dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}
-for(var i = 0; i < steam_dropdown.length; ++i) {
-  steam_dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}
-for(var i = 0; i < steam_trades_dropdown.length; ++i) {
-  steam_trades_dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
+for(var i = 0; i < dropdownarr.length; ++i) {
+  for(var j = 0; j < dropdownarr[i].length; ++j){
+    dropdownarr[i][j].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if(dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
 }
