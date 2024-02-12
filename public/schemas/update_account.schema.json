@@ -1,0 +1,49 @@
+{
+  "set": {
+    "strict": "remove",
+    "minProps": 1,
+    "type": "object",
+    "props": {
+      "o_settings": {
+        "type": "number",
+        "integer": true,
+        "min": 0,
+        "max": 1.7976931348623157e+308,
+        "optional": true
+      },
+      "o_notify": {
+        "type": "number",
+        "integer": true,
+        "min": 0,
+        "max": 1.7976931348623157e+308,
+        "optional": true
+      },
+      "store_alias": {
+        "type": "string",
+        "min": 3,
+        "max": 20,
+        "optional": true
+      },
+      "currency": {
+        "type": "enum",
+        "values": [
+          "USD",
+          "PLN",
+          "BTC",
+          "LTC",
+          "ETH",
+          "EUR"
+        ],
+        "optional": true
+      },
+      "language": {
+        "type": "enum",
+        "values": [
+          "en",
+          "pl"
+        ],
+        "optional": true
+      }
+    }
+  }
+}

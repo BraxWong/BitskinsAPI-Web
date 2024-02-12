@@ -50,6 +50,10 @@ app.get('/profile-settings', function(request, response) {
   })
 })
 
+app.get('/update-account', function(request, response) {
+  response.json("public/schemas/update_account.schema.json");  
+});
+
 app.listen(8080, "127.0.0.1", () => {
   process.on('exit', () => {
     // Kill the port when the process is about to exit
