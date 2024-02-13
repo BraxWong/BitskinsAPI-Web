@@ -21,27 +21,34 @@ var dropdownarr = [account_dropdown, config_dropdown, market_dropdown, steam_dro
                    wallet_reports_dropdown, wallet_deposit_dropdown, cryptocurrency_dropdown, binance_dropdown, giftcode_dropdown, zen_dropdown, card_dropdown, wallet_withdraw_dropdown,
                    wallet_withdraw_cryptocurrency_dropdown, wallet_withdraw_binance_dropdown, visa_dropdown];
 var form = document.getElementById("form");
-var schema = "";
+
 $.ajax({
-  url: '/update-account',
+  url: '/update-tradelink',
   type: 'GET',
   contentType: "application/json",
   success: function(data){
-    schema = data;
     console.log(data);
+    var config = {
+      use_name_attributes: false,
+      theme: 'bootstrap4',
+      disable_edit_json: true,
+      disable_properties: true,
+      disable_collapse: true,
+      schema: {
+        'title': 'Update Trade Link',
+        'properties': {
+          'tradelink': {
+            'type': 'url',
+            'min': 100
+          }
+        }
+      }
+    };
+    const editor = new JSONEditor(form, config);
   },
   error: function(data){
     console.log("Error");
   }
-});
-
-const editor = new JSONEditor(form, {
-  theme: 'bootstrap4',
-  disable_array_add: true,
-  disable_array_delete: true,
-  disable_collapse: true,
-  disable_edit_json: true,
-  schema: schema 
 });
 
 for(var i = 0; i < dropdownarr.length; ++i) {

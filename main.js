@@ -1,7 +1,9 @@
 var express = require('express');
 var app = express();
 var fs = require('fs');
-var database = require('./public/js/Node/database.js')
+var database = require('./public/js/Node/database.js');
+var update_account = require('./public/schemas/update_account.schema.json');
+var update_tradelink = require('./public/schemas/update_tradelink_schema.json');
 const kill = require('kill-port')
 
 app.use('/public', express.static(__dirname + '/public'));
@@ -51,7 +53,13 @@ app.get('/profile-settings', function(request, response) {
 })
 
 app.get('/update-account', function(request, response) {
-  response.json("public/schemas/update_account.schema.json");  
+  response.header("Content-Type", 'application/json');
+  response.send(update_account);
+});
+
+app.get('/update-tradelink', function(request, response) {
+  response.header("Content-Type", 'application/json');
+  response.send(update_tradelink);
 });
 
 app.listen(8080, "127.0.0.1", () => {

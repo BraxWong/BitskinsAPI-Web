@@ -1,0 +1,9 @@
+{
+  "title": "Update Trade Link",
+  "properties": {
+    "tradelink": {
+      "type": "url",
+      "min": 100
+    }
+  }
+}
