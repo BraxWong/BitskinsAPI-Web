@@ -109,6 +109,12 @@ body {
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .account-dropdown-container,
 .config-dropdown-container,
+.profile-dropdown-container,
+.affiliate-dropdown-container,
+.two-factor-dropdown-container,
+.api-dropdown-container,
+.pricing-dropdown-container,
+.market-items-dropdown-container,
 .market-dropdown-container,
 .steam-dropdown-container,
 .steam-trades-dropdown-container,
