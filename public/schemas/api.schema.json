@@ -1,0 +1,9 @@
+{
+  "title": "Insert your API key",
+  "properties": {
+    "API": {
+      "type": "string",
+      "min": 64 
+    }
+  }
+}

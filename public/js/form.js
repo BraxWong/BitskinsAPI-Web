@@ -39,30 +39,30 @@ var dropdownarr = [account_dropdown, profile_dropdown, affiliate_dropdown, two_f
                    wallet_stats_dropdown, wallet_transactions_dropdown, wallet_reports_dropdown, wallet_deposit_dropdown, cryptocurrency_dropdown, binance_dropdown, 
                    giftcode_dropdown, zen_dropdown, card_dropdown, wallet_withdraw_dropdown, wallet_withdraw_cryptocurrency_dropdown, wallet_withdraw_binance_dropdown, visa_dropdown];
 var form = document.getElementById("form");
-
+var currentSchema = {};
+var editor = "";
 $.ajax({
-  url: '/update-tradelink',
+  url: '/get-api',
   type: 'GET',
   contentType: "application/json",
   success: function(data){
-    console.log(data);
+    currentSchema = data;
     var config = {
       use_name_attributes: false,
       theme: 'bootstrap4',
       disable_edit_json: true,
       disable_properties: true,
       disable_collapse: true,
-      schema: {
-        'title': 'Update Trade Link',
-        'properties': {
-          'tradelink': {
-            'type': 'url',
-            'min': 100
-          }
-        }
-      }
+      schema: currentSchema 
     };
-    const editor = new JSONEditor(form, config);
+    editor = new JSONEditor(form, config);
+    var stringifiedJSON = JSON.stringify(currentSchema);
+    editor.on('ready', () => {
+      if(stringifiedJSON.includes("API"))
+      {
+        returnUserData();
+      }
+    })
   },
   error: function(data){
     console.log("Error");
@@ -81,4 +81,18 @@ for(var i = 0; i < dropdownarr.length; ++i) {
       }
     });
   }
+}
+
+function returnUserData(){
+  $.ajax({
+    url: '/getUserData',
+    type: 'GET',
+    contentType: "application/json",
+    success: function(data){
+      console.log("DUB");
+    },
+    error: function(data){
+      console.log("L");
+    }
+  });
 }

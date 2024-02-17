@@ -1,9 +1,11 @@
 var express = require('express');
+var axios = require('axios');
 var app = express();
 var fs = require('fs');
 var database = require('./public/js/Node/database.js');
 var update_account = require('./public/schemas/update_account.schema.json');
 var update_tradelink = require('./public/schemas/update_tradelink_schema.json');
+var bitSkins_api = require('./public/schemas/api.schema.json');
 const kill = require('kill-port')
 
 app.use('/public', express.static(__dirname + '/public'));
@@ -57,9 +59,15 @@ app.get('/update-account', function(request, response) {
   response.send(update_account);
 });
 
+
 app.get('/update-tradelink', function(request, response) {
   response.header("Content-Type", 'application/json');
   response.send(update_tradelink);
+});
+
+app.get('/get-api', function(request, response) {
+  response.header("Content-Type", 'application/json');
+  response.send(bitSkins_api);
 });
 
 app.listen(8080, "127.0.0.1", () => {

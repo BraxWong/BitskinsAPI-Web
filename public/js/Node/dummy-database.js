@@ -51,6 +51,7 @@ const dataToInsert = {
 
 const db = client.db('DATABASE_NAME');
 const collection = db.collection('DATABASE_COLLECTION_NAME');
+const collection2 = db.collection('DATABASE2_COLLECTION_NAME');
 
 app.get("/insertData", async function(request, response) {
   const result = collection.insertOne(request.body);
@@ -79,6 +80,12 @@ app.get("/findUser", async function(request, response) {
   }
 })
 
+app.get("/getUserData", async function(request, response){
+  const userEmail = request.cookies.userEmail;
+  const cursor = collection2.distinct(userEmail);
+  response.send(cursor);
+})
+
 app.get("/userLogin", async function(request, response) {
   const result = await collection.findOne({email: request.body.email, password: request.body.password});
   if(result){
@@ -89,4 +96,9 @@ app.get("/userLogin", async function(request, response) {
     response.status(500).json({success: false});
   }
 })
+
+app.get("/currentUser", function(request, response){
+  response.send(request.cookies.userEmail);
+})
+
 module.exports = app;
