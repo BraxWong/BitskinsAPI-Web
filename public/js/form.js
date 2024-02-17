@@ -41,51 +41,75 @@ var dropdownarr = [account_dropdown, profile_dropdown, affiliate_dropdown, two_f
 var form = document.getElementById("form");
 var currentSchema = {};
 var editor = "";
+var currentURL = "/get-api";
+var type = "GET";
+
 $.ajax({
   url: '/startDatabase',
   type: 'GET',
   success: function(data) {
     console.log(data);
     databaseLoggedOn = true;
-  }
-});
-
-$.ajax({
-  url: '/get-api',
-  type: 'GET',
-  contentType: "application/json",
-  success: function(data){
-    currentSchema = data;
-    var config = {
-      use_name_attributes: false,
-      theme: 'bootstrap4',
-      disable_edit_json: true,
-      disable_properties: true,
-      disable_collapse: true,
-      schema: currentSchema 
-    };
-    editor = new JSONEditor(form, config);
-    var stringifiedJSON = JSON.stringify(currentSchema);
-    editor.on('ready', () => {
-      if(stringifiedJSON.includes("API"))
-      {
-        $.ajax({
-          url: '/userData',
-          type: 'GET',
-          success: function(data){
-            editor.setValue({"API": data.apiKey});
-          },
-          error: function(data){
-            console.log("L");
-          }
-        });
-      }
-    })
   },
-  error: function(data){
-    console.log("Error");
+  error: function(xhr,status,error) {
+    console.error(error);
   }
 });
+showForm(currentURL, type);
+
+function returnUserData(){
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      url: '/userData',
+      type: 'GET',
+      success: function(data){
+        resolve(data.apiKey);
+      },
+      error: function(xhr,status,error){
+        reject(error);
+      }
+    });
+  });
+}
+
+function showForm(url, type)
+{
+  $.ajax({
+    url: currentURL,
+    type: type,
+    contentType: "application/json",
+    success: function(data) {
+      currentSchema = data;
+      var config = {
+        use_name_attributes: false,
+        theme: 'bootstrap4',
+        disable_edit_json: true,
+        disable_properties: true,
+        disable_collapse: true,
+        schema: currentSchema 
+      }
+      editor = new JSONEditor(form, config);
+      if(JSON.stringify(currentSchema).includes("API")){
+        editor.on('ready', ()=> {
+          try{
+            returnUserData().then(data => {
+              editor.setValue({"API": data});
+            });
+          } catch (error){
+            console.error(error);
+          }
+        })
+      } 
+    }
+  });
+}
+
+
+//                        ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮
+//                        ┃                             ┃
+//                        ┃ SideNav Population Function ┃
+//                        ┃                             ┃
+//                        ╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 
 for(var i = 0; i < dropdownarr.length; ++i) {
   for(var j = 0; j < dropdownarr[i].length; ++j){
@@ -101,15 +125,4 @@ for(var i = 0; i < dropdownarr.length; ++i) {
   }
 }
 
-async function returnUserData(){
-  $.ajax({
-    url: '/userData',
-    type: 'GET',
-    success: function(data){
-      return data.apiKey;
-    },
-    error: function(data){
-      console.log("L");
-    }
-  });
-}
+

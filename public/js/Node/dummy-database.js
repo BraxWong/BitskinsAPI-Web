@@ -81,9 +81,12 @@ app.get("/findUser", async function(request, response) {
 })
 
 app.get("/getUserData", async function(request, response){
-  const userEmail = request.cookies.userEmail;
-  const cursor = collection2.distinct(userEmail);
-  response.send(cursor);
+  const cursor = collection2.findOne({email: request.cookies.email});
+  if(cursor){
+    response.status(200).json(cursor);
+  } else {
+    response.status(500).json({error: "The user does not exist"});
+  }
 })
 
 app.get("/userLogin", async function(request, response) {
