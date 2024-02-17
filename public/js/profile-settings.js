@@ -128,7 +128,7 @@ function insertUserSettings()
       lastName: lastName,
       firstName: firstName,
       phoneNumber: phoneNumber,
-      emailAddress: emailAddress,
+      email: emailAddress,
       apiKey: apiKey,
       authToken: authToken,
       enableEmailAlerts: emailAlerts,

@@ -42,6 +42,15 @@ var form = document.getElementById("form");
 var currentSchema = {};
 var editor = "";
 $.ajax({
+  url: '/startDatabase',
+  type: 'GET',
+  success: function(data) {
+    console.log(data);
+    databaseLoggedOn = true;
+  }
+});
+
+$.ajax({
   url: '/get-api',
   type: 'GET',
   contentType: "application/json",
@@ -60,7 +69,16 @@ $.ajax({
     editor.on('ready', () => {
       if(stringifiedJSON.includes("API"))
       {
-        returnUserData();
+        $.ajax({
+          url: '/userData',
+          type: 'GET',
+          success: function(data){
+            editor.setValue({"API": data.apiKey});
+          },
+          error: function(data){
+            console.log("L");
+          }
+        });
       }
     })
   },
@@ -83,13 +101,12 @@ for(var i = 0; i < dropdownarr.length; ++i) {
   }
 }
 
-function returnUserData(){
+async function returnUserData(){
   $.ajax({
-    url: '/getUserData',
+    url: '/userData',
     type: 'GET',
-    contentType: "application/json",
     success: function(data){
-      console.log("DUB");
+      return data.apiKey;
     },
     error: function(data){
       console.log("L");
