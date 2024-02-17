@@ -122,11 +122,10 @@ function insertUserSettings()
   var emailAddress = document.getElementById("email-text").value;
   var apiKey = document.getElementById("api-key-text").value;
   var authToken = document.getElementById("auth-token-text").value;
-  var emailAlerts = document.getElementById("email-checkbox").value; 
-  var phoneAlerts = document.getElementById("phone-checkbox").value;
-
+  var emailAlerts = document.getElementById("email-checkbox").checked; 
+  var phoneAlerts = document.getElementById("phone-checkbox").checked;
   const dataToInsert = {
-      lastName: lastName, 
+      lastName: lastName,
       firstName: firstName,
       phoneNumber: phoneNumber,
       emailAddress: emailAddress,
@@ -146,7 +145,7 @@ function insertUserSettings()
     error: function(data, textStatus, xhr){
       alert("Your Account Settings Have Not Been Saved");
     }
-  })  
+  })
 }
 
 
