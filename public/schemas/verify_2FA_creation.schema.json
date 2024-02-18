@@ -1,0 +1,17 @@
+{
+  "title": "Verify Creating 2FA",
+  "properties": {
+    "email_code": {
+      "type": "string",
+      "pattern": {},
+      "min": 6,
+      "max": 6
+    },
+    "twofa_code": {
+      "type": "string",
+      "pattern": {},
+      "min": 6,
+      "max": 6
+    }
+  }
+}

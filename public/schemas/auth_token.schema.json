@@ -1,0 +1,8 @@
+{
+  "title": "Insert your auth token",
+  "properties": {
+    "Auth Token": {
+      "type": "string"
+    }
+  }
+}

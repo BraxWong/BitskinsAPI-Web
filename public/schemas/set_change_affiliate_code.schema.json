@@ -1,0 +1,11 @@
+{
+  "title": "Set/Change Affiliate Code",
+  "properties": {
+    "code": {
+      "type": "string",
+      "min": 5,
+      "max": 24,
+      "pattern": {}
+    }
+  }
+}

@@ -41,7 +41,7 @@ var dropdownarr = [account_dropdown, profile_dropdown, affiliate_dropdown, two_f
 var form = document.getElementById("form");
 var currentSchema = {};
 var editor = "";
-var currentURL = "/get-api";
+var currentURL = "/get-historic-rewards";
 var type = "GET";
 
 $.ajax({
