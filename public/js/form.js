@@ -41,8 +41,8 @@ var dropdownarr = [account_dropdown, profile_dropdown, affiliate_dropdown, two_f
 var form = document.getElementById("form");
 var currentSchema = {};
 var editor = "";
-var currentURL = "/get-historic-rewards";
-var type = "GET";
+var currentURL = "/account/profile/me";
+var endPointMethod = "GET"
 
 $.ajax({
   url: '/startDatabase',
@@ -55,7 +55,8 @@ $.ajax({
     console.error(error);
   }
 });
-showForm(currentURL, type);
+
+showForm(2, currentURL, endPointMethod);
 
 function returnUserData(){
   return new Promise((resolve, reject) => {
@@ -72,12 +73,16 @@ function returnUserData(){
   });
 }
 
-function showForm(url, type)
+function showForm(schemaNum, endPoint, method)
 {
+  form.innerHTML = "";
+  currentURL = endPoint;
+  endPoint = method; 
   $.ajax({
-    url: currentURL,
-    type: type,
+    url: '/get-schema',
+    type: 'POST',
     contentType: "application/json",
+    data: JSON.stringify({"num": schemaNum}),
     success: function(data) {
       currentSchema = data;
       var config = {
@@ -86,8 +91,8 @@ function showForm(url, type)
         disable_edit_json: true,
         disable_properties: true,
         disable_collapse: true,
-        schema: currentSchema 
-      }
+        schema: currentSchema,
+      };
       editor = new JSONEditor(form, config);
       if(JSON.stringify(currentSchema).includes("API")){
         editor.on('ready', ()=> {
@@ -99,11 +104,14 @@ function showForm(url, type)
             console.error(error);
           }
         })
-      } 
+      }
     }
   });
 }
 
+function testing(){
+  alert("TESTING");
+}
 
 //                        ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮
 //                        ┃                             ┃

@@ -1,0 +1,32 @@
+{
+  "title": "Get Pricing Summary",
+  "properties": {
+   "app_id": {
+      "type": "enum",
+      "values": [
+        730,
+        730,
+        570,
+        440,
+        252490
+      ],
+      "default": 730
+    },
+    "skin_id": {
+      "type": "number",
+      "integer": true,
+      "min": 1,
+      "max": 1.7976931348623157e+308
+    },
+    "date_from": {
+      "type": "string",
+      "pattern": {},
+      "optional": true
+    },
+    "date_to": {
+      "type": "string",
+      "pattern": {},
+      "optional": true
+    }
+  }
+}

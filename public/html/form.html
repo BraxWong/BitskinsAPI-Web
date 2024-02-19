@@ -44,38 +44,38 @@
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="profile-dropdown-container">
-              <a href="#">Get current session</a>
-              <a href="#">Get account balance</a>
+              <a href="#" onclick="showForm(2, '/account/profile/me', 'GET')">Get current session</a>
+              <a href="#" onclick="showForm(2, '/account/profile/balance', 'POST')">Get account balance</a>
               <a href="#">Update account</a>
-              <a href="#">Update trade link</a>
-              <a href="#">Block my account</a>
+              <a href="#" onclick="showForm(1, '/account/profile/update_tradelink', 'POST')">Update trade link</a>
+              <a href="#" onclick="showForm(2, '/account/profile/block', 'POST')">Block my account</a>
             </div>
             <button class="affiliate-dropdown-btn">Affiliate
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="affiliate-dropdown-container">
-              <a href="#">Get affiliate info</a>
-              <a href="#">claim money</a>
-              <a href="#">List historical rewards</a>
-              <a href="#">Set or change affiliate code</a>
+              <a href="#" onclick="showForm(2, '/account/affiliate/me', 'POST')">Get affiliate info</a>
+              <a href="#" onclick="showForm(2, '/account/affiliate/transfer_money', 'POST')">claim money</a>
+              <a href="#" onclick="showForm(3,'/account/affiliate/history', 'POST')">List historical rewards</a>
+              <a href="#" onclick="showForm(4,'/account/affiliate/set_code', 'POST')">Set or change affiliate code</a>
             </div>
             <button class="two-factor-dropdown-btn">Two-factor authentication
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="two-factor-dropdown-container">
-              <a href="#">Create 2FA</a>
-              <a href="#">Verify creating 2FA</a>
-              <a href="#">Disable 2FA</a>
-              <a href="#">Verify disabling 2FA</a>
-              <a href="#">Lock 2FA</a>
-              <a href="#">Unlock 2FA</a>
+              <a href="#" onclick="showForm(5, '/account/twofa/create', 'POST')">Create 2FA</a>
+              <a href="#" onclick="showForm(6, '/account/twofa/verify', 'POST')">Verify creating 2FA</a>
+              <a href="#" onclick="showForm(7, '/account/twofa/disable', 'POST')">Disable 2FA</a>
+              <a href="#" onclick="showForm(8, '/account/twofa/verify_disable', 'POST')">Verify disabling 2FA</a>
+              <a href="#" onclick="showForm(5, '/account/twofa/lock', 'POST')">Lock 2FA</a>
+              <a href="#" onclick="showForm(7, '/account/twofa/unlock', 'POST')">Unlock 2FA</a>
             </div>
             <button class="api-dropdown-btn">API Access
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="api-dropdown-container">
-              <a href="#">Create API Key</a>
-              <a href="#">Disable API Key</a>
+              <a href="#" onclick="showForm(5, '/account/apikey/create', 'POST')">Create API Key</a>
+              <a href="#" onclick="showForm(2, '/account/apikey/disable', 'POST')">Disable API Key</a>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 {
   "title": "Verify disabling 2FA",
-  "Properties": {
+  "properties": {
     "email_code": {
       "type": "string",
       "pattern": {},

@@ -12,6 +12,10 @@ var bitSkins_auth_token = require('./public/schemas/auth_token.schema.json');
 var verify_2FA_creation = require('./public/schemas/verify_2FA_creation.schema.json');
 var disable_2FA = require('./public/schemas/disable_2FA.schema.json');
 var verify_2FA_disable = require('./public/schemas/verify_disable_2FA.schema.json');
+var get_sales = require('./public/schemas/get_sales.schema.json');
+var get_pricing_summary = require('./public/schemas/get_pricing_summary.json');
+var schemas_array = [update_account, update_tradelink, bitSkins_api, historic_rewards, modify_affiliate_code, bitSkins_auth_token,
+                     verify_2FA_creation, disable_2FA, verify_2FA_disable, get_sales, get_pricing_summary];
 const kill = require('kill-port')
 
 app.use('/public', express.static(__dirname + '/public'));
@@ -86,9 +90,19 @@ app.get('/modify-affiliate-code', function(request, response) {
   response.send(modify_affiliate_code);
 });
 
-app.get('./get-auth-token', function(request, response) {
+app.get('/get-auth-token', function(request, response) {
   response.header("Content-Type", 'application/json');
   response.send(bitSkins_auth_token);
+});
+
+app.post('/get-schema', function(request, response) {
+  var array_index = JSON.parse(request.body.num);
+  if(array_index <= schemas_array.length - 1) {
+    response.header("Content-Type", 'application/json');
+    response.status(200).json(schemas_array[array_index]);
+  } else {
+    response.status(500).json({error: "The schema is not found"});
+  }
 });
 
 app.listen(8080, "127.0.0.1", () => {

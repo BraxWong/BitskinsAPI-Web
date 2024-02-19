@@ -1,9 +1,8 @@
 {
   "title": "Disable 2FA",
-  "Properties": {
+  "properties": {
     "twofa_code": {
       "type": "string",
-      "pattern": {},
       "min": 6,
       "max": 6
     }
