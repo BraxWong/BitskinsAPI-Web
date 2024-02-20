@@ -64,37 +64,6 @@ app.get('/profile-settings', function(request, response) {
   })
 })
 
-app.get('/update-account', function(request, response) {
-  response.header("Content-Type", 'application/json');
-  response.send(update_account);
-});
-
-
-app.get('/update-tradelink', function(request, response) {
-  response.header("Content-Type", 'application/json');
-  response.send(update_tradelink);
-});
-
-app.get('/get-api', function(request, response) {
-  response.header("Content-Type", 'application/json');
-  response.send(bitSkins_api);
-});
-
-app.get('/get-historic-rewards', function(request, response) {
-  response.header("Content-Type", 'application/json');
-  response.send(historic_rewards);
-});
-
-app.get('/modify-affiliate-code', function(request, response) {
-  response.header("Content-Type", 'application/json');
-  response.send(modify_affiliate_code);
-});
-
-app.get('/get-auth-token', function(request, response) {
-  response.header("Content-Type", 'application/json');
-  response.send(bitSkins_auth_token);
-});
-
 app.post('/get-schema', function(request, response) {
   var array_index = JSON.parse(request.body.num);
   if(array_index <= schemas_array.length - 1) {
