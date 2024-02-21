@@ -44,17 +44,17 @@ var editor = "";
 var currentURL = "/account/profile/me";
 var endPointMethod = "GET"
 
-$.ajax({
-  url: '/startDatabase',
-  type: 'GET',
-  success: function(data) {
-    console.log(data);
-    databaseLoggedOn = true;
-  },
-  error: function(xhr,status,error) {
-    console.error(error);
-  }
-});
+// $.ajax({
+//   url: '/startDatabase',
+//   type: 'GET',
+//   success: function(data) {
+//     console.log(data);
+//     databaseLoggedOn = true;
+//   },
+//   error: function(xhr,status,error) {
+//     console.error(error);
+//   }
+// });
 
 showForm(2, currentURL, endPointMethod);
 

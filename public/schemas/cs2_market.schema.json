@@ -1,0 +1,408 @@
+{
+  "title": "CS2 Market",
+  "properties": {
+    "limit": {
+      "type": "number",
+      "min": 1,
+      "max": 500,
+      "integer": true,
+      "optional": true
+    },
+    "offset": {
+      "type": "number",
+      "integer": true,
+      "optional": true,
+      "min": 0,
+      "max": 1500
+    },
+    "order": {
+      "optional": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "props": {
+          "field": {
+            "type": "enum",
+            "values": [
+              "price",
+              "id",
+              "discount",
+              "bumped_at",
+              "float_value",
+              "paint_index",
+              "paint_seed",
+              "extras_1"
+            ]
+          },
+          "order": {
+            "type": "enum",
+            "values": [
+              "ASC",
+              "DESC"
+            ]
+          }
+        }
+      }
+    },
+    "where_mine": {
+      "strict": "remove",
+      "optional": true,
+      "type": "object",
+      "props": {
+        "status": {
+          "type": "array",
+          "min": 1,
+          "items": {
+            "type": "enum",
+            "values": [
+              3,
+              2,
+              4,
+              0,
+              5,
+              1,
+              -1,
+              -4
+            ]
+          },
+          "optional": true
+        }
+      }
+    },
+    "where": {
+      "strict": "remove",
+      "optional": true,
+      "type": "object",
+      "props": {
+        "id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "string",
+            "pattern": {}
+          },
+          "optional": true
+        },
+        "name": {
+          "type": "string",
+          "min": 1,
+          "max": 64,
+          "clear_empty": true,
+          "optional": true
+        },
+        "skin_id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        },
+        "price_from": {
+          "type": "number",
+          "min": 10,
+          "max": 200000000,
+          "positive": true,
+          "amount": true,
+          "integer": true,
+          "optional": true
+        },
+        "price_to": {
+          "type": "number",
+          "min": 10,
+          "max": 200000000,
+          "positive": true,
+          "amount": true,
+          "integer": true,
+          "optional": true
+        },
+        "discount_from": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "integer": true,
+          "optional": true
+        },
+        "discount_to": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "integer": true,
+          "optional": true
+        },
+        "skin_name": {
+          "type": "string",
+          "min": 1,
+          "max": 64,
+          "clear_empty": true,
+          "optional": true
+        },
+        "store_alias": {
+          "type": "string",
+          "min": 3,
+          "max": 20,
+          "optional": true
+        },
+        "store_hash": {
+          "type": "string",
+          "min": 64,
+          "max": 64,
+          "optional": true
+        },
+        "has_nametag": {
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "integer": true,
+          "optional": true
+        },
+        "has_hightier": {
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "integer": true,
+          "optional": true
+        },
+        "stickers": {
+          "min": 1,
+          "max": 5,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "props": {
+              "skin_id": {
+                "type": "number",
+                "integer": true,
+                "min": 1,
+                "max": 1.7976931348623157e+308
+              },
+              "slot": {
+                "type": "number",
+                "min": 0,
+                "max": 5,
+                "integer": true,
+                "optional": true
+              },
+              "wear": {
+                "type": "number",
+                "min": 0,
+                "max": 1,
+                "integer": true,
+                "optional": true
+              }
+            }
+          },
+          "optional": true
+        },
+        "sticker_wear": {
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "integer": true,
+          "optional": true
+        },
+        "sticker_counter_from": {
+          "type": "number",
+          "min": 0,
+          "max": 5,
+          "integer": true,
+          "optional": true
+        },
+        "sticker_counter_to": {
+          "type": "number",
+          "min": 0,
+          "max": 5,
+          "integer": true,
+          "optional": true
+        },
+        "tradehold_from": {
+          "type": "number",
+          "min": 0,
+          "max": 8,
+          "integer": true,
+          "optional": true
+        },
+        "tradehold_to": {
+          "type": "number",
+          "min": 0,
+          "max": 8,
+          "integer": true,
+          "optional": true
+        },
+        "float_value_from": {
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "optional": true
+        },
+        "float_value_to": {
+          "type": "number",
+          "min": 0,
+          "max": 1,
+          "optional": true
+        },
+        "extras_1_from": {
+          "type": "number",
+          "min": 0,
+          "max": 100000000,
+          "optional": true
+        },
+        "extras_1_to": {
+          "type": "number",
+          "min": 0,
+          "max": 100000000,
+          "optional": true
+        },
+        "category_id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        },
+        "collection_id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        },
+        "container_id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        },
+        "color_id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        },
+        "exterior_id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        },
+        "paint_id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        },
+        "paint_seed": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        },
+        "paint_index": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        },
+        "phase_id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        },
+        "quality_id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        },
+        "typesub_id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        },
+        "type_id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "User Store",
+  "properties": {
+    "store_alias": {
+      "type": "string",
+      "min": 3,
+      "max": 20
+    },
+    "store_hash": {
+      "type": "string",
+      "min": 64,
+      "max": 64,
+      "optional": true
+    }
+  }
+}

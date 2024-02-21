@@ -1,0 +1,192 @@
+{
+  "title": "Rust Market",
+  "properties": {
+    "limit": {
+      "type": "number",
+      "min": 1,
+      "max": 500,
+      "integer": true,
+      "optional": true
+    },
+    "offset": {
+      "type": "number",
+      "integer": true,
+      "optional": true,
+      "min": 0,
+      "max": 1500
+    },
+    "order": {
+      "optional": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "props": {
+          "field": {
+            "type": "enum",
+            "values": [
+              "price",
+              "id",
+              "discount",
+              "bumped_at"
+            ]
+          },
+          "order": {
+            "type": "enum",
+            "values": [
+              "ASC",
+              "DESC"
+            ]
+          }
+        }
+      }
+    },
+    "where_mine": {
+      "strict": "remove",
+      "optional": true,
+      "type": "object",
+      "props": {
+        "status": {
+          "type": "array",
+          "min": 1,
+          "items": {
+            "type": "enum",
+            "values": [
+              3,
+              2,
+              4,
+              0,
+              5,
+              1,
+              -1,
+              -4
+            ]
+          },
+          "optional": true
+        }
+      }
+    },
+    "where": {
+      "strict": "remove",
+      "optional": true,
+      "type": "object",
+      "props": {
+        "id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "string",
+            "pattern": {}
+          },
+          "optional": true
+        },
+        "name": {
+          "type": "string",
+          "min": 1,
+          "max": 64,
+          "clear_empty": true,
+          "optional": true
+        },
+        "skin_id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        },
+        "price_from": {
+          "type": "number",
+          "min": 10,
+          "max": 200000000,
+          "positive": true,
+          "amount": true,
+          "integer": true,
+          "optional": true
+        },
+        "price_to": {
+          "type": "number",
+          "min": 10,
+          "max": 200000000,
+          "positive": true,
+          "amount": true,
+          "integer": true,
+          "optional": true
+        },
+        "discount_from": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "integer": true,
+          "optional": true
+        },
+        "discount_to": {
+          "type": "number",
+          "min": 0,
+          "max": 100,
+          "integer": true,
+          "optional": true
+        },
+        "skin_name": {
+          "type": "string",
+          "min": 1,
+          "max": 64,
+          "clear_empty": true,
+          "optional": true
+        },
+        "store_alias": {
+          "type": "string",
+          "min": 3,
+          "max": 20,
+          "optional": true
+        },
+        "store_hash": {
+          "type": "string",
+          "min": 64,
+          "max": 64,
+          "optional": true
+        },
+        "category_id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        },
+        "color_id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        },
+        "type_id": {
+          "type": "array",
+          "min": 1,
+          "max": 100,
+          "items": {
+            "type": "number",
+            "integer": true,
+            "min": 0,
+            "max": 1.7976931348623157e+308
+          },
+          "optional": true
+        }
+      }
+    }
+  }
+}

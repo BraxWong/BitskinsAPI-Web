@@ -14,8 +14,17 @@ var disable_2FA = require('./public/schemas/disable_2FA.schema.json');
 var verify_2FA_disable = require('./public/schemas/verify_disable_2FA.schema.json');
 var get_sales = require('./public/schemas/get_sales.schema.json');
 var get_pricing_summary = require('./public/schemas/get_pricing_summary.json');
+var tf2_market = require('./public/schemas/tf2_market.schema.json');
+var dota2_market = require('./public/schemas/dota2_market.schema.json');
+var cs2_market = require('./public/schemas/cs2_market.schema.json');
+var rust_market = require('./public/schemas/rust_market.schema.json');
+var user_store = require('./public/schemas/user_store.schema.json');
+var get_item_details = require('./public/schemas/get_item_details.schema.json');
+var search_skin = require('./public/schemas/search_skin.schema.json');
+var filters = require('./public/schemas/filters.schema.json');
 var schemas_array = [update_account, update_tradelink, bitSkins_api, historic_rewards, modify_affiliate_code, bitSkins_auth_token,
-                     verify_2FA_creation, disable_2FA, verify_2FA_disable, get_sales, get_pricing_summary];
+                     verify_2FA_creation, disable_2FA, verify_2FA_disable, get_sales, get_pricing_summary, tf2_market, dota2_market,
+                     cs2_market, rust_market, user_store, get_item_details, search_skin, filters];
 const kill = require('kill-port')
 
 app.use('/public', express.static(__dirname + '/public'));

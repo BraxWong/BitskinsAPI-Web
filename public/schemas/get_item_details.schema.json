@@ -1,0 +1,32 @@
+{
+  "title": "Get Item Details",
+  "properties": {
+    "app_id": {
+      "type": "enum",
+      "values": [
+        730,
+        730,
+        570,
+        440,
+        252490
+      ],
+      "default": 730
+    },
+    "id": {
+      "type": "string",
+      "pattern": {},
+      "optional": true
+    },
+    "asset_id": {
+      "type": "string",
+      "pattern": {},
+      "optional": true
+    },
+    "hash": {
+      "type": "string",
+      "min": 64,
+      "max": 64,
+      "optional": true
+    }
+  }
+}
