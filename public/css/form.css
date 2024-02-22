@@ -160,3 +160,9 @@ body {
   .sidenav a {font-size: 18px;}
 }
 
+#form-submit-button {
+  position: relative; 
+  bottom: 15px; 
+  width: 710px; 
+  left: 10px;
+}
