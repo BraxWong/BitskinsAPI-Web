@@ -1,0 +1,44 @@
+{
+  "title":"Buy Multiple Items",
+  "properties": {
+    "app_id": {
+      "type": "enum",
+      "values": [
+        730,
+        730,
+        570,
+        440,
+        252490
+      ],
+      "default": 730
+    },
+    "items": {
+      "min": 1,
+      "max": 100,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "props": {
+          "id": {
+            "type": "string",
+            "pattern": {}
+          },
+          "max_price": {
+            "type": "number",
+            "min": 10,
+            "max": 200000000,
+            "positive": true,
+            "amount": true,
+            "integer": true
+          },
+          "hash": {
+            "type": "string",
+            "min": 64,
+            "max": 64,
+            "optional": true
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "title":"Withdraw Single Item",
+  "properties": {
+    "app_id": {
+      "type": "enum",
+      "values": [
+        730,
+        730,
+        570,
+        440,
+        252490
+      ],
+      "default": 730
+    },
+    "id": {
+      "type": "string",
+      "pattern": {}
+    },
+    "external": {
+      "strict": "remove",
+      "optional": true,
+      "type": "object",
+      "props": {
+        "steam_id": {
+          "type": "string",
+          "pattern": {},
+          "min": 17,
+          "max": 17
+        },
+        "steam_token": {
+          "type": "string",
+          "min": 8,
+          "max": 8
+        }
+      }
+    }
+  }
+}

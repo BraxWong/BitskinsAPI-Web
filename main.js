@@ -22,9 +22,22 @@ var user_store = require('./public/schemas/user_store.schema.json');
 var get_item_details = require('./public/schemas/get_item_details.schema.json');
 var search_skin = require('./public/schemas/search_skin.schema.json');
 var filters = require('./public/schemas/filters.schema.json');
+var buy_single_item = require('./public/schemas/buy_single_item.schema.json');
+var buy_multiple_items = require('./public/schemas/buy_multiple_items.schema.json');
+var buy_bulk_items = require('./public/schemas/buy_bulk_items.schema.json');
+var withdraw_single_item = require('./public/schemas/withdraw_single_item.schema.json');
+var withdraw_multiple_items = require('./public/schemas/withdraw_multiple_items.schema.json');
+var delist_single_item = require('./public/schemas/delist_single_item.schema.json');
+var delist_multiple_items = require('./public/schemas/delist_multiple_items.schema.json');
+var relist_single_item = require('./public/schemas/relist_single_item.schema.json');
+var relist_multiple_items= require('./public/schemas/relist_multiple_items.schema.json');
+var update_single_item = require('./public/schemas/update_single_item.schema.json');
+var update_multiple_items = require('./public/schemas/update_multiple_items.schema.json');
 var schemas_array = [update_account, update_tradelink, bitSkins_api, historic_rewards, modify_affiliate_code, bitSkins_auth_token,
                      verify_2FA_creation, disable_2FA, verify_2FA_disable, get_sales, get_pricing_summary, tf2_market, dota2_market,
-                     cs2_market, rust_market, user_store, get_item_details, search_skin, filters];
+                     cs2_market, rust_market, user_store, get_item_details, search_skin, filters, buy_single_item, buy_multiple_items,
+                     buy_bulk_items, withdraw_single_item, withdraw_multiple_items, delist_single_item, delist_multiple_items,
+                     relist_single_item, relist_multiple_items, update_single_item, update_multiple_items];
 const kill = require('kill-port')
 
 app.use('/public', express.static(__dirname + '/public'));

@@ -1,0 +1,28 @@
+{
+  "title":"Update A Single Item",
+  "properties": {
+    "app_id": {
+      "type": "enum",
+      "values": [
+        730,
+        730,
+        570,
+        440,
+        252490
+      ],
+      "default": 730
+    },
+    "id": {
+      "type": "string",
+      "pattern": {}
+    },
+    "price": {
+      "type": "number",
+      "min": 10,
+      "max": 200000000,
+      "positive": true,
+      "amount": true,
+      "integer": true
+    }
+  }
+}
