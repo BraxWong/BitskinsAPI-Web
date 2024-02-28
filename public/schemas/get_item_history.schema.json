@@ -1,0 +1,16 @@
+{
+  "title": "Get Item History",
+  "properties": {
+    "type": {
+      "type": "enum",
+      "values": [
+        "seller",
+        "buyer"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "pattern": {}
+    }
+  }
+}

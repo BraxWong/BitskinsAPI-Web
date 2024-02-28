@@ -1,0 +1,90 @@
+{
+  "title":"Get Items History",
+  "properties": {
+    "type": {
+      "type": "enum",
+      "values": [
+        "seller",
+        "buyer"
+      ]
+    },
+    "limit": {
+      "type": "number",
+      "min": 1,
+      "max": 500,
+      "integer": true,
+      "optional": true
+    },
+    "offset": {
+      "type": "number",
+      "integer": true,
+      "optional": true,
+      "min": 0,
+      "max": 100000
+    },
+    "order": {
+      "optional": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "props": {
+          "field": {
+            "type": "enum",
+            "values": [
+              "id",
+              "price"
+            ]
+          },
+          "order": {
+            "type": "enum",
+            "values": [
+              "ASC",
+              "DESC"
+            ]
+          }
+        }
+      }
+    },
+    "where": {
+      "strict": "remove",
+      "optional": true,
+      "type": "object",
+      "props": {
+        "app_id": {
+          "type": "enum",
+          "values": [
+            730,
+            730,
+            570,
+            440,
+            252490
+          ],
+          "optional": true
+        },
+        "skin_id": {
+          "type": "number",
+          "integer": true,
+          "min": 1,
+          "max": 1.7976931348623157e+308,
+          "optional": true
+        },
+        "price_from": {
+          "type": "number",
+          "min": -200000000,
+          "max": 200000000,
+          "amount": true,
+          "integer": true,
+          "optional": true
+        },
+        "price_to": {
+          "type": "number",
+          "min": -200000000,
+          "max": 200000000,
+          "amount": true,
+          "integer": true,
+          "optional": true
+        }
+      }
+    }
+  }
+}
