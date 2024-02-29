@@ -1,0 +1,47 @@
+{
+  "title": "Deposit Steam Items",
+  "properties": {
+    "app_id": {
+      "type": "enum",
+      "values": [
+        730,
+        730,
+        570,
+        440,
+        252490
+      ],
+      "default": 730
+    },
+    "items": {
+      "min": 1,
+      "max": 100,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "props": {
+          "asset_id": {
+            "type": "string",
+            "pattern": {}
+          },
+          "price": {
+            "type": "number",
+            "min": 10,
+            "max": 200000000,
+            "positive": true,
+            "amount": true,
+            "integer": true
+          }
+        }
+      }
+    },
+    "type": {
+      "type": "enum",
+      "values": [
+        1,
+        2,
+        3
+      ],
+      "default": 1
+    }
+  }
+}

@@ -198,16 +198,16 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="steam-dropdown-container">
-            <a href="#">Get Steam Inventory</a>
-            <a href="#">Deposit Steam Items</a>
+            <a href="#" onclick="showForm(38, '/steam/inventory/list', 'POST')">Get Steam Inventory</a>
+            <a href="#" onclick="showForm(39, '/steam/deposit/many', 'POST')">Deposit Steam Items</a>
             <button class="steam-trades-dropdown-btn">
               Steam Trades
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="steam-trades-dropdown-container">
-              <a href="#">Get Steam Trades</a>
-              <a href="#">Get Active Steam Trades</a>
-              <a href="#">Get Hashes of Active Steam Trades</a>
+              <a href="#" onclick="showForm(40, '/steam/trade/list', 'POST')">Get Steam Trades</a>
+              <a href="#" onclick="showForm(41, '/steam/trade/active', 'POST')">Get Active Steam Trades</a>
+              <a href="#" onclick="showForm(2, '/steam/trade/active_hash' , 'POST')">Get Hashes of Active Steam Trades</a>
             </div>
           </div>
         </div>

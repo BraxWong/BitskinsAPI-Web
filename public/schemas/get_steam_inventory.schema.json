@@ -1,0 +1,16 @@
+{
+  "title": "Get Steam Inventory",
+  "properties": {
+    "app_id": {
+      "type": "enum",
+      "values": [
+        730,
+        730,
+        570,
+        440,
+        252490
+      ],
+      "default": 730
+    }
+  }
+}

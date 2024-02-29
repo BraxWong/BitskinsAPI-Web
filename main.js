@@ -41,12 +41,17 @@ var get_bumped_items = require('./public/schemas/get_bumped_items.schema.json');
 var enable_bumping = require('./public/schemas/enable_bumping.schema.json');
 var disable_bumping = require('./public/schemas/disable_bumping.schema.json');
 var buy_bump_packages = require('./public/schemas/buy_bump_packages.schema.json');
+var get_steam_inventory = require('./public/schemas/get_steam_inventory.schema.json');
+var deposit_steam_items = require('./public/schemas/deposit_steam_items.schema.json');
+var get_steam_trades = require('./public/schemas/get_steam_trades.schema.json');
+var get_active_steam_trades = require('./public/schemas/get_active_steam_trades.schema.json');
 var schemas_array = [update_account, update_tradelink, bitSkins_api, historic_rewards, modify_affiliate_code, bitSkins_auth_token,
                      verify_2FA_creation, disable_2FA, verify_2FA_disable, get_sales, get_pricing_summary, tf2_market, dota2_market,
                      cs2_market, rust_market, user_store, get_item_details, search_skin, filters, buy_single_item, buy_multiple_items,
                      buy_bulk_items, withdraw_single_item, withdraw_multiple_items, delist_single_item, delist_multiple_items,
                      relist_single_item, relist_multiple_items, update_single_item, update_multiple_items, get_items_history,
-                     get_item_details, get_receipt, bump_single_item, get_bumped_items, enable_bumping, disable_bumping, buy_bump_packages];
+                     get_item_details, get_receipt, bump_single_item, get_bumped_items, enable_bumping, disable_bumping, buy_bump_packages,
+                     get_steam_inventory, deposit_steam_items, get_steam_trades, get_active_steam_trades];
 const kill = require('kill-port')
 
 app.use('/public', express.static(__dirname + '/public'));
