@@ -1,0 +1,118 @@
+{
+  "title": "Get Wallet Pending Transactions",
+  "properties": {
+    "limit": {
+      "type": "number",
+      "min": 1,
+      "max": 500,
+      "integer": true,
+      "optional": true
+    },
+    "offset": {
+      "type": "number",
+      "integer": true,
+      "optional": true,
+      "min": 0,
+      "max": 100000
+    },
+    "order": {
+      "optional": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "props": {
+          "field": {
+            "type": "enum",
+            "values": [
+              "id",
+              "amount"
+            ]
+          },
+          "order": {
+            "type": "enum",
+            "values": [
+              "ASC",
+              "DESC"
+            ]
+          }
+        }
+      }
+    },
+    "where": {
+      "strict": "remove",
+      "optional": true,
+      "type": "object",
+      "props": {
+        "amount_from": {
+          "type": "number",
+          "min": -200000000,
+          "max": 200000000,
+          "amount": true,
+          "integer": true,
+          "optional": true
+        },
+        "amount_to": {
+          "type": "number",
+          "min": -200000000,
+          "max": 200000000,
+          "amount": true,
+          "integer": true,
+          "optional": true
+        },
+        "date_from": {
+          "type": "string",
+          "pattern": {},
+          "optional": true
+        },
+        "date_to": {
+          "type": "string",
+          "pattern": {},
+          "optional": true
+        },
+        "date": {
+          "type": "string",
+          "pattern": {},
+          "optional": true
+        },
+        "service_id": {
+          "items": "number",
+          "min": 1,
+          "max": 10,
+          "unique": true,
+          "type": "array",
+          "enum": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            80,
+            81,
+            100,
+            101,
+            102
+          ],
+          "optional": true
+        }
+      }
+    }
+  }
+}

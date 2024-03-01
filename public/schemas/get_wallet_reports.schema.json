@@ -1,0 +1,65 @@
+{
+  "title": "Get Wallet Reports",
+  "properties": {
+    "limit": {
+      "type": "number",
+      "min": 1,
+      "max": 500,
+      "integer": true,
+      "optional": true
+    },
+    "offset": {
+      "type": "number",
+      "integer": true,
+      "optional": true,
+      "min": 0,
+      "max": 100000
+    },
+    "order": {
+      "optional": true,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "props": {
+          "field": {
+            "type": "enum",
+            "values": [
+              "id"
+            ]
+          },
+          "order": {
+            "type": "enum",
+            "values": [
+              "ASC",
+              "DESC"
+            ]
+          }
+        }
+      }
+    },
+    "where": {
+      "strict": "remove",
+      "type": "object",
+      "props": {
+        "type": {
+          "type": "enum",
+          "values": [
+            1,
+            2,
+            3
+          ],
+          "optional": true
+        },
+        "status": {
+          "type": "enum",
+          "values": [
+            -1,
+            0,
+            1
+          ],
+          "optional": true
+        }
+      }
+    }
+  }
+}

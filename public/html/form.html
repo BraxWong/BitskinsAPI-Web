@@ -221,25 +221,25 @@
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="wallet-stats-dropdown-container">
-              <a href="#">Get Wallet Stats</a>
-              <a href="#">Get KYC Limits</a>
+              <a href="#" onclick="showForm(2, '/wallet/stats/get', 'POST')">Get Wallet Stats</a>
+              <a href="#" onclick="showForm(2, '/wallet/stats/get_kyc_limit', 'POST')">Get KYC Limits</a>
             </div>
             <button class="wallet-transactions-dropdown-btn">
               Wallet Transactions 
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="wallet-transactions-dropdown-container">
-              <a href="#">Get Wallet Transactions</a>
-              <a href="#">Get Wallet Pending Transactions</a>
+              <a href="#" onclick="showForm(42, '/wallet/transaction/list', 'POST')">Get Wallet Transactions</a>
+              <a href="#" onclick="showForm(43, '/wallet/transaction/list_pending', 'POST')">Get Wallet Pending Transactions</a>
             </div>
             <button class="wallet-reports-dropdown-btn">
               Wallet Reports
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="wallet-reports-dropdown-container">
-              <a href="#">Get Wallet Reports</a>
-              <a href="#">Generate Wallet Report</a>
-              <a href="#">Download Wallet Report</a>
+              <a href="#" onclick="showForm(44, '/wallet/report/list', 'POST')">Get Wallet Reports</a>
+              <a href="#" onclick="showForm(45, '/wallet/report/generate', 'POST')">Generate Wallet Report</a>
+              <a href="#" onclick="showForm(46, '/wallet/report/download', 'POST')">Download Wallet Report</a>
             </div>
           </div>
         </div>

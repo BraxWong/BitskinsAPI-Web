@@ -1,0 +1,17 @@
+{
+  "title":"Generate Wallet Reports",
+  "properties": {
+    "type": {
+      "type": "enum",
+      "values": [
+        1,
+        2,
+        3
+      ]
+    },
+    "date": {
+      "type": "string",
+      "pattern": {}
+    }
+  }
+}
