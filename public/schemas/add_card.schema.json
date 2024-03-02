@@ -1,0 +1,73 @@
+{
+  "title":"Add Card",
+  "properties": {
+    "amount": {
+      "type": "number",
+      "min": 1000,
+      "max": 2500000,
+      "positive": true,
+      "integer": true,
+      "amount": true
+    },
+    "card": {
+      "strict": "remove",
+      "type": "object",
+      "props": {
+        "pan": {
+          "type": "string",
+          "min": 15,
+          "max": 19,
+          "pattern": {}
+        },
+        "holder": {
+          "type": "string",
+          "min": 1,
+          "max": 50
+        },
+        "security_code": {
+          "type": "string",
+          "min": 3,
+          "max": 4,
+          "pattern": {}
+        },
+        "expiration": {
+          "type": "string",
+          "pattern": {}
+        }
+      }
+    },
+    "billing_address": {
+      "strict": "remove",
+      "type": "object",
+      "props": {
+        "country": {
+          "type": "string",
+          "min": 2,
+          "max": 2,
+          "pattern": {}
+        },
+        "city": {
+          "type": "string",
+          "min": 1,
+          "max": 50
+        },
+        "addr_line_1": {
+          "type": "string",
+          "min": 1,
+          "max": 50
+        },
+        "addr_line_2": {
+          "type": "string",
+          "min": 1,
+          "max": 50,
+          "optional": true
+        },
+        "zip": {
+          "type": "string",
+          "min": 1,
+          "max": 50
+        }
+      }
+    }
+  }
+}

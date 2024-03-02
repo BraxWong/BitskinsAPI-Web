@@ -1,0 +1,13 @@
+{
+  "title":"Deposit Zen",
+  "properties": {
+    "amount": {
+      "type": "number",
+      "min": 5000,
+      "max": 2500000,
+      "positive": true,
+      "integer": true,
+      "amount": true
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "title":"Get Litecoin Address",
+  "properties": {
+    "type": {
+      "type": "enum",
+      "values": [
+        "legacy",
+        "p2sh-segwit",
+        "bech32"
+      ]
+    }
+  }
+}
