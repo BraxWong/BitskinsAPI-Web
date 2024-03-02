@@ -1,0 +1,34 @@
+{
+  "title":"Withdraw Binance",
+  "properties": {
+    "twofa_code": {
+      "type": "string",
+      "pattern": {},
+      "min": 6,
+      "max": 6
+    },
+    "amount": {
+      "type": "number",
+      "min": 1000,
+      "max": 5000000,
+      "positive": true,
+      "integer": true,
+      "amount": true
+    },
+    "receiver": {
+      "type": "string",
+      "min": 1,
+      "max": 64,
+      "clear_empty": true
+    },
+    "receiver_type": {
+      "type": "enum",
+      "values": [
+        "PAY_ID",
+        "BINANCE_ID",
+        "EMAIL"
+      ],
+      "default": "BINANCE_ID"
+    }
+  }
+}

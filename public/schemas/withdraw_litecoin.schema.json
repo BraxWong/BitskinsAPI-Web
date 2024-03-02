@@ -1,0 +1,25 @@
+{
+  "title":"Withdraw Litecoin",
+  "properties": {
+    "twofa_code": {
+      "type": "string",
+      "pattern": {},
+      "min": 6,
+      "max": 6
+    },
+    "amount": {
+      "type": "number",
+      "min": 100000,
+      "max": 25000000,
+      "positive": true,
+      "integer": true,
+      "amount": true
+    },
+    "address": {
+      "type": "string",
+      "min": 1,
+      "max": 64,
+      "clear_empty": true
+    }
+  }
+}

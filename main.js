@@ -57,6 +57,11 @@ var use_gift_code = require('./public/schemas/use_gift_code.schema.json');
 var deposit_zen = require('./public/schemas/deposit_zen.schema.json');
 var add_card = require('./public/schemas/add_card.schema.json');
 var deposit_card = require('./public/schemas/deposit_card.schema.json');
+var withdraw_bitcoin = require('./public/schemas/withdraw_bitcoin.schema.json');
+var withdraw_litecoin = require('./public/schemas/withdraw_litecoin.schema.json');
+var withdraw_ethereum = require('./public/schemas/withdraw_ethereum.schema.json');
+var withdraw_binance = require('./public/schemas/withdraw_binance.schema.json');
+var withdraw_visa = require('./public/schemas/withdraw_visa.schema.json');
 var schemas_array = [update_account, update_tradelink, bitSkins_api, historic_rewards, modify_affiliate_code, bitSkins_auth_token,
                      verify_2FA_creation, disable_2FA, verify_2FA_disable, get_sales, get_pricing_summary, tf2_market, dota2_market,
                      cs2_market, rust_market, user_store, get_item_details, search_skin, filters, buy_single_item, buy_multiple_items,
@@ -65,7 +70,8 @@ var schemas_array = [update_account, update_tradelink, bitSkins_api, historic_re
                      get_item_details, get_receipt, bump_single_item, get_bumped_items, enable_bumping, disable_bumping, buy_bump_packages,
                      get_steam_inventory, deposit_steam_items, get_steam_trades, get_active_steam_trades, get_wallet_transactions, get_wallet_pending_transactions,
                      get_wallet_reports, generate_wallet_report, download_wallet_report, deposit_binance, get_litecoin_address, get_bitcoin_address,
-                     use_gift_code, deposit_zen, add_card, deposit_card];
+                     use_gift_code, deposit_zen, add_card, deposit_card, withdraw_bitcoin, withdraw_litecoin, withdraw_ethereum, withdraw_binance,
+                     withdraw_visa];
 const kill = require('kill-port')
 
 app.use('/public', express.static(__dirname + '/public'));
