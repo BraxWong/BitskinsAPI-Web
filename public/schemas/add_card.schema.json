@@ -1,6 +1,10 @@
 {
-  "title":"Add Card",
+  "title": "Add Card",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "amount": {
       "type": "number",
       "min": 1000,

@@ -1,6 +1,10 @@
 {
-  "title":"Withdraw Bitcoin",
+  "title": "Withdraw Bitcoin",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "twofa_code": {
       "type": "string",
       "pattern": {},

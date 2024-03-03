@@ -1,21 +1,19 @@
 {
-  "set": {
-    "strict": "remove",
-    "minProps": 1,
-    "type": "object",
+  "title": "Update Account",
+  "properties": {
     "props": {
       "o_settings": {
         "type": "number",
         "integer": true,
         "min": 0,
-        "max": 1.7976931348623157e+308,
+        "max": 1.7976931348623157e308,
         "optional": true
       },
       "o_notify": {
         "type": "number",
         "integer": true,
         "min": 0,
-        "max": 1.7976931348623157e+308,
+        "max": 1.7976931348623157e308,
         "optional": true
       },
       "store_alias": {
@@ -26,22 +24,12 @@
       },
       "currency": {
         "type": "enum",
-        "values": [
-          "USD",
-          "PLN",
-          "BTC",
-          "LTC",
-          "ETH",
-          "EUR"
-        ],
+        "values": ["usd", "pln", "btc", "ltc", "eth", "eur"],
         "optional": true
       },
       "language": {
         "type": "enum",
-        "values": [
-          "en",
-          "pl"
-        ],
+        "values": ["en", "pl"],
         "optional": true
       }
     }

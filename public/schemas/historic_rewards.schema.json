@@ -1,6 +1,10 @@
 {
   "title": "Historic Rewards",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "limit": {
       "type": "number",
       "min": 1,

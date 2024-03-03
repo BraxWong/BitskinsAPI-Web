@@ -1,12 +1,13 @@
 {
   "title": "Get Item History",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "type": {
       "type": "enum",
-      "values": [
-        "seller",
-        "buyer"
-      ]
+      "values": ["seller", "buyer"]
     },
     "id": {
       "type": "string",

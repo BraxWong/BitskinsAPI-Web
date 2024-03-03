@@ -1,6 +1,10 @@
 {
   "title": "Deposit Binance",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "amount": {
       "type": "number",
       "min": 1000,

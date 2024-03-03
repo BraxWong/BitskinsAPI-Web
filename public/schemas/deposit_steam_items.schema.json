@@ -1,15 +1,13 @@
 {
   "title": "Deposit Steam Items",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "app_id": {
       "type": "enum",
-      "values": [
-        730,
-        730,
-        570,
-        440,
-        252490
-      ],
+      "values": [730, 730, 570, 440, 252490],
       "default": 730
     },
     "items": {
@@ -36,11 +34,7 @@
     },
     "type": {
       "type": "enum",
-      "values": [
-        1,
-        2,
-        3
-      ],
+      "values": [1, 2, 3],
       "default": 1
     }
   }

@@ -1,6 +1,9 @@
 {
   "title": "Disable 2FA",
   "properties": {
+    "Auth Token": {
+      "type": "string"
+    },
     "twofa_code": {
       "type": "string",
       "min": 6,

@@ -1,6 +1,10 @@
 {
-  "title":"Use Gift Code",
+  "title": "Use Gift Code",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "code": {
       "type": "uuid"
     }

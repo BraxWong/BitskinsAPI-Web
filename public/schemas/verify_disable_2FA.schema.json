@@ -1,6 +1,9 @@
 {
   "title": "Verify disabling 2FA",
   "properties": {
+    "Auth Token": {
+      "type": "string"
+    },
     "email_code": {
       "type": "string",
       "pattern": {},

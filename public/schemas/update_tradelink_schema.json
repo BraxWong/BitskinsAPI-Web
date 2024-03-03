@@ -1,6 +1,10 @@
 {
   "title": "Update Trade Link",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "tradelink": {
       "type": "url",
       "min": 100

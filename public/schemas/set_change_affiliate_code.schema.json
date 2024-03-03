@@ -1,6 +1,10 @@
 {
   "title": "Set/Change Affiliate Code",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "code": {
       "type": "string",
       "min": 5,

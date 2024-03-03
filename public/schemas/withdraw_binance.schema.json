@@ -1,6 +1,10 @@
 {
-  "title":"Withdraw Binance",
+  "title": "Withdraw Binance",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "twofa_code": {
       "type": "string",
       "pattern": {},
@@ -23,11 +27,7 @@
     },
     "receiver_type": {
       "type": "enum",
-      "values": [
-        "PAY_ID",
-        "BINANCE_ID",
-        "EMAIL"
-      ],
+      "values": ["PAY_ID", "BINANCE_ID", "EMAIL"],
       "default": "BINANCE_ID"
     }
   }

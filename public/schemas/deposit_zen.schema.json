@@ -1,6 +1,10 @@
 {
-  "title":"Deposit Zen",
+  "title": "Deposit Zen",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "amount": {
       "type": "number",
       "min": 5000,

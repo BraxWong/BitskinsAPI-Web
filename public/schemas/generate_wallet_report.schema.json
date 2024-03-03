@@ -1,13 +1,13 @@
 {
-  "title":"Generate Wallet Reports",
+  "title": "Generate Wallet Reports",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "type": {
       "type": "enum",
-      "values": [
-        1,
-        2,
-        3
-      ]
+      "values": [1, 2, 3]
     },
     "date": {
       "type": "string",

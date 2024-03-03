@@ -1,6 +1,10 @@
 {
   "title": "User Store",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "store_alias": {
       "type": "string",
       "min": 3,

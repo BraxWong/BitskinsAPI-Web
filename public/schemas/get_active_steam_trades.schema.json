@@ -1,6 +1,10 @@
 {
   "title": "Get Active Steam Trades",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "limit": {
       "type": "number",
       "min": 1,
@@ -27,21 +31,12 @@
         },
         "app_id": {
           "type": "enum",
-          "values": [
-            730,
-            730,
-            570,
-            440,
-            252490
-          ],
+          "values": [730, 730, 570, 440, 252490],
           "optional": true
         },
         "type": {
           "type": "enum",
-          "values": [
-            1,
-            2
-          ],
+          "values": [1, 2],
           "optional": true
         },
         "hash": {

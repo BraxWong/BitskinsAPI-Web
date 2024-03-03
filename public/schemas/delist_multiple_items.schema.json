@@ -1,6 +1,10 @@
 {
-  "title":"Delist Multiple Items",
+  "title": "Delist Multiple Items",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "items": {
       "min": 1,
       "max": 100,
@@ -10,13 +14,7 @@
         "props": {
           "app_id": {
             "type": "enum",
-            "values": [
-              730,
-              730,
-              570,
-              440,
-              252490
-            ],
+            "values": [730, 730, 570, 440, 252490],
             "default": 730
           },
           "id": {

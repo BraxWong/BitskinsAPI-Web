@@ -1,6 +1,10 @@
 {
   "title": "CS2 Market",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "limit": {
       "type": "number",
       "min": 1,
@@ -36,10 +40,7 @@
           },
           "order": {
             "type": "enum",
-            "values": [
-              "ASC",
-              "DESC"
-            ]
+            "values": ["ASC", "DESC"]
           }
         }
       }
@@ -54,16 +55,7 @@
           "min": 1,
           "items": {
             "type": "enum",
-            "values": [
-              3,
-              2,
-              4,
-              0,
-              5,
-              1,
-              -1,
-              -4
-            ]
+            "values": [3, 2, 4, 0, 5, 1, -1, -4]
           },
           "optional": true
         }
@@ -99,7 +91,7 @@
             "type": "number",
             "integer": true,
             "min": 0,
-            "max": 1.7976931348623157e+308
+            "max": 1.7976931348623157e308
           },
           "optional": true
         },
@@ -179,7 +171,7 @@
                 "type": "number",
                 "integer": true,
                 "min": 1,
-                "max": 1.7976931348623157e+308
+                "max": 1.7976931348623157e308
               },
               "slot": {
                 "type": "number",
@@ -266,7 +258,7 @@
             "type": "number",
             "integer": true,
             "min": 0,
-            "max": 1.7976931348623157e+308
+            "max": 1.7976931348623157e308
           },
           "optional": true
         },
@@ -278,7 +270,7 @@
             "type": "number",
             "integer": true,
             "min": 0,
-            "max": 1.7976931348623157e+308
+            "max": 1.7976931348623157e308
           },
           "optional": true
         },
@@ -290,7 +282,7 @@
             "type": "number",
             "integer": true,
             "min": 0,
-            "max": 1.7976931348623157e+308
+            "max": 1.7976931348623157e308
           },
           "optional": true
         },
@@ -302,7 +294,7 @@
             "type": "number",
             "integer": true,
             "min": 0,
-            "max": 1.7976931348623157e+308
+            "max": 1.7976931348623157e308
           },
           "optional": true
         },
@@ -314,7 +306,7 @@
             "type": "number",
             "integer": true,
             "min": 0,
-            "max": 1.7976931348623157e+308
+            "max": 1.7976931348623157e308
           },
           "optional": true
         },
@@ -326,7 +318,7 @@
             "type": "number",
             "integer": true,
             "min": 0,
-            "max": 1.7976931348623157e+308
+            "max": 1.7976931348623157e308
           },
           "optional": true
         },
@@ -338,7 +330,7 @@
             "type": "number",
             "integer": true,
             "min": 0,
-            "max": 1.7976931348623157e+308
+            "max": 1.7976931348623157e308
           },
           "optional": true
         },
@@ -350,7 +342,7 @@
             "type": "number",
             "integer": true,
             "min": 0,
-            "max": 1.7976931348623157e+308
+            "max": 1.7976931348623157e308
           },
           "optional": true
         },
@@ -362,7 +354,7 @@
             "type": "number",
             "integer": true,
             "min": 0,
-            "max": 1.7976931348623157e+308
+            "max": 1.7976931348623157e308
           },
           "optional": true
         },
@@ -374,7 +366,7 @@
             "type": "number",
             "integer": true,
             "min": 0,
-            "max": 1.7976931348623157e+308
+            "max": 1.7976931348623157e308
           },
           "optional": true
         },
@@ -386,7 +378,7 @@
             "type": "number",
             "integer": true,
             "min": 0,
-            "max": 1.7976931348623157e+308
+            "max": 1.7976931348623157e308
           },
           "optional": true
         },
@@ -398,7 +390,7 @@
             "type": "number",
             "integer": true,
             "min": 0,
-            "max": 1.7976931348623157e+308
+            "max": 1.7976931348623157e308
           },
           "optional": true
         }

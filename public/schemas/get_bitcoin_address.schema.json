@@ -1,13 +1,13 @@
 {
-  "title":"Get Bitcoin Address",
+  "title": "Get Bitcoin Address",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "type": {
       "type": "enum",
-      "values": [
-        "legacy",
-        "p2sh-segwit",
-        "bech32"
-      ]
+      "values": ["legacy", "p2sh-segwit", "bech32"]
     }
   }
 }

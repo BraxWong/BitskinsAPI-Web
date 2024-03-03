@@ -1,13 +1,13 @@
 {
-  "title":"Get Litecoin Address",
+  "title": "Get Litecoin Address",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "type": {
       "type": "enum",
-      "values": [
-        "legacy",
-        "p2sh-segwit",
-        "bech32"
-      ]
+      "values": ["legacy", "p2sh-segwit", "bech32"]
     }
   }
 }

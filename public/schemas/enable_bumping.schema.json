@@ -1,15 +1,13 @@
 {
   "title": "Enable Bumping",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "app_id": {
       "type": "enum",
-      "values": [
-        730,
-        730,
-        570,
-        440,
-        252490
-      ],
+      "values": [730, 730, 570, 440, 252490],
       "default": 730
     },
     "id": {
@@ -18,14 +16,7 @@
     },
     "period": {
       "type": "enum",
-      "values": [
-        60,
-        180,
-        360,
-        720,
-        1440,
-        2880
-      ]
+      "values": [60, 180, 360, 720, 1440, 2880]
     },
     "quantity": {
       "type": "number",

@@ -1,15 +1,13 @@
 {
-  "title":"Buy Single Item",
+  "title": "Buy Single Item",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "app_id": {
       "type": "enum",
-      "values": [
-        730,
-        730,
-        570,
-        440,
-        252490
-      ],
+      "values": [730, 730, 570, 440, 252490],
       "default": 730
     },
     "id": {

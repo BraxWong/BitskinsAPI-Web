@@ -1,6 +1,10 @@
 {
   "title": "Get Wallet Reports",
   "properties": {
+    "API": {
+      "type": "string",
+      "min": 64
+    },
     "limit": {
       "type": "number",
       "min": 1,
@@ -23,16 +27,11 @@
         "props": {
           "field": {
             "type": "enum",
-            "values": [
-              "id"
-            ]
+            "values": ["id"]
           },
           "order": {
             "type": "enum",
-            "values": [
-              "ASC",
-              "DESC"
-            ]
+            "values": ["ASC", "DESC"]
           }
         }
       }
@@ -43,20 +42,12 @@
       "props": {
         "type": {
           "type": "enum",
-          "values": [
-            1,
-            2,
-            3
-          ],
+          "values": [1, 2, 3],
           "optional": true
         },
         "status": {
           "type": "enum",
-          "values": [
-            -1,
-            0,
-            1
-          ],
+          "values": [-1, 0, 1],
           "optional": true
         }
       }
