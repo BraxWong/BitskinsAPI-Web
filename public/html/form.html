@@ -1,742 +1,399 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Bitskins API Web Portal</title>
-        <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-        <script
-            src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
-            type="text/javascript"
-        ></script>
-        <link href="/public/css/Bootstrap/bootstrap.min.css" rel="stylesheet" />
-        <link href="/public/css/form.css" rel="stylesheet" />
-        <link href="/public/css/main.css" rel="stylesheet" />
-    </head>
-    <body>
-        <!--Start of Nav Bar-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/public/html/main.html"
-                >Bitskins API Web Portal</a
-            >
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="/public/html/main.html"
-                        >Home</a
-                    >
-                    <a class="nav-item nav-link" href="#">About</a>
-                    <a class="nav-item nav-link" href="/public/html/form.html"
-                        >Forms</a
-                    >
-                    <a
-                        class="nav-item nav-link"
-                        href="/public/html/contact-us.html"
-                        >Contact Us</a
-                    >
-                </div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bitskins API Web Portal</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/pretty-print-json@2.1/dist/css/pretty-print-json.css>
+    <link href="/public/css/Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="/public/css/form.css" rel="stylesheet" />
+    <link href="/public/css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--Start of Nav Bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/public/html/main.html">Bitskins API Web Portal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/public/html/main.html">Home</a>
+                <a class="nav-item nav-link" href="#">About</a>
+                <a class="nav-item nav-link" href="/public/html/form.html">Forms</a>
+                <a class="nav-item nav-link" href="/public/html/contact-us.html">Contact Us</a>
             </div>
-        </nav>
-        <!--End of Nav Bar-->
-        <div class="row">
-            <div class="sidenav col-md-3">
-                <a
-                    href="/"
-                    class="d-flex align-items-center mb-md-0 me-md-auto text-decoration-none mb-3 text-white"
-                >
-                    <svg class="bi me-2" width="40" height="32">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg>
-                    <span class="fs-4">Forms</span>
-                </a>
-                <hr style="color: white" />
-                <div id="account-dropdown-div">
-                    <button class="account-dropdown-btn">
-                        Account
+        </div>
+    </nav>
+    <!--End of Nav Bar-->
+    <div class="row">
+        <div class="sidenav col-md-3">
+            <a href="/" class="d-flex align-items-center mb-md-0 me-md-auto text-decoration-none mb-3 text-white">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+                <span class="fs-4">Forms</span>
+            </a>
+            <hr style="color: white" />
+            <div id="account-dropdown-div">
+                <button class="account-dropdown-btn">
+                    Account
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="account-dropdown-container">
+                    <button class="profile-dropdown-btn">
+                        Profile
                         <i class="fa fa-caret-down"></i>
                     </button>
-                    <div class="account-dropdown-container">
-                        <button class="profile-dropdown-btn">
-                            Profile
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="profile-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/account/profile/me', 'GET')"
-                                >Get current session</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/account/profile/balance', 'POST')"
-                                >Get account balance</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(0, '/account/profile/update', 'POST"
-                                >Update account</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(1, '/account/profile/update_tradelink', 'POST')"
-                                >Update trade link</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/account/profile/block', 'POST')"
-                                >Block my account</a
-                            >
-                        </div>
-                        <button class="affiliate-dropdown-btn">
-                            Affiliate
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="affiliate-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/account/affiliate/me', 'POST')"
-                                >Get affiliate info</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/account/affiliate/transfer_money', 'POST')"
-                                >claim money</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(3,'/account/affiliate/history', 'POST')"
-                                >List historical rewards</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(4,'/account/affiliate/set_code', 'POST')"
-                                >Set or change affiliate code</a
-                            >
-                        </div>
-                        <button class="two-factor-dropdown-btn">
-                            Two-factor authentication
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="two-factor-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(5, '/account/twofa/create', 'POST')"
-                                >Create 2FA</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(6, '/account/twofa/verify', 'POST')"
-                                >Verify creating 2FA</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(7, '/account/twofa/disable', 'POST')"
-                                >Disable 2FA</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(8, '/account/twofa/verify_disable', 'POST')"
-                                >Verify disabling 2FA</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(5, '/account/twofa/lock', 'POST')"
-                                >Lock 2FA</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(7, '/account/twofa/unlock', 'POST')"
-                                >Unlock 2FA</a
-                            >
-                        </div>
-                        <button class="api-dropdown-btn">
-                            API Access
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="api-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(5, '/account/apikey/create', 'POST')"
-                                >Create API Key</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/account/apikey/disable', 'POST')"
-                                >Disable API Key</a
-                            >
-                        </div>
+                    <div class="profile-dropdown-container">
+                        <a href="#" onclick="showForm(2, '/account/profile/me', 'GET')">Get current session</a>
+                        <a href="#" onclick="showForm(2, '/account/profile/balance', 'POST')">Get account balance</a>
+                        <a href="#" onclick="showForm(0, '/account/profile/update', 'POST">Update account</a>
+                        <a href="#" onclick="showForm(1, '/account/profile/update_tradelink', 'POST')">Update trade
+                            link</a>
+                        <a href="#" onclick="showForm(2, '/account/profile/block', 'POST')">Block my account</a>
                     </div>
-                </div>
-                <div id="config-dropdown-div">
-                    <button class="config-dropdown-btn">
-                        Config
+                    <button class="affiliate-dropdown-btn">
+                        Affiliate
                         <i class="fa fa-caret-down"></i>
                     </button>
-                    <div class="config-dropdown-container">
-                        <a
-                            href="#"
-                            onclick="showForm(2, '/config/currency/list', 'GET')"
-                            >Get currency rates</a
-                        >
-                        <a
-                            href="#"
-                            onclick="showForm(2, '/config/fee_plan/list' ,'GET')"
-                            >Get fee plans</a
-                        >
-                        <a
-                            href="#"
-                            onclick="showForm(2, '/config/status/get', 'GET')"
-                            >Get platform status</a
-                        >
+                    <div class="affiliate-dropdown-container">
+                        <a href="#" onclick="showForm(2, '/account/affiliate/me', 'POST')">Get affiliate info</a>
+                        <a href="#" onclick="showForm(2, '/account/affiliate/transfer_money', 'POST')">claim money</a>
+                        <a href="#" onclick="showForm(3,'/account/affiliate/history', 'POST')">List historical
+                            rewards</a>
+                        <a href="#" onclick="showForm(4,'/account/affiliate/set_code', 'POST')">Set or change affiliate
+                            code</a>
                     </div>
-                </div>
-                <div id="market-dropdown-div">
-                    <button class="market-dropdown-btn">
-                        Market
+                    <button class="two-factor-dropdown-btn">
+                        Two-factor authentication
                         <i class="fa fa-caret-down"></i>
                     </button>
-                    <div class="market-dropdown-container">
-                        <button class="pricing-dropdown-btn">
-                            Pricing
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="pricing-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(9, '/market/pricing/list', 'POST')"
-                                >Get sales</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(10, '/market/pricing/summary', 'POST')"
-                                >Get pricing summary</a
-                            >
-                        </div>
-                        <button class="market-items-dropdown-btn">
-                            Market Items
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="market-items-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(11, '/market/search/440', 'POST')"
-                                >TF2 Market</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(12, '/market/search/570', 'POST')"
-                                >Dota 2 Market</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(13, '/market/search/730', 'POST')"
-                                >CS2 Market</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(14, '/market/search/252490', 'POST')"
-                                >Rust Market</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(15, '/market/search/store', 'POST')"
-                                >User store</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(16, '/market/search/get', 'POST')"
-                                >Get item details</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(17, '/market/search/skin_name', 'POST')"
-                                >Search skin</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(18, '/market/search/filters', 'POST')"
-                                >Filters</a
-                            >
-                        </div>
-                        <button class="buy-items-dropdown-btn">
-                            Buy Item
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="buy-items-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(19, '/market/buy/single', 'POST')"
-                                >Buy single item</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(20, '/market/buy/many', 'POST')"
-                                >Buy multiple items</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(21, '/market/buy/bulk', 'POST')"
-                                >Buy bulk items</a
-                            >
-                        </div>
-                        <button class="withdraw-dropdown-btn">
-                            Withdraw
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="withdraw-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(22, '/market/withdraw/single', 'POST')"
-                                >Withdraw single item</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(23, '/market/withdraw/many', 'POST')"
-                                >Withdraw multiple items</a
-                            >
-                        </div>
-                        <button class="delist-dropdown-btn">
-                            Delist
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="delist-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(24, '/market/delist/single', 'POST')"
-                                >Delist single item</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(25, '/market/delist/many', 'POST')"
-                                >Delist multiple items</a
-                            >
-                        </div>
-                        <button class="relist-dropdown-btn">
-                            Relist
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="relist-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(26, '/market/relist/single', 'POST')"
-                                >Relist single item</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(27, '/market/relist/many', 'POST')"
-                                >Relist multiple items</a
-                            >
-                        </div>
-                        <button class="update-price-dropdown-btn">
-                            Update Price
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="update-price-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(28, '/market/update_price/single', 'POST')"
-                                >Update single item price</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(29, '/market/update_price/many', 'POST')"
-                                >Update multiple items prices</a
-                            >
-                        </div>
-                        <button class="item-history-dropdown-btn">
-                            Item History
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="item-history-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(30, '/market/history/list', 'POST')"
-                                >Get items history</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(31, '/market/history/get', 'POST')"
-                                >Get item history</a
-                            >
-                        </div>
-                        <button class="receipt-dropdown-btn">
-                            Receipt
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="receipt-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(32, '/market/receipt/get', 'POST')"
-                                >Get receipt</a
-                            >
-                        </div>
-                        <button class="bump-up-dropdown-btn">
-                            Bump Up
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="bump-up-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(33, '/market/bump/single', 'POST')"
-                                >Bump single item</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(34, '/market/bump/list', 'POST')"
-                                >Get bumped item</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(35, '/market/bump/enable', 'POST')"
-                                >Enable bumping</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(36, '/market/bump/disable', 'POST')"
-                                >Disable bumping</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(37, '/market/bump/buy_package', 'POST')"
-                                >Buy bumps package</a
-                            >
-                        </div>
-                        <button class="all-available-skins-dropdown-btn">
-                            All Available Skins
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="all-available-skins-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/market/skin/440', 'GET')"
-                                >Get list of all skins for TF2</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/market/skin/570', 'GET')"
-                                >Get list of all skins for Dota2</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/market/skin/730', 'GET')"
-                                >Get list of all skins for CS2</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/market/skin/252490', 'GET')"
-                                >Get list of all skins for Rust</a
-                            >
-                        </div>
-                        <button class="all-insell-items-dropdown-btn">
-                            All Insell Items
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="all-insell-items-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/market/insell/440', 'GET')"
-                                >Get list of all items in sell for TF2</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/market/insell/570', 'GET')"
-                                >Get list of all items in sell for Dota2</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/market/insell/730', 'GET')"
-                                >Get list of all items in sell for CS2</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/market/insell/252490', 'GET')"
-                                >Get list of all items in sell for Rust</a
-                            >
-                        </div>
+                    <div class="two-factor-dropdown-container">
+                        <a href="#" onclick="showForm(5, '/account/twofa/create', 'POST')">Create 2FA</a>
+                        <a href="#" onclick="showForm(6, '/account/twofa/verify', 'POST')">Verify creating 2FA</a>
+                        <a href="#" onclick="showForm(7, '/account/twofa/disable', 'POST')">Disable 2FA</a>
+                        <a href="#" onclick="showForm(8, '/account/twofa/verify_disable', 'POST')">Verify disabling
+                            2FA</a>
+                        <a href="#" onclick="showForm(5, '/account/twofa/lock', 'POST')">Lock 2FA</a>
+                        <a href="#" onclick="showForm(7, '/account/twofa/unlock', 'POST')">Unlock 2FA</a>
                     </div>
-                </div>
-                <div id="steam-dropdown-div">
-                    <button class="steam-dropdown-btn">
-                        Steam
+                    <button class="api-dropdown-btn">
+                        API Access
                         <i class="fa fa-caret-down"></i>
                     </button>
-                    <div class="steam-dropdown-container">
-                        <a
-                            href="#"
-                            onclick="showForm(38, '/steam/inventory/list', 'POST')"
-                            >Get Steam Inventory</a
-                        >
-                        <a
-                            href="#"
-                            onclick="showForm(39, '/steam/deposit/many', 'POST')"
-                            >Deposit Steam Items</a
-                        >
-                        <button class="steam-trades-dropdown-btn">
-                            Steam Trades
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="steam-trades-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(40, '/steam/trade/list', 'POST')"
-                                >Get Steam Trades</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(41, '/steam/trade/active', 'POST')"
-                                >Get Active Steam Trades</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/steam/trade/active_hash' , 'POST')"
-                                >Get Hashes of Active Steam Trades</a
-                            >
-                        </div>
-                    </div>
-                </div>
-                <div id="wallet-dropdown-div">
-                    <button class="wallet-dropdown-btn">
-                        Wallet
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="wallet-dropdown-container">
-                        <button class="wallet-stats-dropdown-btn">
-                            Wallet Stats
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="wallet-stats-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/wallet/stats/get', 'POST')"
-                                >Get Wallet Stats</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/wallet/stats/get_kyc_limit', 'POST')"
-                                >Get KYC Limits</a
-                            >
-                        </div>
-                        <button class="wallet-transactions-dropdown-btn">
-                            Wallet Transactions
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="wallet-transactions-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(42, '/wallet/transaction/list', 'POST')"
-                                >Get Wallet Transactions</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(43, '/wallet/transaction/list_pending', 'POST')"
-                                >Get Wallet Pending Transactions</a
-                            >
-                        </div>
-                        <button class="wallet-reports-dropdown-btn">
-                            Wallet Reports
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="wallet-reports-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(44, '/wallet/report/list', 'POST')"
-                                >Get Wallet Reports</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(45, '/wallet/report/generate', 'POST')"
-                                >Generate Wallet Report</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(46, '/wallet/report/download', 'POST')"
-                                >Download Wallet Report</a
-                            >
-                        </div>
-                    </div>
-                </div>
-                <div id="wallet-deposit-dropdown-div">
-                    <button class="wallet-deposit-dropdown-btn">
-                        Wallet Deposit
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="wallet-deposit-dropdown-container">
-                        <button class="binance-dropdown-btn">
-                            Binance
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="binance-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(47, '/wallet/deposit/binancepay/create', 'POST')"
-                                >Deposit Binance</a
-                            >
-                        </div>
-                        <button class="cryptocurrency-dropdown-btn">
-                            Cryptocurrency
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="cryptocurrency-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(2,'/wallet/deposit/crypto/list_addresses', 'POST')"
-                                >Get Cryptocurrency Addresses</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(48, '/wallet/deposit/crypto/get_litecoin_address', 'POST')"
-                                >Get Litecoin Addres</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(49, 'wallet/deposit/crypto/get_bitcoin_address', 'POST')"
-                                >Get Bitcoin Addres</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(2, 'wallet/deposit/crypto/get_ethereum_address', 'POST')"
-                                >Get Ethereum Addres</a
-                            >
-                        </div>
-                        <button class="giftcode-dropdown-btn">
-                            Gift Code
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="giftcode-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(50, '/wallet/deposit/gift_code/use', 'POST')"
-                                >Use Gift Code</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/wallet/deposit/gift_code/list_used', 'POST')"
-                                >Get Used Gift Codes</a
-                            >
-                        </div>
-                        <button class="zen-dropdown-btn">
-                            Zen
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="zen-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(51, '/wallet/deposit/zen/create', 'POST')"
-                                >Deposit Zen</a
-                            >
-                        </div>
-                        <button class="card-dropdown-btn">
-                            Card
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="card-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(52, '/wallet/deposit/unlimint/add_card', 'POST')"
-                                >Add card</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(2, '/wallet/deposit/unlimint/list_cards', 'POST')"
-                                >Get card</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(53, '/wallet/deposit/unlimint/card_deposit', 'POST')"
-                                >Deposit card</a
-                            >
-                        </div>
-                    </div>
-                </div>
-                <div id="wallet-withdraw-dropdown-div">
-                    <button class="wallet-withdraw-dropdown-btn">
-                        Wallet Withdraw
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="wallet-withdraw-dropdown-container">
-                        <button
-                            class="wallet-withdraw-cryptocurrency-dropdown-btn"
-                        >
-                            Cryptocurrency
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="wallet-withdraw-cryptocurrency-container">
-                            <a
-                                href="#"
-                                onclick="showForm(54, '/wallet/withdraw/crypto/litecoin', 'POST')"
-                                >Withdraw Bitcoin</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(55, '/wallet/withdraw/crypto/bitcoin', 'POST')"
-                                >Withdraw Litecoin</a
-                            >
-                            <a
-                                href="#"
-                                onclick="showForm(56, '/wallet/withdraw/crypto/ethereum', 'POST')"
-                                >Withdraw Ethereum</a
-                            >
-                        </div>
-                        <button class="wallet-withdraw-binance-dropdown-btn">
-                            Binance
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="wallet-withdraw-binance-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(57, '/wallet/withdraw/binancepay/create', 'POST')"
-                                >Withdraw Binance</a
-                            >
-                        </div>
-                        <button class="visa-dropdown-btn">
-                            Visa
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="visa-dropdown-container">
-                            <a
-                                href="#"
-                                onclick="showForm(58, '/wallet/withdraw/unlimint/card_withdraw', 'POST')"
-                                >Withdraw Visa</a
-                            >
-                        </div>
+                    <div class="api-dropdown-container">
+                        <a href="#" onclick="showForm(5, '/account/apikey/create', 'POST')">Create API Key</a>
+                        <a href="#" onclick="showForm(2, '/account/apikey/disable', 'POST')">Disable API Key</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-6" style="position: relative; top: 100px">
-                <div class="row" id="form"></div>
-                <div class="row">
-                    <button
-                        type="button"
-                        class="btn btn-secondary"
-                        id="form-submit-button"
-                        onclick="submitForm()"
-                    >
-                        Submit
-                    </button>
+            <div id="config-dropdown-div">
+                <button class="config-dropdown-btn">
+                    Config
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="config-dropdown-container">
+                    <a href="#" onclick="showForm(2, '/config/currency/list', 'GET')">Get currency rates</a>
+                    <a href="#" onclick="showForm(2, '/config/fee_plan/list' ,'GET')">Get fee plans</a>
+                    <a href="#" onclick="showForm(2, '/config/status/get', 'GET')">Get platform status</a>
                 </div>
-                <div class="row">
-                    <textarea
-                        class="form-control"
-                        id="request-results"
-                        rows="10"
-                        readonly
-                    ></textarea>
+            </div>
+            <div id="market-dropdown-div">
+                <button class="market-dropdown-btn">
+                    Market
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="market-dropdown-container">
+                    <button class="pricing-dropdown-btn">
+                        Pricing
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="pricing-dropdown-container">
+                        <a href="#" onclick="showForm(9, '/market/pricing/list', 'POST')">Get sales</a>
+                        <a href="#" onclick="showForm(10, '/market/pricing/summary', 'POST')">Get pricing summary</a>
+                    </div>
+                    <button class="market-items-dropdown-btn">
+                        Market Items
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="market-items-dropdown-container">
+                        <a href="#" onclick="showForm(11, '/market/search/440', 'POST')">TF2 Market</a>
+                        <a href="#" onclick="showForm(12, '/market/search/570', 'POST')">Dota 2 Market</a>
+                        <a href="#" onclick="showForm(13, '/market/search/730', 'POST')">CS2 Market</a>
+                        <a href="#" onclick="showForm(14, '/market/search/252490', 'POST')">Rust Market</a>
+                        <a href="#" onclick="showForm(15, '/market/search/store', 'POST')">User store</a>
+                        <a href="#" onclick="showForm(16, '/market/search/get', 'POST')">Get item details</a>
+                        <a href="#" onclick="showForm(17, '/market/search/skin_name', 'POST')">Search skin</a>
+                        <a href="#" onclick="showForm(18, '/market/search/filters', 'POST')">Filters</a>
+                    </div>
+                    <button class="buy-items-dropdown-btn">
+                        Buy Item
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="buy-items-dropdown-container">
+                        <a href="#" onclick="showForm(19, '/market/buy/single', 'POST')">Buy single item</a>
+                        <a href="#" onclick="showForm(20, '/market/buy/many', 'POST')">Buy multiple items</a>
+                        <a href="#" onclick="showForm(21, '/market/buy/bulk', 'POST')">Buy bulk items</a>
+                    </div>
+                    <button class="withdraw-dropdown-btn">
+                        Withdraw
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="withdraw-dropdown-container">
+                        <a href="#" onclick="showForm(22, '/market/withdraw/single', 'POST')">Withdraw single item</a>
+                        <a href="#" onclick="showForm(23, '/market/withdraw/many', 'POST')">Withdraw multiple items</a>
+                    </div>
+                    <button class="delist-dropdown-btn">
+                        Delist
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="delist-dropdown-container">
+                        <a href="#" onclick="showForm(24, '/market/delist/single', 'POST')">Delist single item</a>
+                        <a href="#" onclick="showForm(25, '/market/delist/many', 'POST')">Delist multiple items</a>
+                    </div>
+                    <button class="relist-dropdown-btn">
+                        Relist
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="relist-dropdown-container">
+                        <a href="#" onclick="showForm(26, '/market/relist/single', 'POST')">Relist single item</a>
+                        <a href="#" onclick="showForm(27, '/market/relist/many', 'POST')">Relist multiple items</a>
+                    </div>
+                    <button class="update-price-dropdown-btn">
+                        Update Price
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="update-price-dropdown-container">
+                        <a href="#" onclick="showForm(28, '/market/update_price/single', 'POST')">Update single item
+                            price</a>
+                        <a href="#" onclick="showForm(29, '/market/update_price/many', 'POST')">Update multiple items
+                            prices</a>
+                    </div>
+                    <button class="item-history-dropdown-btn">
+                        Item History
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="item-history-dropdown-container">
+                        <a href="#" onclick="showForm(30, '/market/history/list', 'POST')">Get items history</a>
+                        <a href="#" onclick="showForm(31, '/market/history/get', 'POST')">Get item history</a>
+                    </div>
+                    <button class="receipt-dropdown-btn">
+                        Receipt
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="receipt-dropdown-container">
+                        <a href="#" onclick="showForm(32, '/market/receipt/get', 'POST')">Get receipt</a>
+                    </div>
+                    <button class="bump-up-dropdown-btn">
+                        Bump Up
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="bump-up-dropdown-container">
+                        <a href="#" onclick="showForm(33, '/market/bump/single', 'POST')">Bump single item</a>
+                        <a href="#" onclick="showForm(34, '/market/bump/list', 'POST')">Get bumped item</a>
+                        <a href="#" onclick="showForm(35, '/market/bump/enable', 'POST')">Enable bumping</a>
+                        <a href="#" onclick="showForm(36, '/market/bump/disable', 'POST')">Disable bumping</a>
+                        <a href="#" onclick="showForm(37, '/market/bump/buy_package', 'POST')">Buy bumps package</a>
+                    </div>
+                    <button class="all-available-skins-dropdown-btn">
+                        All Available Skins
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="all-available-skins-dropdown-container">
+                        <a href="#" onclick="showForm(2, '/market/skin/440', 'GET')">Get list of all skins for TF2</a>
+                        <a href="#" onclick="showForm(2, '/market/skin/570', 'GET')">Get list of all skins for Dota2</a>
+                        <a href="#" onclick="showForm(2, '/market/skin/730', 'GET')">Get list of all skins for CS2</a>
+                        <a href="#" onclick="showForm(2, '/market/skin/252490', 'GET')">Get list of all skins for
+                            Rust</a>
+                    </div>
+                    <button class="all-insell-items-dropdown-btn">
+                        All Insell Items
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="all-insell-items-dropdown-container">
+                        <a href="#" onclick="showForm(2, '/market/insell/440', 'GET')">Get list of all items in sell for
+                            TF2</a>
+                        <a href="#" onclick="showForm(2, '/market/insell/570', 'GET')">Get list of all items in sell for
+                            Dota2</a>
+                        <a href="#" onclick="showForm(2, '/market/insell/730', 'GET')">Get list of all items in sell for
+                            CS2</a>
+                        <a href="#" onclick="showForm(2, '/market/insell/252490', 'GET')">Get list of all items in sell
+                            for Rust</a>
+                    </div>
+                </div>
+            </div>
+            <div id="steam-dropdown-div">
+                <button class="steam-dropdown-btn">
+                    Steam
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="steam-dropdown-container">
+                    <a href="#" onclick="showForm(38, '/steam/inventory/list', 'POST')">Get Steam Inventory</a>
+                    <a href="#" onclick="showForm(39, '/steam/deposit/many', 'POST')">Deposit Steam Items</a>
+                    <button class="steam-trades-dropdown-btn">
+                        Steam Trades
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="steam-trades-dropdown-container">
+                        <a href="#" onclick="showForm(40, '/steam/trade/list', 'POST')">Get Steam Trades</a>
+                        <a href="#" onclick="showForm(41, '/steam/trade/active', 'POST')">Get Active Steam Trades</a>
+                        <a href="#" onclick="showForm(2, '/steam/trade/active_hash' , 'POST')">Get Hashes of Active
+                            Steam Trades</a>
+                    </div>
+                </div>
+            </div>
+            <div id="wallet-dropdown-div">
+                <button class="wallet-dropdown-btn">
+                    Wallet
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="wallet-dropdown-container">
+                    <button class="wallet-stats-dropdown-btn">
+                        Wallet Stats
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="wallet-stats-dropdown-container">
+                        <a href="#" onclick="showForm(2, '/wallet/stats/get', 'POST')">Get Wallet Stats</a>
+                        <a href="#" onclick="showForm(2, '/wallet/stats/get_kyc_limit', 'POST')">Get KYC Limits</a>
+                    </div>
+                    <button class="wallet-transactions-dropdown-btn">
+                        Wallet Transactions
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="wallet-transactions-dropdown-container">
+                        <a href="#" onclick="showForm(42, '/wallet/transaction/list', 'POST')">Get Wallet
+                            Transactions</a>
+                        <a href="#" onclick="showForm(43, '/wallet/transaction/list_pending', 'POST')">Get Wallet
+                            Pending Transactions</a>
+                    </div>
+                    <button class="wallet-reports-dropdown-btn">
+                        Wallet Reports
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="wallet-reports-dropdown-container">
+                        <a href="#" onclick="showForm(44, '/wallet/report/list', 'POST')">Get Wallet Reports</a>
+                        <a href="#" onclick="showForm(45, '/wallet/report/generate', 'POST')">Generate Wallet Report</a>
+                        <a href="#" onclick="showForm(46, '/wallet/report/download', 'POST')">Download Wallet Report</a>
+                    </div>
+                </div>
+            </div>
+            <div id="wallet-deposit-dropdown-div">
+                <button class="wallet-deposit-dropdown-btn">
+                    Wallet Deposit
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="wallet-deposit-dropdown-container">
+                    <button class="binance-dropdown-btn">
+                        Binance
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="binance-dropdown-container">
+                        <a href="#" onclick="showForm(47, '/wallet/deposit/binancepay/create', 'POST')">Deposit
+                            Binance</a>
+                    </div>
+                    <button class="cryptocurrency-dropdown-btn">
+                        Cryptocurrency
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="cryptocurrency-dropdown-container">
+                        <a href="#" onclick="showForm(2,'/wallet/deposit/crypto/list_addresses', 'POST')">Get
+                            Cryptocurrency Addresses</a>
+                        <a href="#" onclick="showForm(48, '/wallet/deposit/crypto/get_litecoin_address', 'POST')">Get
+                            Litecoin Addres</a>
+                        <a href="#" onclick="showForm(49, 'wallet/deposit/crypto/get_bitcoin_address', 'POST')">Get
+                            Bitcoin Addres</a>
+                        <a href="#" onclick="showForm(2, 'wallet/deposit/crypto/get_ethereum_address', 'POST')">Get
+                            Ethereum Addres</a>
+                    </div>
+                    <button class="giftcode-dropdown-btn">
+                        Gift Code
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="giftcode-dropdown-container">
+                        <a href="#" onclick="showForm(50, '/wallet/deposit/gift_code/use', 'POST')">Use Gift Code</a>
+                        <a href="#" onclick="showForm(2, '/wallet/deposit/gift_code/list_used', 'POST')">Get Used Gift
+                            Codes</a>
+                    </div>
+                    <button class="zen-dropdown-btn">
+                        Zen
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="zen-dropdown-container">
+                        <a href="#" onclick="showForm(51, '/wallet/deposit/zen/create', 'POST')">Deposit Zen</a>
+                    </div>
+                    <button class="card-dropdown-btn">
+                        Card
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="card-dropdown-container">
+                        <a href="#" onclick="showForm(52, '/wallet/deposit/unlimint/add_card', 'POST')">Add card</a>
+                        <a href="#" onclick="showForm(2, '/wallet/deposit/unlimint/list_cards', 'POST')">Get card</a>
+                        <a href="#" onclick="showForm(53, '/wallet/deposit/unlimint/card_deposit', 'POST')">Deposit
+                            card</a>
+                    </div>
+                </div>
+            </div>
+            <div id="wallet-withdraw-dropdown-div">
+                <button class="wallet-withdraw-dropdown-btn">
+                    Wallet Withdraw
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="wallet-withdraw-dropdown-container">
+                    <button class="wallet-withdraw-cryptocurrency-dropdown-btn">
+                        Cryptocurrency
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="wallet-withdraw-cryptocurrency-container">
+                        <a href="#" onclick="showForm(54, '/wallet/withdraw/crypto/litecoin', 'POST')">Withdraw
+                            Bitcoin</a>
+                        <a href="#" onclick="showForm(55, '/wallet/withdraw/crypto/bitcoin', 'POST')">Withdraw
+                            Litecoin</a>
+                        <a href="#" onclick="showForm(56, '/wallet/withdraw/crypto/ethereum', 'POST')">Withdraw
+                            Ethereum</a>
+                    </div>
+                    <button class="wallet-withdraw-binance-dropdown-btn">
+                        Binance
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="wallet-withdraw-binance-dropdown-container">
+                        <a href="#" onclick="showForm(57, '/wallet/withdraw/binancepay/create', 'POST')">Withdraw
+                            Binance</a>
+                    </div>
+                    <button class="visa-dropdown-btn">
+                        Visa
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="visa-dropdown-container">
+                        <a href="#" onclick="showForm(58, '/wallet/withdraw/unlimint/card_withdraw', 'POST')">Withdraw
+                            Visa</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
-        <script src="/public/js/form.js"></script>
-    </body>
+        <div class="col-md-2"></div>
+        <div class="col-md-6" style="position: relative; top: 100px">
+            <div class="row" id="form"></div>
+            <div class="row">
+                <button type="button" class="btn btn-secondary" id="form-submit-button" onclick="submitForm()">
+                    Submit
+                </button>
+            </div>
+            <div class="row">
+                <pre id=request-results class=json-container></pre>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
+    <script src=https://cdn.jsdelivr.net/npm/pretty-print-json@2.1/dist/pretty-print-json.min.js></script>
+    <script src="../js/pretty-json-min.js"></script>
+    <script src="/public/js/form.js"></script>
+</body>
+
 </html>

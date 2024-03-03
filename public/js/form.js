@@ -192,6 +192,7 @@ function testing() {
 for (var i = 0; i < dropdownarr.length; ++i) {
   for (var j = 0; j < dropdownarr[i].length; ++j) {
     dropdownarr[i][j].addEventListener("click", function () {
+      results_text_area.innerHTML = "";
       this.classList.toggle("active");
       var dropdownContent = this.nextElementSibling;
       if (dropdownContent.style.display === "block") {
@@ -206,7 +207,7 @@ for (var i = 0; i < dropdownarr.length; ++i) {
 function submitForm() {
   var jsonBody = {
     url: currentURL,
-    type: endPointMethod, 
+    type: endPointMethod,
     form: editor.getValue(),
   };
   $.ajax({
@@ -215,10 +216,10 @@ function submitForm() {
     contentType: "application/json",
     data: JSON.stringify(jsonBody),
     success: function (data) {
-      results_text_area.innerText = JSON.stringify(data);
+      results_text_area.innerHTML = prettyPrintJson.toHtml(data);
     },
     error: function (_xhr, _status, error) {
-      results_text_area.innerText = error;
+      results_text_area.innerHTML = error;
     },
   });
 }
