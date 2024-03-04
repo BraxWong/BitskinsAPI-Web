@@ -145,6 +145,8 @@ function returnUserData() {
 }
 
 function showForm(schemaNum, endPoint, method) {
+  results_text_area.innerHTML = "";
+  results_text_area.style.borderStyle = "none";
   form.innerHTML = "";
   currentURL = endPoint;
   endPoint = method;
@@ -179,10 +181,6 @@ function showForm(schemaNum, endPoint, method) {
   });
 }
 
-function testing() {
-  alert("TESTING");
-}
-
 //                        ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮
 //                        ┃                             ┃
 //                        ┃ SideNav Population Function ┃
@@ -192,7 +190,6 @@ function testing() {
 for (var i = 0; i < dropdownarr.length; ++i) {
   for (var j = 0; j < dropdownarr[i].length; ++j) {
     dropdownarr[i][j].addEventListener("click", function () {
-      results_text_area.innerHTML = "";
       this.classList.toggle("active");
       var dropdownContent = this.nextElementSibling;
       if (dropdownContent.style.display === "block") {
@@ -217,9 +214,11 @@ function submitForm() {
     data: JSON.stringify(jsonBody),
     success: function (data) {
       results_text_area.innerHTML = prettyPrintJson.toHtml(data);
+      results_text_area.style.borderStyle = "solid";
     },
     error: function (_xhr, _status, error) {
-      results_text_area.innerHTML = error;
+      results_text_area.innerHTML = prettyPrintJson.toHtml(error);
+      results_text_area.style.borderStyle = "solid";
     },
   });
 }
