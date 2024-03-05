@@ -149,7 +149,7 @@ function showForm(schemaNum, endPoint, method) {
   results_text_area.style.borderStyle = "none";
   form.innerHTML = "";
   currentURL = endPoint;
-  endPoint = method;
+  endPointMethod = method;
   $.ajax({
     url: "/get-schema",
     type: "POST",

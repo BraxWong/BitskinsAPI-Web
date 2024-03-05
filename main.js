@@ -184,26 +184,35 @@ app.post("/get-schema", function (request, response) {
 });
 
 app.post("/send-form", function (request, response) {
-  if(request.body.type === "GET")
-  {
+  var verifyType = "";
+  var tokenType = "x-apikey";
+  if (JSON.stringify(request.body.form).includes("API")) {
+    verifyType = request.body.form.API;
+    delete request.body.form.API;
+  } else {
+    verifyType = request.body.form["Auth Token"];
+    tokenType = "x-auth-token";
+    delete request.body.form["Auth Token"];
+  }
+  var headers = {
+    "content-type": "application/json",
+  };
+  headers[tokenType] = verifyType;
+
+  if (request.body.type === "GET") {
     axios
       .get("https://api.bitskins.com" + request.body.url, {
-        headers: {
-          "content-type": "application/json",
-          "x-apikey": request.body.form.API,
-        },
+        headers: headers,
       })
       .then((result) => response.send(result.data))
       .catch((error) => response.send(error.response.data));
   } else {
-    axios.post("https://api.bitskins.com" + request.body.url, request.body.form, {
-      "headers": {
-        "content-type": "application/json",
-        "x-apikey": request.body.form.API,
-      },
-    })
-    .then(result => console.log('Request success', result.data))
-    .catch(error => console.error('Request failed', error.response.data));
+    axios
+      .post("https://api.bitskins.com" + request.body.url, request.body.form, {
+        headers: headers,
+      })
+      .then((result) => response.send(result.data))
+      .catch((error) => response.send(error.response.data));
   }
 });
 
