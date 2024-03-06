@@ -64,3 +64,7 @@ npm install
 - Notifications Page
 
 ![Notifications Page](Resources/NotificationsPage.png)
+
+- Form Page
+
+![Form Page](Resources/FormPage.png)

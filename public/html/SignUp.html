@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,48 +11,53 @@
     <link href="/public/css/SignUp.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="/public/js/SignUp.js" type="text/javascript"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <!--Start of Nav Bar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="main.html">Bitskins API Web Portal</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-              <a class="nav-item nav-link" href="/public/html/main.html">Home</a>
-              <a class="nav-item nav-link" href="#">About</a>
-              <a class="nav-item nav-link" href="#">Forms</a>
-              <a class="nav-item nav-link" href="/public/html/contact-us.html">Contact Us</a>
-  </div>
-          <a class="btn btn-outline-success my-1 my-sm-1" href="/public/html/login.html" id="Login-Button">Login</a>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/public/html/main.html">Home</a>
+                <a class="nav-item nav-link" href="#">About</a>
+                <a class="nav-item nav-link" href="#">Forms</a>
+                <a class="nav-item nav-link" href="/public/html/contact-us.html">Contact Us</a>
+            </div>
+            <a class="btn btn-outline-success my-1 my-sm-1" href="/public/html/login.html" id="Login-Button">Login</a>
         </div>
     </nav>
     <!--End of Nav Bar-->
 
     <div class="login-container">
-      <div id="grid-item1"></div>
+        <div id="grid-item1"></div>
         <div class="card shadow p-3 mb-5 bg-white rounded" id="Create-Account-Card">
-          <div class="card-title">Create a new account</div>
+            <div class="card-title">Create a new account</div>
             <hr>
             </br>
-            <input type="email" class="form-control" id="Login-Email" aria-describedby="emailHelp" placeholder="Email" name="user_email">
+            <input type="email" class="form-control" id="Login-Email" aria-describedby="emailHelp" placeholder="Email"
+                name="user_email">
             </br>
             <input type="password" class="form-control" id="Login-Password" placeholder="Password" name="user_name">
             <a href="/public/html/login.html" id="Login">Sign In Here</a>
             </br>
             </br>
+            <input type="troll" id="troll-defender" style="display: None;">
             <button type="submit" class="btn btn-dark" id="Create-Account-Button" onclick="sign_up()">Create</button>
             </br>
-          </div>
         </div>
-        <!--Start of Login Template-->
-        <!--End of Login Template-->
-      </div>
-      <div id="grid-item3"></div>
     </div>
-  </main>
+    <!--Start of Login Template-->
+    <!--End of Login Template-->
+    </div>
+    <div id="grid-item3"></div>
+    </div>
+    </main>
     <script src="/public/js/Bootstrap/bootstrap.bundle.min.js"></script>
-</script>
+    </script>
+
 </html>
