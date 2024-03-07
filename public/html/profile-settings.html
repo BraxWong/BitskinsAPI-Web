@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,405 +12,438 @@
     <link href="/public/css/main.css" rel="stylesheet">
     <link href="/public/css/profile-settings.css" rel="stylesheet">
     <script src="/public/js/libphonenumber.min.js" type="text/javascript"></script>
-  </head>
-  <body>
-        <!--Start of Nav Bar-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/public/html/main.html">Bitskins API Web Portal</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                  <a class="nav-item nav-link active" href="/public/html/main.html">Home</a>
-                  <a class="nav-item nav-link" href="#">About</a>
-                  <a class="nav-item nav-link" href="/public/html/form.html">Forms</a>
-                  <a class="nav-item nav-link" href="/public/html/contact-us.html">Contact Us</a>
-              </div>
+</head>
+
+<body>
+    <!--Start of Nav Bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/public/html/main.html">Bitskins API Web Portal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/public/html/main.html">Home</a>
+                <a class="nav-item nav-link" href="#">About</a>
+                <a class="nav-item nav-link" href="/public/html/form.html">Forms</a>
+                <a class="nav-item nav-link" href="/public/html/contact-us.html">Contact Us</a>
+                <a class="nav-item nav-link" href="/public/html/roadmap.html">Roadmap</a>
             </div>
-        </nav>
-        <!--End of Nav Bar-->
-        <div class="row">
-          <div class="col-md">
+        </div>
+    </nav>
+    <!--End of Nav Bar-->
+    <div class="row">
+        <div class="col-md">
             <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-black" id="sidebar">
-              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                <span class="fs-4">Settings</span>
-              </a>
-              <hr>
-              <ul class="nav nav-pills flex-column mb-auto">
-                <li class="nav-item">
-                  <a href="#" class="nav-link active" aria-current="page" id="public-profile-nav">
-                    <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
-                    Public Profile
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link text-white" id="account-settings-nav">
-                    <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-                    Account Settings
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="nav-link text-white" id="notification-nav">
-                    <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-                    Notifications
-                  </a>
-                </li>
-              </ul>
-              <hr>
-              <div class="dropdown">
-                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                    <span class="fs-4">Settings</span>
                 </a>
-              </div>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" aria-current="page" id="public-profile-nav">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#home"></use>
+                            </svg>
+                            Public Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white" id="account-settings-nav">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#speedometer2"></use>
+                            </svg>
+                            Account Settings
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white" id="notification-nav">
+                            <svg class="bi me-2" width="16" height="16">
+                                <use xlink:href="#table"></use>
+                            </svg>
+                            Notifications
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                        id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    </a>
+                </div>
             </div>
-          </div>
-          <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
             <div class="card shadow pt-2" id="public-profile">
-              <div class="card-title" id="public-profile-card-title">
-                Public Profile
-              </div>
-              <hr style="width:30vh; position:relative; bottom: 10vh;">
-              <div class="row">
-                <div class="form-group col" id="last-name-div">
-                  <label id="last-name-label">
-                    Last Name
-                  </label>
-                  <input type="last-name" class="form-control"aria-describedby="lastname" placeholder="Doe" id="last-name-text">
-                  <small id="last-name-hint" style="display: none; color: red;">Please provide your last name</small>
-                </div>  
-                <div class="form-group col" id="first-name-div">
-                  <label id="first-name-label">
-                    First Name
-                  </label>
-                  <input type="first-name"class="form-control"aria-describedby="firstname"placeholder="John" id="first-name-text">
-                  <small id="first-name-hint" style="display: none; color: red;">Please provide your first name</small>
+                <div class="card-title" id="public-profile-card-title">
+                    Public Profile
                 </div>
-              </div> 
-              <div class="row">
-                <div class="form-group col" id="phone-number-div">
-                  <label id="phone-number-label">Phone Number</label>
-                  <div class="input-group-prepend">
-                    <div class="dropdown" id="dropdownMenu">
-                      <button class="dropbtn" id="dropdown-btn-text" style="width: 73px;">Click Me</button>
-                      <div class="dropdown-content" style="height: 300px; overflow-y: auto;">
-                        <a href="#" area-code="+1" country="US">+1 United States</a>
-                        <a href="#" area-code="+1" country="CA">+1 Canada</a>
-                        <a href="#" area-code="+1 340" country="VI">+1(340) United States Virgin Islands</a>
-                        <a href="#" area-code="+1 670" country="MP">1 (670) –  Northern Mariana Islands</a>
-                        <a href="#" area-code="+1 671" country="GU">1 (671) –  Guam</a>
-                        <a href="#" area-code="+1 684" country="AS">1 (684) –  American Samoa</a>
-                        <a href="#" area-code="+1 787" country="PR">1 (787) –  Puerto Rico</a>
-                        <a href="#" area-code="+1 939" country="PR">1 (939) - Puerto Rico</a>
-                        <a href="#" area-code="+1 242" country="BS">1 (242) –  Bahamas</a>
-                        <a href="#" area-code="+1 246" country="BB">1 (246) –  Barbados</a>
-                        <a href="#" area-code="+1 264" country="AI">1 (264) –  Anguilla</a>
-                        <a href="#" area-code="+1 268" country="AG">1 (268) –  Antigua and Barbuda</a>
-                        <a href="#" area-code="+1 284" country="VG">1 (284) –  British Virgin Islands</a>
-                        <a href="#" area-code="+1 345" country="KY">1 (345) –  Cayman Islands</a>
-                        <a href="#" area-code="+1 441" country="BM">1 (441) –  Bermuda</a>
-                        <a href="#" area-code="+1 473" country="GD">1 (473) –  Grenada</a>
-                        <a href="#" area-code="+1 649" country="TC">1 (649) –  Turks and Caicos Islands</a>
-                        <a href="#" area-code="+1 659" country="JM">1 (658) –  Jamaica</a>
-                        <a href="#" area-code="+1 876" country="JM">1 (876) –  Jamaica</a>
-                        <a href="#" area-code="+1 664" country="MS">1 (664) –  Montserrat</a>
-                        <a href="#" area-code="+1 721" country="SX">1 (721) –  Sint Maarten</a>
-                        <a href="#" area-code="+1 758" country="LC">1 (758) –  Saint Lucia</a>
-                        <a href="#" area-code="+1 767" country="DM">1 (767) –  Dominica</a>
-                        <a href="#" area-code="+1 784" country="VC">1 (784) –  Saint Vincent and the Grenadines</a>
-                        <a href="#" area-code="+1 809" country="DO">1 (809) –  Dominican Republic</a>
-                        <a href="#" area-code="+1 829" country="DO">1 (829) –  Dominican Republic</a>
-                        <a href="#" area-code="+1 849" country="DO">1 (849) –  Dominican Republic</a>
-                        <a href="#" area-code="+1 868" country="TT">1 (868) –  Trinidad and Tobago</a>
-                        <a href="#" area-code="+1 664" country="KN">1 (869) –  Saint Kitts and Nevis</a>
-                        <a href="#" area-code="+20" country="EG">20 –  Egypt</a>
-                        <a href="#" area-code="+211" country="SS">211 –  South Sudan</a>
-                        <a href="#" area-code="+212" country="MA">212 –  Morocco (including Western Sahara)</a>
-                        <a href="#" area-code="+213" country="DZ">213 –  Algeria</a>
-                        <a href="#" area-code="+216" country="TN">216 –  Tunisia</a>
-                        <a href="#" area-code="+218" country="LY">218 –  Libya</a>
-                        <a href="#" area-code="+220" country="GM">220 –  Gambia</a>
-                        <a href="#" area-code="+221" country="SN">221 –  Senegal</a>
-                        <a href="#" area-code="+222" country="MR">222 –  Mauritania</a>
-                        <a href="#" area-code="+223" country="ML">223 –  Mali</a>
-                        <a href="#" area-code="+224" country="GN">224 –  Guinea</a>
-                        <a href="#" area-code="+225" country="CI">225 –  Ivory Coast</a>
-                        <a href="#" area-code="+226" country="BF">226 –  Burkina Faso</a>
-                        <a href="#" area-code="+227" country="NE">227 –  Niger</a>
-                        <a href="#" area-code="+228" country="TG">228 –  Togo</a>
-                        <a href="#" area-code="+229" country="BJ">229 –  Benin</a>
-                        <a href="#" area-code="+230" country="MU">230 –  Mauritius</a>
-                        <a href="#" area-code="+231" country="LR">231 –  Liberia</a>
-                        <a href="#" area-code="+232" country="SL">232 –  Sierra Leone</a>
-                        <a href="#" area-code="+233" country="GH">233 –  Ghana</a>
-                        <a href="#" area-code="+234" country="NG">234 –  Nigeria</a>
-                        <a href="#" area-code="+235" country="TD">235 –  Chad</a>
-                        <a href="#" area-code="+236" country="CF">236 –  Central African Republic</a>
-                        <a href="#" area-code="+237" country="CM">237 –  Cameroon</a>
-                        <a href="#" area-code="+238" country="CV">238 –  Cape Verde</a>
-                        <a href="#" area-code="+239" country="ST">239 –  São Tomé and Príncipe</a>
-                        <a href="#" area-code="+240" country="GQ">240 –  Equatorial Guinea</a>
-                        <a href="#" area-code="+241" country="GA">241 –  Gabon</a>
-                        <a href="#" area-code="+242" country="CG">242 –  Republic of the Congo</a>
-                        <a href="#" area-code="+243" country="CD">243 –  Democratic Republic of the Congo</a>
-                        <a href="#" area-code="+244" country="AO">244 –  Angola</a>
-                        <a href="#" area-code="+245" country="GW">245 –  Guinea-Bissau</a>
-                        <a href="#" area-code="+246" country="IO">246 –  British Indian Ocean Territory</a>
-                        <a href="#" area-code="+247" country="SH">247 –  Ascension Island</a>
-                        <a href="#" area-code="+248" country="SC">248 –  Seychelles</a>
-                        <a href="#" area-code="+249" country="SD">249 –  Sudan</a>
-                        <a href="#" area-code="+250" country="RW">250 –  Rwanda</a>
-                        <a href="#" area-code="+251" country="ET">251 –  Ethiopia</a>
-                        <a href="#" area-code="+252" country="SO">252 –  Somalia (including  Somaliland)</a>
-                        <a href="#" area-code="+253" country="DJ">253 –  Djibouti</a>
-                        <a href="#" area-code="+254" country="KE">254 –  Kenya</a>
-                        <a href="#" area-code="+255" country="TZ">255 –  Tanzania</a>
-                        <a href="#" area-code="+256" country="UG">256 –  Uganda</a>
-                        <a href="#" area-code="+257" country="BI">257 –  Burundi</a>
-                        <a href="#" area-code="+258" country="MZ">258 –  Mozambique</a>
-                        <a href="#" area-code="+260" country="ZM">260 –  Zambia</a>
-                        <a href="#" area-code="+261" country="MG">261 –  Madagascar</a>
-                        <a href="#" area-code="+262" country="RE">262 –  Réunion</a>
-                        <a href="#" area-code="+263" country="ZW">263 –  Zimbabwe</a>
-                        <a href="#" area-code="+264" country="NA">264 –  Namibia </a>
-                        <a href="#" area-code="+265" country="MW">265 –  Malawi</a>
-                        <a href="#" area-code="+266" country="LS">266 –  Lesotho</a>
-                        <a href="#" area-code="+267" country="BW">267 –  Botswana</a>
-                        <a href="#" area-code="+268" country="SZ">268 –  Eswatini</a>
-                        <a href="#" area-code="+269" country="KM">269 –  Comoros </a>
-                        <a href="#" area-code="+27" country="ZA">27 –  South Africa</a>
-                        <a href="#" area-code="+290" country="SH">290 –  Saint Helena</a>
-                        <a href="#" area-code="+290 8" country="SH">290 (8) –  Tristan da Cunha</a>
-                        <a href="#" area-code="+291" country="ER">291 –  Eritrea</a>
-                        <a href="#" area-code="+297" country="AW">297 –  Aruba</a>
-                        <a href="#" area-code="+298" country="FO">298 –  Faroe Islands</a>
-                        <a href="#" area-code="+299" country="GL">299 –  Greenland</a>
-                        <a href="#" area-code="+30" country="GR">30 –  Greece</a>
-                        <a href="#" area-code="+31" country="NL">31 –  Netherlands</a>
-                        <a href="#" area-code="+32" country="BE">32 –  Belgium</a>
-                        <a href="#" area-code="+33" country="FR">33 –  France</a>
-                        <a href="#" area-code="+34" country="ES">34 –  Spain</a>
-                        <a href="#" area-code="+350" country="GI">350 –  Gibraltar</a>
-                        <a href="#" area-code="+351" country="PT">351 –  Portugal</a>
-                        <a href="#" area-code="+352" country="LU">352 –  Luxembourg</a>
-                        <a href="#" area-code="+353" country="IE">353 –  Ireland</a>
-                        <a href="#" area-code="+354" country="IS">354 –  Iceland</a>
-                        <a href="#" area-code="+355" country="AL">355 –  Albania</a>
-                        <a href="#" area-code="+356" country="MT">356 –  Malta</a>
-                        <a href="#" area-code="+357" country="CY">357 –  Cyprus (including  Akrotiri and Dhekelia)</a>
-                        <a href="#" area-code="+358" country="FI">358 –  Finland</a>
-                        <a href="#" area-code="+35818" country="AX">358 (18) –  Åland</a>
-                        <a href="#" area-code="+359" country="BG">359 –  Bulgaria</a>
-                        <a href="#" area-code="+36" country="HU">36 –  Hungary</a>
-                        <a href="#" area-code="+370" country="LT">370 –  Lithuania</a>
-                        <a href="#" area-code="+371" country="LV">371 –  Latvia </a>
-                        <a href="#" area-code="+372" country="EE">372 –  Estonia</a>
-                        <a href="#" area-code="+373" country="MD">373 –  Moldova</a>
-                        <a href="#" area-code="+374" country="AM">374 –  Armenia</a>
-                        <a href="#" area-code="+375" country="BY">375 –  Belarus</a>
-                        <a href="#" area-code="+376" country="AD">376 –  Andorra </a>
-                        <a href="#" area-code="+377" country="MC">377 –  Monaco </a>
-                        <a href="#" area-code="+378" country="SM">378 –  San Marino</a>
-                        <a href="#" area-code="+379" country="VA">379 –  Vatican City </a>
-                        <a href="#" area-code="+380" country="UA">380 –  Ukraine</a>
-                        <a href="#" area-code="+381" country="RS">381 –  Serbia</a>
-                        <a href="#" area-code="+382" country="ME">382 –  Montenegro</a>
-                        <a href="#" area-code="+383">383 –  Kosovo</a>
-                        <a href="#" area-code="+385" country="HR">385 –  Croatia</a>
-                        <a href="#" area-code="+386" country="SI">386 –  Slovenia</a>
-                        <a href="#" area-code="+387" country="BA">387 –  Bosnia and Herzegovina</a>
-                        <a href="#" area-code="+389">389 –  North Macedonia</a>
-                        <a href="#" area-code="+39" country="MK">39 –  Italy</a>
-                        <a href="#" area-code="+40" country="RO">40 –  Romania</a>
-                        <a href="#" area-code="+41" country="CH">41 –   Switzerland</a>
-                        <a href="#" area-code="+4191">41 (91) –  Campione d'Italia, </a>
-                        <a href="#" area-code="+420" country="CZ">420 –  Czech Republic</a>
-                        <a href="#" area-code="+421" country="SK">421 –  Slovakia</a>
-                        <a href="#" area-code="+423" country="LI">423 –  Liechtenstein </a>
-                        <a href="#" area-code="+43" country="AT">43 –  Austria</a>
-                        <a href="#" area-code="+44" country="GB">44 –  United Kingdom</a>
-                        <a href="#" area-code="+441481" country="GG">44 (1481) –  Guernsey</a>
-                        <a href="#" area-code="+441534" country="JE">44 (1534) –  Jersey</a>
-                        <a href="#" area-code="+441624" country="IM">44 (1624) –  Isle of Man</a>
-                        <a href="#" area-code="+45" country="DK">45 –  Denmark</a>
-                        <a href="#" area-code="+46" country="SE">46 –  Sweden</a>
-                        <a href="#" area-code="+47" country="NO">47 –  Norway</a>
-                        <a href="#" area-code="+4779" country="SJ">47 (79) –  Svalbard</a>
-                        <a href="#" area-code="+48" country="PL">48 –  Poland</a>
-                        <a href="#" area-code="+49" country="DE">49 –  Germany</a>
-                        <a href="#" area-code="+500" country="FK">500 –  Falkland Islands</a>
-                        <a href="#" area-code="+501" country="BZ">501 –  Belize</a>
-                        <a href="#" area-code="+502" country="GT">502 –  Guatemala</a>
-                        <a href="#" area-code="+503" country="SV">503 –  El Salvador</a>
-                        <a href="#" area-code="+504" country="HN">504 –  Honduras</a>
-                        <a href="#" area-code="+505" country="NI">505 –  Nicaragua</a>
-                        <a href="#" area-code="+506" country="CR">506 –  Costa Rica</a>
-                        <a href="#" area-code="+507" country="PA">507 –  Panama</a>
-                        <a href="#" area-code="+508" country="PM">508 –  Saint-Pierre and Miquelon</a>
-                        <a href="#" area-code="+509" country="HT">509 –  Haiti</a>
-                        <a href="#" area-code="+51" country="PE">51 –  Peru</a>
-                        <a href="#" area-code="+52" country="MX">52 –  Mexico</a>
-                        <a href="#" area-code="+53" country="CU">53 –  Cuba</a>
-                        <a href="#" area-code="+54" country="AR">54 –  Argentina</a>
-                        <a href="#" area-code="+55" country="BR">55 –  Brazil</a>
-                        <a href="#" area-code="+56" country="CL">56 –  Chile</a>
-                        <a href="#" area-code="+57" country="CI">57 –  Colombia</a>
-                        <a href="#" area-code="+58" country="VE">58 –  Venezuela</a>
-                        <a href="#" area-code="+590" country="GP">590 –  Guadeloupe </a>
-                        <a href="#" area-code="+591" country="BO">591 –  Bolivia</a>
-                        <a href="#" area-code="+592" country="GY">592 –  Guyana</a>
-                        <a href="#" area-code="+593" country="EC">593 –  Ecuador</a>
-                        <a href="#" area-code="+594" country="GF">594 –  French Guiana</a>
-                        <a href="#" area-code="+595" country="PY">595 –  Paraguay</a>
-                        <a href="#" area-code="+596" country="MQ">596 –  Martinique</a>
-                        <a href="#" area-code="+597" country="SR">597 –  Suriname</a>
-                        <a href="#" area-code="+598" country="UY">598 –  Uruguay</a>
-                        <a href="#" area-code="+5993" country="BQ">599 3 –  Sint Eustatius</a>
-                        <a href="#" area-code="+5994" country="BQ">599 4 –  Saba</a>
-                        <a href="#" area-code="+5997" country="BQ">599 7 –  Bonaire</a>
-                        <a href="#" area-code="+5999" country="CW">599 9 –  Curaçao</a>
-                        <a href="#" area-code="+60" country="MY">60 –  Malaysia</a>
-                        <a href="#" area-code="+61" country="AU">61 –  Australia(</a>
-                        <a href="#" area-code="+62" country="ID">62 –  Indonesia</a>
-                        <a href="#" area-code="+63" country="PH">63 –  Philippines</a>
-                        <a href="#" area-code="+64" country="NZ">64 –  New Zealand</a>
-                        <a href="#" area-code="+64" country="PN">64 –  Pitcairn Islands</a>
-                        <a href="#" area-code="+65" country="SG">65 –  Singapore</a>
-                        <a href="#" area-code="+66" country="TH">66 –  Thailand</a>
-                        <a href="#" area-code="+670" country="TL">670 –  East Timor </a>
-                        <a href="#" area-code="+673" country="BN">673 –  Brunei</a>
-                        <a href="#" area-code="+674" country="NR">674 –  Nauru</a>
-                        <a href="#" area-code="+675" country="PG">675 –  Papua New Guinea</a>
-                        <a href="#" area-code="+676" country="TO">676 –  Tonga</a>
-                        <a href="#" area-code="+677" country="SB">677 –  Solomon Islands</a>
-                        <a href="#" area-code="+678" country="VU">678 –  Vanuatu</a>
-                        <a href="#" area-code="+679" country="FJ">679 –  Fiji</a>
-                        <a href="#" area-code="+680" country="PW">680 –  Palau</a>
-                        <a href="#" area-code="+681" country="WF">681 –  Wallis and Futuna</a>
-                        <a href="#" area-code="+682" country="CK">682 –  Cook Islands</a>
-                        <a href="#" area-code="+683" country="NU">683 –  Niue</a>
-                        <a href="#" area-code="+685" country="WS">685 –  Samoa</a>
-                        <a href="#" area-code="+686" country="KI">686 –  Kiribati</a>
-                        <a href="#" area-code="+687" country="NC">687 –  New Caledonia</a>
-                        <a href="#" area-code="+688" country="TV">688 –  Tuvalu</a>
-                        <a href="#" area-code="+689" country="PF">689 –  French Polynesia</a>
-                        <a href="#" area-code="+690" country="TK">690 –  Tokelau</a>
-                        <a href="#" area-code="+691" country="FM">691 –  Federated States of Micronesia</a>
-                        <a href="#" area-code="+692" country="MH">692 –  Marshall Islands</a>
-                        <a href="#" area-code="+7" country="RU">7 (1–5, 8, 9) –  Russia</a>
-                        <a href="#" area-code="+767" country="KZ">7 (6, 7) –  Kazakhstan</a>
-                        <a href="#" area-code="+81" country="JP">81 –  Japan</a>
-                        <a href="#" area-code="+82" country="KR">82 –  South Korea</a>
-                        <a href="#" area-code="+84" country="VN">84 –  Vietnam</a>
-                        <a href="#" area-code="+850" country="KP">850 –  North Korea</a>
-                        <a href="#" area-code="+852" country="HK">852 –  Hong Kong</a>
-                        <a href="#" area-code="+853" country="MO">853 –  Macau</a>
-                        <a href="#" area-code="+855" country="KH">855 –  Cambodia</a>
-                        <a href="#" area-code="+856" country="LA">856 –  Laos</a>
-                        <a href="#" area-code="+86" country="CN">86 –  China</a>
-                        <a href="#" area-code="+880" country="BD">880 –  Bangladesh</a>
-                        <a href="#" area-code="+886" country="TW">886 –  Taiwan</a>
-                        <a href="#" area-code="+90" country="TR">90 –  Turkey</a>
-                        <a href="#" area-code="+90392" country="CY">90 (392) –  Northern Cyprus</a>
-                        <a href="#" area-code="+91" country="IN">91 –  India</a>
-                        <a href="#" area-code="+92" country="PK">92 –  Pakistan</a>
-                        <a href="#" area-code="+93" country="AF">93 –  Afghanistan</a>
-                        <a href="#" area-code="+94" country="LK">94 –  Sri Lanka</a>
-                        <a href="#" area-code="+95" country="MM">95 –  Myanmar</a>
-                        <a href="#" area-code="+960" country="MV">960 –  Maldives</a>
-                        <a href="#" area-code="+961" country="LB">961 –  Lebanon</a>
-                        <a href="#" area-code="+962" country="JO">962 –  Jordan</a>
-                        <a href="#" area-code="+963" country="SY">963 –  Syria</a>
-                        <a href="#" area-code="+964" country="IQ">964 –  Iraq</a>
-                        <a href="#" area-code="+965" country="KW">965 –  Kuwait</a>
-                        <a href="#" area-code="+966" country="SA">966 –  Saudi Arabia</a>
-                        <a href="#" area-code="+967" country="YE">967 –  Yemen</a>
-                        <a href="#" area-code="+968" country="OM">968 –  Oman</a>
-                        <a href="#" area-code="+970" country="PS">970 –  Palestine</a>
-                        <a href="#" area-code="+971" country="AE">971 –  United Arab Emirates</a>
-                        <a href="#" area-code="+972" country="IL">972 –  Israel (</a>
-                        <a href="#" area-code="+973" country="BH">973 –  Bahrain</a>
-                        <a href="#" area-code="+974" country="QA">974 –  Qatar</a>
-                        <a href="#" area-code="+975" country="BT">975 –  Bhutan</a>
-                        <a href="#" area-code="+976" country="MN">976 –  Mongolia</a>
-                        <a href="#" area-code="+977" country="NP">977 –  Nepal</a>
-                        <a href="#" area-code="+98" country="IR">98 –  Iran</a>
-                        <a href="#" area-code="+992" country="TJ">992 –  Tajikistan</a>
-                        <a href="#" area-code="+993" country="TM">993 –  Turkmenistan</a>
-                        <a href="#" area-code="+994" country="AZ">994 –  Azerbaijan</a>
-                        <a href="#" area-code="+995" country="GE">995 –  Georgia</a>
-                        <a href="#" area-code="+996" country="KG">996 –  Kyrgyzstan</a>
-                        <a href="#" area-code="+997" country="KZ">997 –  Kazakhstan </a>
-                        <a href="#" area-code="+998" country="UZ">998 –  Uzbekistan</a>                       
-                      </div>
+                <hr style="width:30vh; position:relative; bottom: 10vh;">
+                <div class="row">
+                    <div class="form-group col" id="last-name-div">
+                        <label id="last-name-label">
+                            Last Name
+                        </label>
+                        <input type="last-name" class="form-control" aria-describedby="lastname" placeholder="Doe"
+                            id="last-name-text">
+                        <small id="last-name-hint" style="display: none; color: red;">Please provide your last
+                            name</small>
                     </div>
-                    <input type="phone-number"class="form-control"aria-describedby="phonenumber"placeholder="" id="phone-number-text">
-                  </div>           
-                  <small id="phone-number-hint" style="display: none; color: red;">Please provide a valid phone number</small>
+                    <div class="form-group col" id="first-name-div">
+                        <label id="first-name-label">
+                            First Name
+                        </label>
+                        <input type="first-name" class="form-control" aria-describedby="firstname" placeholder="John"
+                            id="first-name-text">
+                        <small id="first-name-hint" style="display: none; color: red;">Please provide your first
+                            name</small>
+                    </div>
                 </div>
-                <div class="form-group col" id="email-div">
-                  <label id="email-label">Email Address</label>
-                  <input type="emailAddress"class="form-control"aria-describedby="phonenumber"placeholder="" id="email-text" style="width: 200px;">
-                  <small id="email-hint" style="display: none; color: red;">Please provide a valid email address</small>
+                <div class="row">
+                    <div class="form-group col" id="phone-number-div">
+                        <label id="phone-number-label">Phone Number</label>
+                        <div class="input-group-prepend">
+                            <div class="dropdown" id="dropdownMenu">
+                                <button class="dropbtn" id="dropdown-btn-text" style="width: 73px;">Click Me</button>
+                                <div class="dropdown-content" style="height: 300px; overflow-y: auto;">
+                                    <a href="#" area-code="+1" country="US">+1 United States</a>
+                                    <a href="#" area-code="+1" country="CA">+1 Canada</a>
+                                    <a href="#" area-code="+1 340" country="VI">+1(340) United States Virgin Islands</a>
+                                    <a href="#" area-code="+1 670" country="MP">1 (670) – Northern Mariana Islands</a>
+                                    <a href="#" area-code="+1 671" country="GU">1 (671) – Guam</a>
+                                    <a href="#" area-code="+1 684" country="AS">1 (684) – American Samoa</a>
+                                    <a href="#" area-code="+1 787" country="PR">1 (787) – Puerto Rico</a>
+                                    <a href="#" area-code="+1 939" country="PR">1 (939) - Puerto Rico</a>
+                                    <a href="#" area-code="+1 242" country="BS">1 (242) – Bahamas</a>
+                                    <a href="#" area-code="+1 246" country="BB">1 (246) – Barbados</a>
+                                    <a href="#" area-code="+1 264" country="AI">1 (264) – Anguilla</a>
+                                    <a href="#" area-code="+1 268" country="AG">1 (268) – Antigua and Barbuda</a>
+                                    <a href="#" area-code="+1 284" country="VG">1 (284) – British Virgin Islands</a>
+                                    <a href="#" area-code="+1 345" country="KY">1 (345) – Cayman Islands</a>
+                                    <a href="#" area-code="+1 441" country="BM">1 (441) – Bermuda</a>
+                                    <a href="#" area-code="+1 473" country="GD">1 (473) – Grenada</a>
+                                    <a href="#" area-code="+1 649" country="TC">1 (649) – Turks and Caicos Islands</a>
+                                    <a href="#" area-code="+1 659" country="JM">1 (658) – Jamaica</a>
+                                    <a href="#" area-code="+1 876" country="JM">1 (876) – Jamaica</a>
+                                    <a href="#" area-code="+1 664" country="MS">1 (664) – Montserrat</a>
+                                    <a href="#" area-code="+1 721" country="SX">1 (721) – Sint Maarten</a>
+                                    <a href="#" area-code="+1 758" country="LC">1 (758) – Saint Lucia</a>
+                                    <a href="#" area-code="+1 767" country="DM">1 (767) – Dominica</a>
+                                    <a href="#" area-code="+1 784" country="VC">1 (784) – Saint Vincent and the
+                                        Grenadines</a>
+                                    <a href="#" area-code="+1 809" country="DO">1 (809) – Dominican Republic</a>
+                                    <a href="#" area-code="+1 829" country="DO">1 (829) – Dominican Republic</a>
+                                    <a href="#" area-code="+1 849" country="DO">1 (849) – Dominican Republic</a>
+                                    <a href="#" area-code="+1 868" country="TT">1 (868) – Trinidad and Tobago</a>
+                                    <a href="#" area-code="+1 664" country="KN">1 (869) – Saint Kitts and Nevis</a>
+                                    <a href="#" area-code="+20" country="EG">20 – Egypt</a>
+                                    <a href="#" area-code="+211" country="SS">211 – South Sudan</a>
+                                    <a href="#" area-code="+212" country="MA">212 – Morocco (including Western
+                                        Sahara)</a>
+                                    <a href="#" area-code="+213" country="DZ">213 – Algeria</a>
+                                    <a href="#" area-code="+216" country="TN">216 – Tunisia</a>
+                                    <a href="#" area-code="+218" country="LY">218 – Libya</a>
+                                    <a href="#" area-code="+220" country="GM">220 – Gambia</a>
+                                    <a href="#" area-code="+221" country="SN">221 – Senegal</a>
+                                    <a href="#" area-code="+222" country="MR">222 – Mauritania</a>
+                                    <a href="#" area-code="+223" country="ML">223 – Mali</a>
+                                    <a href="#" area-code="+224" country="GN">224 – Guinea</a>
+                                    <a href="#" area-code="+225" country="CI">225 – Ivory Coast</a>
+                                    <a href="#" area-code="+226" country="BF">226 – Burkina Faso</a>
+                                    <a href="#" area-code="+227" country="NE">227 – Niger</a>
+                                    <a href="#" area-code="+228" country="TG">228 – Togo</a>
+                                    <a href="#" area-code="+229" country="BJ">229 – Benin</a>
+                                    <a href="#" area-code="+230" country="MU">230 – Mauritius</a>
+                                    <a href="#" area-code="+231" country="LR">231 – Liberia</a>
+                                    <a href="#" area-code="+232" country="SL">232 – Sierra Leone</a>
+                                    <a href="#" area-code="+233" country="GH">233 – Ghana</a>
+                                    <a href="#" area-code="+234" country="NG">234 – Nigeria</a>
+                                    <a href="#" area-code="+235" country="TD">235 – Chad</a>
+                                    <a href="#" area-code="+236" country="CF">236 – Central African Republic</a>
+                                    <a href="#" area-code="+237" country="CM">237 – Cameroon</a>
+                                    <a href="#" area-code="+238" country="CV">238 – Cape Verde</a>
+                                    <a href="#" area-code="+239" country="ST">239 – São Tomé and Príncipe</a>
+                                    <a href="#" area-code="+240" country="GQ">240 – Equatorial Guinea</a>
+                                    <a href="#" area-code="+241" country="GA">241 – Gabon</a>
+                                    <a href="#" area-code="+242" country="CG">242 – Republic of the Congo</a>
+                                    <a href="#" area-code="+243" country="CD">243 – Democratic Republic of the Congo</a>
+                                    <a href="#" area-code="+244" country="AO">244 – Angola</a>
+                                    <a href="#" area-code="+245" country="GW">245 – Guinea-Bissau</a>
+                                    <a href="#" area-code="+246" country="IO">246 – British Indian Ocean Territory</a>
+                                    <a href="#" area-code="+247" country="SH">247 – Ascension Island</a>
+                                    <a href="#" area-code="+248" country="SC">248 – Seychelles</a>
+                                    <a href="#" area-code="+249" country="SD">249 – Sudan</a>
+                                    <a href="#" area-code="+250" country="RW">250 – Rwanda</a>
+                                    <a href="#" area-code="+251" country="ET">251 – Ethiopia</a>
+                                    <a href="#" area-code="+252" country="SO">252 – Somalia (including Somaliland)</a>
+                                    <a href="#" area-code="+253" country="DJ">253 – Djibouti</a>
+                                    <a href="#" area-code="+254" country="KE">254 – Kenya</a>
+                                    <a href="#" area-code="+255" country="TZ">255 – Tanzania</a>
+                                    <a href="#" area-code="+256" country="UG">256 – Uganda</a>
+                                    <a href="#" area-code="+257" country="BI">257 – Burundi</a>
+                                    <a href="#" area-code="+258" country="MZ">258 – Mozambique</a>
+                                    <a href="#" area-code="+260" country="ZM">260 – Zambia</a>
+                                    <a href="#" area-code="+261" country="MG">261 – Madagascar</a>
+                                    <a href="#" area-code="+262" country="RE">262 – Réunion</a>
+                                    <a href="#" area-code="+263" country="ZW">263 – Zimbabwe</a>
+                                    <a href="#" area-code="+264" country="NA">264 – Namibia </a>
+                                    <a href="#" area-code="+265" country="MW">265 – Malawi</a>
+                                    <a href="#" area-code="+266" country="LS">266 – Lesotho</a>
+                                    <a href="#" area-code="+267" country="BW">267 – Botswana</a>
+                                    <a href="#" area-code="+268" country="SZ">268 – Eswatini</a>
+                                    <a href="#" area-code="+269" country="KM">269 – Comoros </a>
+                                    <a href="#" area-code="+27" country="ZA">27 – South Africa</a>
+                                    <a href="#" area-code="+290" country="SH">290 – Saint Helena</a>
+                                    <a href="#" area-code="+290 8" country="SH">290 (8) – Tristan da Cunha</a>
+                                    <a href="#" area-code="+291" country="ER">291 – Eritrea</a>
+                                    <a href="#" area-code="+297" country="AW">297 – Aruba</a>
+                                    <a href="#" area-code="+298" country="FO">298 – Faroe Islands</a>
+                                    <a href="#" area-code="+299" country="GL">299 – Greenland</a>
+                                    <a href="#" area-code="+30" country="GR">30 – Greece</a>
+                                    <a href="#" area-code="+31" country="NL">31 – Netherlands</a>
+                                    <a href="#" area-code="+32" country="BE">32 – Belgium</a>
+                                    <a href="#" area-code="+33" country="FR">33 – France</a>
+                                    <a href="#" area-code="+34" country="ES">34 – Spain</a>
+                                    <a href="#" area-code="+350" country="GI">350 – Gibraltar</a>
+                                    <a href="#" area-code="+351" country="PT">351 – Portugal</a>
+                                    <a href="#" area-code="+352" country="LU">352 – Luxembourg</a>
+                                    <a href="#" area-code="+353" country="IE">353 – Ireland</a>
+                                    <a href="#" area-code="+354" country="IS">354 – Iceland</a>
+                                    <a href="#" area-code="+355" country="AL">355 – Albania</a>
+                                    <a href="#" area-code="+356" country="MT">356 – Malta</a>
+                                    <a href="#" area-code="+357" country="CY">357 – Cyprus (including Akrotiri and
+                                        Dhekelia)</a>
+                                    <a href="#" area-code="+358" country="FI">358 – Finland</a>
+                                    <a href="#" area-code="+35818" country="AX">358 (18) – Åland</a>
+                                    <a href="#" area-code="+359" country="BG">359 – Bulgaria</a>
+                                    <a href="#" area-code="+36" country="HU">36 – Hungary</a>
+                                    <a href="#" area-code="+370" country="LT">370 – Lithuania</a>
+                                    <a href="#" area-code="+371" country="LV">371 – Latvia </a>
+                                    <a href="#" area-code="+372" country="EE">372 – Estonia</a>
+                                    <a href="#" area-code="+373" country="MD">373 – Moldova</a>
+                                    <a href="#" area-code="+374" country="AM">374 – Armenia</a>
+                                    <a href="#" area-code="+375" country="BY">375 – Belarus</a>
+                                    <a href="#" area-code="+376" country="AD">376 – Andorra </a>
+                                    <a href="#" area-code="+377" country="MC">377 – Monaco </a>
+                                    <a href="#" area-code="+378" country="SM">378 – San Marino</a>
+                                    <a href="#" area-code="+379" country="VA">379 – Vatican City </a>
+                                    <a href="#" area-code="+380" country="UA">380 – Ukraine</a>
+                                    <a href="#" area-code="+381" country="RS">381 – Serbia</a>
+                                    <a href="#" area-code="+382" country="ME">382 – Montenegro</a>
+                                    <a href="#" area-code="+383">383 – Kosovo</a>
+                                    <a href="#" area-code="+385" country="HR">385 – Croatia</a>
+                                    <a href="#" area-code="+386" country="SI">386 – Slovenia</a>
+                                    <a href="#" area-code="+387" country="BA">387 – Bosnia and Herzegovina</a>
+                                    <a href="#" area-code="+389">389 – North Macedonia</a>
+                                    <a href="#" area-code="+39" country="MK">39 – Italy</a>
+                                    <a href="#" area-code="+40" country="RO">40 – Romania</a>
+                                    <a href="#" area-code="+41" country="CH">41 – Switzerland</a>
+                                    <a href="#" area-code="+4191">41 (91) – Campione d'Italia, </a>
+                                    <a href="#" area-code="+420" country="CZ">420 – Czech Republic</a>
+                                    <a href="#" area-code="+421" country="SK">421 – Slovakia</a>
+                                    <a href="#" area-code="+423" country="LI">423 – Liechtenstein </a>
+                                    <a href="#" area-code="+43" country="AT">43 – Austria</a>
+                                    <a href="#" area-code="+44" country="GB">44 – United Kingdom</a>
+                                    <a href="#" area-code="+441481" country="GG">44 (1481) – Guernsey</a>
+                                    <a href="#" area-code="+441534" country="JE">44 (1534) – Jersey</a>
+                                    <a href="#" area-code="+441624" country="IM">44 (1624) – Isle of Man</a>
+                                    <a href="#" area-code="+45" country="DK">45 – Denmark</a>
+                                    <a href="#" area-code="+46" country="SE">46 – Sweden</a>
+                                    <a href="#" area-code="+47" country="NO">47 – Norway</a>
+                                    <a href="#" area-code="+4779" country="SJ">47 (79) – Svalbard</a>
+                                    <a href="#" area-code="+48" country="PL">48 – Poland</a>
+                                    <a href="#" area-code="+49" country="DE">49 – Germany</a>
+                                    <a href="#" area-code="+500" country="FK">500 – Falkland Islands</a>
+                                    <a href="#" area-code="+501" country="BZ">501 – Belize</a>
+                                    <a href="#" area-code="+502" country="GT">502 – Guatemala</a>
+                                    <a href="#" area-code="+503" country="SV">503 – El Salvador</a>
+                                    <a href="#" area-code="+504" country="HN">504 – Honduras</a>
+                                    <a href="#" area-code="+505" country="NI">505 – Nicaragua</a>
+                                    <a href="#" area-code="+506" country="CR">506 – Costa Rica</a>
+                                    <a href="#" area-code="+507" country="PA">507 – Panama</a>
+                                    <a href="#" area-code="+508" country="PM">508 – Saint-Pierre and Miquelon</a>
+                                    <a href="#" area-code="+509" country="HT">509 – Haiti</a>
+                                    <a href="#" area-code="+51" country="PE">51 – Peru</a>
+                                    <a href="#" area-code="+52" country="MX">52 – Mexico</a>
+                                    <a href="#" area-code="+53" country="CU">53 – Cuba</a>
+                                    <a href="#" area-code="+54" country="AR">54 – Argentina</a>
+                                    <a href="#" area-code="+55" country="BR">55 – Brazil</a>
+                                    <a href="#" area-code="+56" country="CL">56 – Chile</a>
+                                    <a href="#" area-code="+57" country="CI">57 – Colombia</a>
+                                    <a href="#" area-code="+58" country="VE">58 – Venezuela</a>
+                                    <a href="#" area-code="+590" country="GP">590 – Guadeloupe </a>
+                                    <a href="#" area-code="+591" country="BO">591 – Bolivia</a>
+                                    <a href="#" area-code="+592" country="GY">592 – Guyana</a>
+                                    <a href="#" area-code="+593" country="EC">593 – Ecuador</a>
+                                    <a href="#" area-code="+594" country="GF">594 – French Guiana</a>
+                                    <a href="#" area-code="+595" country="PY">595 – Paraguay</a>
+                                    <a href="#" area-code="+596" country="MQ">596 – Martinique</a>
+                                    <a href="#" area-code="+597" country="SR">597 – Suriname</a>
+                                    <a href="#" area-code="+598" country="UY">598 – Uruguay</a>
+                                    <a href="#" area-code="+5993" country="BQ">599 3 – Sint Eustatius</a>
+                                    <a href="#" area-code="+5994" country="BQ">599 4 – Saba</a>
+                                    <a href="#" area-code="+5997" country="BQ">599 7 – Bonaire</a>
+                                    <a href="#" area-code="+5999" country="CW">599 9 – Curaçao</a>
+                                    <a href="#" area-code="+60" country="MY">60 – Malaysia</a>
+                                    <a href="#" area-code="+61" country="AU">61 – Australia(</a>
+                                    <a href="#" area-code="+62" country="ID">62 – Indonesia</a>
+                                    <a href="#" area-code="+63" country="PH">63 – Philippines</a>
+                                    <a href="#" area-code="+64" country="NZ">64 – New Zealand</a>
+                                    <a href="#" area-code="+64" country="PN">64 – Pitcairn Islands</a>
+                                    <a href="#" area-code="+65" country="SG">65 – Singapore</a>
+                                    <a href="#" area-code="+66" country="TH">66 – Thailand</a>
+                                    <a href="#" area-code="+670" country="TL">670 – East Timor </a>
+                                    <a href="#" area-code="+673" country="BN">673 – Brunei</a>
+                                    <a href="#" area-code="+674" country="NR">674 – Nauru</a>
+                                    <a href="#" area-code="+675" country="PG">675 – Papua New Guinea</a>
+                                    <a href="#" area-code="+676" country="TO">676 – Tonga</a>
+                                    <a href="#" area-code="+677" country="SB">677 – Solomon Islands</a>
+                                    <a href="#" area-code="+678" country="VU">678 – Vanuatu</a>
+                                    <a href="#" area-code="+679" country="FJ">679 – Fiji</a>
+                                    <a href="#" area-code="+680" country="PW">680 – Palau</a>
+                                    <a href="#" area-code="+681" country="WF">681 – Wallis and Futuna</a>
+                                    <a href="#" area-code="+682" country="CK">682 – Cook Islands</a>
+                                    <a href="#" area-code="+683" country="NU">683 – Niue</a>
+                                    <a href="#" area-code="+685" country="WS">685 – Samoa</a>
+                                    <a href="#" area-code="+686" country="KI">686 – Kiribati</a>
+                                    <a href="#" area-code="+687" country="NC">687 – New Caledonia</a>
+                                    <a href="#" area-code="+688" country="TV">688 – Tuvalu</a>
+                                    <a href="#" area-code="+689" country="PF">689 – French Polynesia</a>
+                                    <a href="#" area-code="+690" country="TK">690 – Tokelau</a>
+                                    <a href="#" area-code="+691" country="FM">691 – Federated States of Micronesia</a>
+                                    <a href="#" area-code="+692" country="MH">692 – Marshall Islands</a>
+                                    <a href="#" area-code="+7" country="RU">7 (1–5, 8, 9) – Russia</a>
+                                    <a href="#" area-code="+767" country="KZ">7 (6, 7) – Kazakhstan</a>
+                                    <a href="#" area-code="+81" country="JP">81 – Japan</a>
+                                    <a href="#" area-code="+82" country="KR">82 – South Korea</a>
+                                    <a href="#" area-code="+84" country="VN">84 – Vietnam</a>
+                                    <a href="#" area-code="+850" country="KP">850 – North Korea</a>
+                                    <a href="#" area-code="+852" country="HK">852 – Hong Kong</a>
+                                    <a href="#" area-code="+853" country="MO">853 – Macau</a>
+                                    <a href="#" area-code="+855" country="KH">855 – Cambodia</a>
+                                    <a href="#" area-code="+856" country="LA">856 – Laos</a>
+                                    <a href="#" area-code="+86" country="CN">86 – China</a>
+                                    <a href="#" area-code="+880" country="BD">880 – Bangladesh</a>
+                                    <a href="#" area-code="+886" country="TW">886 – Taiwan</a>
+                                    <a href="#" area-code="+90" country="TR">90 – Turkey</a>
+                                    <a href="#" area-code="+90392" country="CY">90 (392) – Northern Cyprus</a>
+                                    <a href="#" area-code="+91" country="IN">91 – India</a>
+                                    <a href="#" area-code="+92" country="PK">92 – Pakistan</a>
+                                    <a href="#" area-code="+93" country="AF">93 – Afghanistan</a>
+                                    <a href="#" area-code="+94" country="LK">94 – Sri Lanka</a>
+                                    <a href="#" area-code="+95" country="MM">95 – Myanmar</a>
+                                    <a href="#" area-code="+960" country="MV">960 – Maldives</a>
+                                    <a href="#" area-code="+961" country="LB">961 – Lebanon</a>
+                                    <a href="#" area-code="+962" country="JO">962 – Jordan</a>
+                                    <a href="#" area-code="+963" country="SY">963 – Syria</a>
+                                    <a href="#" area-code="+964" country="IQ">964 – Iraq</a>
+                                    <a href="#" area-code="+965" country="KW">965 – Kuwait</a>
+                                    <a href="#" area-code="+966" country="SA">966 – Saudi Arabia</a>
+                                    <a href="#" area-code="+967" country="YE">967 – Yemen</a>
+                                    <a href="#" area-code="+968" country="OM">968 – Oman</a>
+                                    <a href="#" area-code="+970" country="PS">970 – Palestine</a>
+                                    <a href="#" area-code="+971" country="AE">971 – United Arab Emirates</a>
+                                    <a href="#" area-code="+972" country="IL">972 – Israel (</a>
+                                    <a href="#" area-code="+973" country="BH">973 – Bahrain</a>
+                                    <a href="#" area-code="+974" country="QA">974 – Qatar</a>
+                                    <a href="#" area-code="+975" country="BT">975 – Bhutan</a>
+                                    <a href="#" area-code="+976" country="MN">976 – Mongolia</a>
+                                    <a href="#" area-code="+977" country="NP">977 – Nepal</a>
+                                    <a href="#" area-code="+98" country="IR">98 – Iran</a>
+                                    <a href="#" area-code="+992" country="TJ">992 – Tajikistan</a>
+                                    <a href="#" area-code="+993" country="TM">993 – Turkmenistan</a>
+                                    <a href="#" area-code="+994" country="AZ">994 – Azerbaijan</a>
+                                    <a href="#" area-code="+995" country="GE">995 – Georgia</a>
+                                    <a href="#" area-code="+996" country="KG">996 – Kyrgyzstan</a>
+                                    <a href="#" area-code="+997" country="KZ">997 – Kazakhstan </a>
+                                    <a href="#" area-code="+998" country="UZ">998 – Uzbekistan</a>
+                                </div>
+                            </div>
+                            <input type="phone-number" class="form-control" aria-describedby="phonenumber"
+                                placeholder="" id="phone-number-text">
+                        </div>
+                        <small id="phone-number-hint" style="display: none; color: red;">Please provide a valid phone
+                            number</small>
+                    </div>
+                    <div class="form-group col" id="email-div">
+                        <label id="email-label">Email Address</label>
+                        <input type="emailAddress" class="form-control" aria-describedby="phonenumber" placeholder=""
+                            id="email-text" style="width: 200px;">
+                        <small id="email-hint" style="display: none; color: red;">Please provide a valid email
+                            address</small>
+                    </div>
                 </div>
-              </div>
-              <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" id="public-profile-next-button" onclick="changeToAccountSettings()", type="submit">
-                Next
-              </button>
+                <button
+                    class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+                    id="public-profile-next-button" onclick="changeToAccountSettings()" , type="submit">
+                    Next
+                </button>
             </div>
             <div class="card shadow pt-2" id="account-settings" style="display: none;">
-              <div class="card-title" id="account-settings-card-title">
-                Account Settings 
-              </div>
-              <hr style="width:30vh; position:relative; top:40px; left: 189px; text-align: center;">
-              <div class="row">
-                <div class="form-group col" id="api-div">
-                  <label>
-                    Bitskins' API Key
-                  </label>
-                  <input type="api-key" class="form-control"aria-describedby="lastname" placeholder="API-KEY" id="api-key-text">
-                  <small id="api-key-hint" style="display: none; color: red;">Please provide a valid API key</small>
-                </div>  
-                <div class="form-group col" id="auth-div">
-                  <label>
-                    Bitskins' Authentication Token 
-                  </label>
-                  <input type="auth-token"class="form-control"aria-describedby="firstname"placeholder="AUTH-TOKEN" id="auth-token-text">
+                <div class="card-title" id="account-settings-card-title">
+                    Account Settings
                 </div>
-              </div> 
-              <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" id="account-settings-next-button" onclick="changeToNotification()">
-                Next
-              </button>
+                <hr style="width:30vh; position:relative; top:40px; left: 189px; text-align: center;">
+                <div class="row">
+                    <div class="form-group col" id="api-div">
+                        <label>
+                            Bitskins' API Key
+                        </label>
+                        <input type="api-key" class="form-control" aria-describedby="lastname" placeholder="API-KEY"
+                            id="api-key-text">
+                        <small id="api-key-hint" style="display: none; color: red;">Please provide a valid API
+                            key</small>
+                    </div>
+                    <div class="form-group col" id="auth-div">
+                        <label>
+                            Bitskins' Authentication Token
+                        </label>
+                        <input type="auth-token" class="form-control" aria-describedby="firstname"
+                            placeholder="AUTH-TOKEN" id="auth-token-text">
+                    </div>
+                </div>
+                <button
+                    class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+                    id="account-settings-next-button" onclick="changeToNotification()">
+                    Next
+                </button>
             </div>
             <div class="card shadow pt-2" style="display: none;" id="Notifications-div">
-              <div class="card-title" id="Notifications-title">
-                Notifications
-              </div>
-              <hr style="width:30vh; position:relative; bottom: 10vh;">
-              <div class="row">
-                <div class="form-group col" id="email-notifications-div">
-                  <input class="form-check-input" type="checkbox" value="" id="email-checkbox">
-                  <label id="email-notification-label">
-                    Allow alerts to be sent to your email
-                  </label>
-                </div>  
-                <div class="form-group col" id="phone-notifications-div">
-                  <input class="form-check-input" type="checkbox" value="" id="phone-checkbox">
-                  <label id="first-name-label">
-                    Allow alerts to be sent to your phone
-                  </label>
+                <div class="card-title" id="Notifications-title">
+                    Notifications
                 </div>
-              </div> 
-              <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" id="Notifications-submit-button" onclick="insertUserSettings()", type="submit">
-                Submit
-              </button>
+                <hr style="width:30vh; position:relative; bottom: 10vh;">
+                <div class="row">
+                    <div class="form-group col" id="email-notifications-div">
+                        <input class="form-check-input" type="checkbox" value="" id="email-checkbox">
+                        <label id="email-notification-label">
+                            Allow alerts to be sent to your email
+                        </label>
+                    </div>
+                    <div class="form-group col" id="phone-notifications-div">
+                        <input class="form-check-input" type="checkbox" value="" id="phone-checkbox">
+                        <label id="first-name-label">
+                            Allow alerts to be sent to your phone
+                        </label>
+                    </div>
+                </div>
+                <button
+                    class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+                    id="Notifications-submit-button" onclick="insertUserSettings()" , type="submit">
+                    Submit
+                </button>
             </div>
 
-          </div>
-          <div class="col-sm">
-          </div>
         </div>
+        <div class="col-sm">
+        </div>
+    </div>
     </main>
     <script src="/public/js/Bootstrap/bootstrap.bundle.min.js"></script>
     <script src="/public/js/profile-settings.js"></script>
+
 </html>

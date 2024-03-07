@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,97 +10,106 @@
     <link href="/public/css/Bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="/public/css/contact-us.css" rel="stylesheet">
     <link href="/public/css/main.css" rel="stylesheet">
-  </head>
-  <body>
+</head>
+
+<body>
     <!--Start of Nav Bar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="main.html">Bitskins API Web Portal</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-              <a class="nav-item nav-link" href="/public/html/main.html">Home</a>
-              <a class="nav-item nav-link" href="#">About</a>
-              <a class="nav-item nav-link" href="#">Forms</a>
-              <a class="nav-item nav-link active" href="/public/html/contact-us.html">Contact Us</a>
-          </div>
-          <a class="btn btn-outline-success my-2 my-sm-0" href="/public/html/Login.html" id="Login-Button">Login</a> 
-          <a class="btn btn-outline-success my-1 my-sm-1" href="/public/html/SignUp.html" id="SignUp-Button">Sign Up</a>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/public/html/main.html">Home</a>
+                <a class="nav-item nav-link" href="#">About</a>
+                <a class="nav-item nav-link" href="/public/html/form.html">Forms</a>
+                <a class="nav-item nav-link active" href="/public/html/contact-us.html">Contact Us</a>
+                <a class="nav-item nav-link" href="/public/html/roadmap.html">Roadmap</a>
+            </div>
+            <a class="btn btn-outline-success my-2 my-sm-0" href="/public/html/Login.html" id="Login-Button">Login</a>
+            <a class="btn btn-outline-success my-1 my-sm-1" href="/public/html/SignUp.html" id="SignUp-Button">Sign
+                Up</a>
         </div>
     </nav>
     <!--End of Nav Bar-->
-    
+
     <!--Start of alert popups-->
     <div id="success-alert" class="alert alert-success alert-dismissible" role="alert" style="display: none;">
-      <h4 class="alert-heading">Inquiry Sent Successfully!</h4>
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
+        <h4 class="alert-heading">Inquiry Sent Successfully!</h4>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
 
     <div id="error-alert" class "alert alert-danger alert-dismissible" role="alert" style="display: none;">
-      <h4 class="alert-heading">Error: Inquiry was not sent!</h4>
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
+        <h4 class="alert-heading">Error: Inquiry was not sent!</h4>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
 
     <div id="invalid-email-alert" class "alert alert-danger alert-dismissible" role="alert" style="display: none;">
-      <h4 class="alert-heading">Error: Your email address is invalid.</h4>
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
+        <h4 class="alert-heading">Error: Your email address is invalid.</h4>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
     <!--End of alert popups-->
 
     <!--Start of Contact Us Card-->
     <div class="card" style="width: 58rem;" id="Contact-Us-Box">
-      <div class="card-body">
-        <h5 class="card-title" id="card-title">Contact Us</h5>
-        <p class="card-text" id="card-text">If you have any questions, please fill out the form below. We will get back to you as soon as possible.</p>
-      </div>
-      <!--End of Contact Us Card-->
+        <div class="card-body">
+            <h5 class="card-title" id="card-title">Contact Us</h5>
+            <p class="card-text" id="card-text">If you have any questions, please fill out the form below. We will get
+                back to you as soon as possible.</p>
+        </div>
+        <!--End of Contact Us Card-->
 
-      <!--Start of Contact Us Form-->
-      <form id="contact-us-form">
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="Form-Email" aria-describedby="emailHelp" placeholder="For example: example@exampleAddr.com" name="user_email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-        </br>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Name</label>
-          <input type="Name" class="form-control" id="Form-Name" placeholder="John Doe" name="user_name">
-        </div>
-        </br>
-        <div class="form-group">
-            <label for="phoneNumber">Phone Number(Please include the area code)</label>
-            <input type="Phone Number" class="form-control" id="Form-Phone-Number" placeholder="+852 12345678" name="phone_number">
-        </div>
-        </br>
-        <div class="form-group">
-            <label for="message">Message</label>
-            <textarea class="form-control" id="Form-Message" placeholder="Your message" name="message"></textarea>
-        </div>
-        </br>
-        <button type="submit" class="btn btn-primary" id="Form-Send-Button">Send</button>
-      </form>
+        <!--Start of Contact Us Form-->
+        <form id="contact-us-form">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="Form-Email" aria-describedby="emailHelp"
+                    placeholder="For example: example@exampleAddr.com" name="user_email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            </br>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Name</label>
+                <input type="Name" class="form-control" id="Form-Name" placeholder="John Doe" name="user_name">
+            </div>
+            </br>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number(Please include the area code)</label>
+                <input type="Phone Number" class="form-control" id="Form-Phone-Number" placeholder="+852 12345678"
+                    name="phone_number">
+            </div>
+            </br>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="Form-Message" placeholder="Your message" name="message"></textarea>
+            </div>
+            </br>
+            <button type="submit" class="btn btn-primary" id="Form-Send-Button">Send</button>
+        </form>
     </div>
     <!--End of Contact us Form-->
 
     <!--Start of Disclaimer-->
     <div class="card" id="Disclaimer">
-      <div class="card-body" id="Disclaimer-text">
-        NOTICE: Users' information will be used but not stored after a contact us form has been sent. 
-      </div>
+        <div class="card-body" id="Disclaimer-text">
+            NOTICE: Users' information will be used but not stored after a contact us form has been sent.
+        </div>
     </div>
     <!--End of Disclaimer-->
 
-</div>
-  </main>
+    </div>
+    </main>
     <script src="/public/js/Bootstrap/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="/public/js/contact-us.js"></script>
+
 </html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,78 +12,86 @@
     <link href="/public/css/login.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="/public/js/Login.js"></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <!--Start of Nav Bar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="main.html">Bitskins API Web Portal</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-              <a class="nav-item nav-link" href="/public/html/main.html">Home</a>
-              <a class="nav-item nav-link" href="#">About</a>
-              <a class="nav-item nav-link" href="#">Forms</a>
-              <a class="nav-item nav-link" href="/public/html/contact-us.html">Contact Us</a>
-          </div>
-          <a class="btn btn-outline-success my-1 my-sm-1" href="/public/html/SignUp.html" id="SignUp-Button">Sign Up</a>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/public/html/main.html">Home</a>
+                <a class="nav-item nav-link" href="#">About</a>
+                <a class="nav-item nav-link" href="#">Forms</a>
+                <a class="nav-item nav-link" href="/public/html/contact-us.html">Contact Us</a>
+                <a class="nav-item nav-link" href="/public/html/roadmap.html">Roadmap</a>
+            </div>
+            <a class="btn btn-outline-success my-1 my-sm-1" href="/public/html/SignUp.html" id="SignUp-Button">Sign
+                Up</a>
         </div>
     </nav>
     <!--End of Nav Bar-->
 
     <div class="login-container">
-      <div id="grid-item1"></div>
-      <div class="card-group">
-        <div class="card shadow p-3 mb-5 bg-white rounded" id="Login-Card">
-          <h3 id="Login-Text">
-            Login
-          </h3>
-          <div class="card-body">
-            <a class="btn btn-outline-success my-1 my-sm-1" id="Login-Facebook-Button">
-              <picture>
-                <img src="/public/resources/img/facebook-icon.png" id="Facebook-Icon">
-              </picture>
-              Facebook Login
-            </a>
-            </br>
-            </br>
-            <a class="btn btn-outline-success my-1 my-sm-1" id="Login-Twitter-Button">
-              <picture>
-                <img src="/public/resources/img/twitter-icon.png" id="Twitter-Icon">
-              </picture>
-              Twitter Login
-            </a>
-            </br>
-            </br>
-            <h4 id="Login-Email-Text">
-              Login with email
-            </h4>
-            <input type="email" class="form-control" id="Login-Email" aria-describedby="emailHelp" placeholder="Email" name="user_email">
-            </br>
-            <input type="password" class="form-control" id="Login-Password" placeholder="Password" name="user_name">
-            </br>
-            <a href="/public/html/forgot-password.html" id="Forgot-Password">Forgot password?</a>
-            </br>
-            </br>
-            <button type="submit" class="btn btn-dark" id="Login-Button" onclick="login()">Login</button>
-            </br>
-          </div>
-        </div>
-        <!--Start of Login Template-->
-        <div class="card shadow p-3 mb-5 bg-white rounded col-md-6" id="Card-2">
-          <div class="card-body">
-            <div class="card-title">
-              Do not have an account?
+        <div id="grid-item1"></div>
+        <div class="card-group">
+            <div class="card shadow p-3 mb-5 bg-white rounded" id="Login-Card">
+                <h3 id="Login-Text">
+                    Login
+                </h3>
+                <div class="card-body">
+                    <a class="btn btn-outline-success my-1 my-sm-1" id="Login-Facebook-Button">
+                        <picture>
+                            <img src="/public/resources/img/facebook-icon.png" id="Facebook-Icon">
+                        </picture>
+                        Facebook Login
+                    </a>
+                    </br>
+                    </br>
+                    <a class="btn btn-outline-success my-1 my-sm-1" id="Login-Twitter-Button">
+                        <picture>
+                            <img src="/public/resources/img/twitter-icon.png" id="Twitter-Icon">
+                        </picture>
+                        Twitter Login
+                    </a>
+                    </br>
+                    </br>
+                    <h4 id="Login-Email-Text">
+                        Login with email
+                    </h4>
+                    <input type="email" class="form-control" id="Login-Email" aria-describedby="emailHelp"
+                        placeholder="Email" name="user_email">
+                    </br>
+                    <input type="password" class="form-control" id="Login-Password" placeholder="Password"
+                        name="user_name">
+                    </br>
+                    <a href="/public/html/forgot-password.html" id="Forgot-Password">Forgot password?</a>
+                    </br>
+                    </br>
+                    <button type="submit" class="btn btn-dark" id="Login-Button" onclick="login()">Login</button>
+                    </br>
+                </div>
             </div>
-            <hr id="Line-Separator">
-            <a class="btn btn-outline-success my1 my-sm-1" id="Sign-Up" href="/public/html/SignUp.html">Sign Up Here</a>
-          </div>
+            <!--Start of Login Template-->
+            <div class="card shadow p-3 mb-5 bg-white rounded col-md-6" id="Card-2">
+                <div class="card-body">
+                    <div class="card-title">
+                        Do not have an account?
+                    </div>
+                    <hr id="Line-Separator">
+                    <a class="btn btn-outline-success my1 my-sm-1" id="Sign-Up" href="/public/html/SignUp.html">Sign Up
+                        Here</a>
+                </div>
+            </div>
+            <!--End of Login Template-->
         </div>
-        <!--End of Login Template-->
-      </div>
-      <div id="grid-item3"></div>
+        <div id="grid-item3"></div>
     </div>
-  </main>
+    </main>
     <script src="/public/js/Bootstrap/bootstrap.bundle.min.js"></script>
+
 </html>
