@@ -187,7 +187,12 @@ app.post("/send-form", function (request, response) {
   var verifyType = "";
   var tokenType = "x-apikey";
   if (JSON.stringify(request.body.form).includes("API")) {
-    verifyType = request.body.form.API;
+    var apikey = request.body.form.API;
+    if (apikey.length != 64) {
+      response.send({ error: "Tht API Key has to be 64 characters long." });
+      return;
+    }
+    verifyType = apikey;
     delete request.body.form.API;
   } else {
     verifyType = request.body.form["Auth Token"];
