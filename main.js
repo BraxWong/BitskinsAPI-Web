@@ -189,7 +189,7 @@ app.post("/send-form", function (request, response) {
   if (JSON.stringify(request.body.form).includes("API")) {
     var apikey = request.body.form.API;
     if (apikey.length != 64) {
-      response.send({ error: "Tht API Key has to be 64 characters long." });
+      response.send({ error: "The API Key has to be 64 characters long." });
       return;
     }
     verifyType = apikey;

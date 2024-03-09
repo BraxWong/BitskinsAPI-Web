@@ -213,10 +213,14 @@ function submitForm() {
     contentType: "application/json",
     data: JSON.stringify(jsonBody),
     success: function (data) {
+      if (JSON.stringify(data).includes("code")) {
+        data = decodeErrorCode(data.code);
+      }
       results_text_area.innerHTML = prettyPrintJson.toHtml(data);
       results_text_area.style.borderStyle = "solid";
     },
     error: function (_xhr, _status, error) {
+      console.log(decodeErrorCode(error));
       results_text_area.innerHTML = prettyPrintJson.toHtml(error);
       results_text_area.style.borderStyle = "solid";
     },

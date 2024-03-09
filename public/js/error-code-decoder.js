@@ -220,5 +220,7 @@ function decodeErrorCode(errorcode) {
       return "You Have Reached The Ticket Limit. Please Try Again Later.";
     case "BAM_STEAM_015":
       return "BitSkins' Bots Have Lost Connection With Steam. Please Try Again Later.";
+    default:
+      return `${errorcode} Unknown. Please Contact BitSkins Customer Service For More Information.`;
   }
 }
