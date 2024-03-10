@@ -202,6 +202,7 @@ for (var i = 0; i < dropdownarr.length; ++i) {
 }
 
 function submitForm() {
+  document.getElementById("form-submit-button").disabled = true;
   var jsonBody = {
     url: currentURL,
     type: endPointMethod,
@@ -218,11 +219,13 @@ function submitForm() {
       }
       results_text_area.innerHTML = prettyPrintJson.toHtml(data);
       results_text_area.style.borderStyle = "solid";
+      document.getElementById("form-submit-button").disabled = false;
     },
     error: function (_xhr, _status, error) {
       console.log(decodeErrorCode(error));
       results_text_area.innerHTML = prettyPrintJson.toHtml(error);
       results_text_area.style.borderStyle = "solid";
+      document.getElementById("form-submit-button").disabled = false;
     },
   });
 }
